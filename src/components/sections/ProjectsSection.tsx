@@ -31,7 +31,7 @@ const Projects = () => {
                                     title='GitHub'
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-white font-semibold px-4 py-2 rounded-full text-black border border-black hover:bg-black hover:text-white transition-colors duration-300"
+                                    className="font-semibold px-4 py-2 rounded-full text-white border bg-gray-950 border-gray-950 hover:bg-gray-700 hover:border-gray-700 hover:text-white transition-colors duration-400"
                                 >
                                     GitHub
                                 </a>
@@ -40,7 +40,7 @@ const Projects = () => {
                                     title='Live Demo'
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="ml-4 bg-white font-semibold px-4 py-2 rounded-full text-blue-900 border border-blue-900 hover:bg-blue-700 hover:text-white transition-colors duration-300"
+                                    className="ml-4 bg-white font-semibold px-4 py-2 rounded-full text-blue-900 border border-blue-900 hover:bg-blue-900 hover:text-white transition-colors duration-400"
                                 >
                                     Live Demo
                                 </a>

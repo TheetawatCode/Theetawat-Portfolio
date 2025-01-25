@@ -91,7 +91,7 @@ const HeroSection: React.FC = () => {
                         data-aos="fade-up"
                         data-aos-duration="3000">
                         <a
-                            href="/src/assets/Theetawat_Resume.pdf"
+                            href="/pdf/Theetawat_Resume.pdf"
                             title="Download Resume"
                             target="_blank"
                             rel="noopener noreferrer"

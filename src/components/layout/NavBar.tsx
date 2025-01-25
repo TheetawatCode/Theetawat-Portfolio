@@ -61,7 +61,7 @@ const NavBar: React.FC = () => {
             </li> */}
             <li>
               <a
-                href="/src/assets/Theetawat_Resume.pdf"
+                href="/pdf/Theetawat_Resume.pdf"
                 title="Download Resume"
                 target="_blank"
                 rel="noopener noreferrer"

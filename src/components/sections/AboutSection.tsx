@@ -23,7 +23,7 @@ const AboutSection = () => {
                     </div>
                     <div className="flex justify-center items-center order-1" data-aos="flip-right" data-aos-duration="1000">
                         <img
-                            src="\src\assets\images\profile.PNG"
+                            src="/images/profile.PNG"
                             alt="Profile"
                             title="Theetawat Premsawat (James)"
                             className="rounded-full shadow-2xl w-64 h-64 object-cover hover:scale-110 transition-transform duration-300"

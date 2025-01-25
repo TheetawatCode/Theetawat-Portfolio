@@ -1,4 +1,5 @@
 // data/projectsData.ts
+
 export interface Project {
   id: number;
   title: string;
@@ -16,7 +17,7 @@ export const projectsData: Project[] = [
     description:
       "A personal portfolio website built with React, TypeScript, and TailwindCSS.",
     image:
-      "/src/assets/images/projects/project1.jpg",
+      "/images/projects/project1.jpg",
     technologies: ["React", "TypeScript", "JavaScript", "TailwindCSS"],
     githubLink: "https://github.com/TheetawatCode/Theetawat-Portfolio",
     liveDemo: "https://theetawat-portfolio.vercel.app/",
@@ -26,7 +27,7 @@ export const projectsData: Project[] = [
     title: "E-commerce Platform",
     description:
       "A fully functional e-commerce platform with user authentication and payment integration.",
-    image: "/src/assets/images/projects/project2.jpg",
+    image: "/images/projects/project2.jpg",
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
     githubLink: "https://github.com/yourusername/ecommerce",
     liveDemo: "/",
@@ -36,7 +37,7 @@ export const projectsData: Project[] = [
     title: "Task Management App",
     description:
       "A task management application with drag-and-drop functionality and real-time updates.",
-    image: "/src/assets/images/projects/project3.jpg",
+    image: "/images/projects/project3.jpg",
     technologies: ["React", "Firebase", "TailwindCSS"],
     githubLink: "https://github.com/yourusername/taskmanager",
     liveDemo: "/",

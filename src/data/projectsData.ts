@@ -17,9 +17,9 @@ export const projectsData: Project[] = [
       "A personal portfolio website built with React, TypeScript, and TailwindCSS.",
     image:
       "/src/assets/images/projects/project1.jpg",
-    technologies: ["React", "TypeScript", "TailwindCSS"],
-    githubLink: "https://github.com/yourusername/portfolio",
-    liveDemo: "/",
+    technologies: ["React", "TypeScript", "JavaScript", "TailwindCSS"],
+    githubLink: "https://github.com/TheetawatCode/Theetawat-Portfolio",
+    liveDemo: "https://theetawat-portfolio.vercel.app/",
   },
   {
     id: 2,

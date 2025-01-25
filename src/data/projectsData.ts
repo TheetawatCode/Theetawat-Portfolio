@@ -22,24 +22,26 @@ export const projectsData: Project[] = [
     githubLink: "https://github.com/TheetawatCode/Theetawat-Portfolio",
     liveDemo: "https://theetawat-portfolio.vercel.app/",
   },
-  {
-    id: 2,
-    title: "E-commerce Platform",
-    description:
-      "A fully functional e-commerce platform with user authentication and payment integration.",
-    image: "/images/projects/project2.jpg",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubLink: "https://github.com/yourusername/ecommerce",
-    liveDemo: "/",
-  },
-  {
-    id: 3,
-    title: "Task Management App",
-    description:
-      "A task management application with drag-and-drop functionality and real-time updates.",
-    image: "/images/projects/project3.jpg",
-    technologies: ["React", "Firebase", "TailwindCSS"],
-    githubLink: "https://github.com/yourusername/taskmanager",
-    liveDemo: "/",
-  },
+  // {
+  //   id: 2,
+  //   title: "E-commerce Platform",
+  //   description:
+  //     "A fully functional e-commerce platform with user authentication and payment integration.",
+  //   image: "/images/projects/project2.jpg",
+  //   technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+  //   githubLink: "https://github.com/yourusername/ecommerce",
+  //   liveDemo: "/",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Task Management App",
+  //   description:
+  //     "A task management application with drag-and-drop functionality and real-time updates.",
+  //   image: "/images/projects/project3.jpg",
+  //   technologies: ["React", "Firebase", "TailwindCSS"],
+  //   githubLink: "https://github.com/yourusername/taskmanager",
+  //   liveDemo: "/",
+  // },
+
+  // Add more projects here
 ];

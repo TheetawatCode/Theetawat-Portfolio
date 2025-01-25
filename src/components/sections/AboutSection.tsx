@@ -21,12 +21,15 @@ const AboutSection = () => {
                             <a href="mailto:KpE1t@example.com" className="text-blue-900 hover:underline">theetawat.work@gmail.com</a>
                         </p>
                     </div>
-                    <div className="flex justify-center items-center order-1" data-aos="flip-right" data-aos-duration="1000">
+                    <div className="flex justify-center items-center order-1"
+                        data-aos="flip-right"
+                        data-aos-duration="1000"
+                    >
                         <img
                             src="/images/profile.PNG"
                             alt="Profile"
                             title="Theetawat Premsawat (James)"
-                            className="rounded-full shadow-2xl w-64 h-64 object-cover hover:scale-110 transition-transform duration-300"
+                            className="my-10 rounded-full shadow-2xl w-64 h-64 object-cover hover:scale-110 transition-transform duration-300"
                         />
                     </div>
                 </div>

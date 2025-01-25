@@ -3,7 +3,7 @@ const AboutSection = () => {
     return (
         <section id="about" className="py-16 bg-gray-100">
             <div className="max-w-5xl mx-auto px-4">
-                <h2 className="text-3xl font-bold text-blue-900 mb-14">About Me</h2>
+                <h2 className="text-3xl font-bold text-blue-900 mb-14">./ About Me</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                     <div className="order-2 text-base text-gray-700" data-aos="fade-up" data-aos-duration="3000">
                         <p className="mb-6">

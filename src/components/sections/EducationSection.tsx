@@ -15,7 +15,7 @@ const EducationSection = () => {
     return (
         <section id="experiences" className="py-20 bg-gray-100">
             <div className="max-w-5xl mx-auto px-4">
-                <h2 className="text-3xl font-bold text-blue-900">Education</h2>
+                <h2 className="text-3xl font-bold text-blue-900">./ Education</h2>
                 <div className="mt-8 space-y-8">
                     {education.map((exp, index) => (
                         <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"

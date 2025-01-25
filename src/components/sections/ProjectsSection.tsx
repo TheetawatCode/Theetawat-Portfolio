@@ -1,8 +1,4 @@
 // components/Projects.tsx
-import project1Image from './assets/images/projects/project1.jpg';
-import project2Image from './assets/images/projects/project2.jpg';
-import project3Image from './assets/images/projects/project3.jpg';
-
 import { projectsData } from '../../data/projectsData';
 
 const Projects = () => {

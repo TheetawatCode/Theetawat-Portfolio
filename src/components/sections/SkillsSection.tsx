@@ -13,7 +13,7 @@ const SkillsSection = () => {
                     {skills.map((skill, index) => (
                         <div key={index} className="bg-white text-sm font-medium px-4 py-2 rounded-full text-blue-900 border border-blue-900 hover:bg-blue-700 hover:text-white transition-colors duration-500 hover:shadow-lg"
                             data-aos="fade-right"
-                            data-aos-duration="1500"
+                            data-aos-duration="3000"
                         >
                             {skill}
                         </div>

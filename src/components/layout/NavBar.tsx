@@ -127,7 +127,7 @@ const NavBar: React.FC = () => {
                       </div>
                     </div>
                     <nav>
-                      <ul className="space-y-8 mt-10">
+                      <ul className="space-y-8 mt-10 mb-8">
                         <li>
                           <a
                             href="#about"

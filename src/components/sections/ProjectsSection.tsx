@@ -15,17 +15,18 @@ const Projects = () => {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-48 object-cover rounded-t-lg"
+                                className="w-full h-48 object-cover rounded-t-lg pointer-events-none select-none draggable-false"
+                                onContextMenu={(e) => e.preventDefault()}
                             />
                             <h3 className="text-xl font-bold mt-4">{project.title}</h3>
                             <p className="text-gray-700 mt-2">{project.description}</p>
                             {/* แสดง technologies เป็น Bullets */}
-                            <ul className="mt-2 text-gray-700 list-disc list-inside">
+                            <ul className="mt-2 grid grid-cols-2 text-gray-700 list-disc list-inside">
                                 {project.technologies.map((tech, techIndex) => (
                                     <li key={techIndex}>{tech}</li>
                                 ))}
                             </ul>
-                            <div className="mt-6 flex justify-center ">
+                            <div className="mt-6 flex justify-center">
                                 <a
                                     href={project.githubLink}
                                     title='GitHub'
@@ -40,8 +41,7 @@ const Projects = () => {
                                     title='Live Demo'
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="ml-4 bg-white font-semibold px-4 py-2 rounded-full text-blue-900 border border-blue-900 hover:bg-blue-900 hover:text-white transition-colors duration-400 pointer-events-none select-none draggable-false"
-                                    onContextMenu={(e) => e.preventDefault()}
+                                    className="ml-4 bg-white font-semibold px-4 py-2 rounded-full text-blue-900 border border-blue-900 hover:bg-blue-900 hover:text-white transition-colors duration-400"
                                 >
                                     Live Demo
                                 </a>

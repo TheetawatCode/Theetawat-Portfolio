@@ -3,7 +3,7 @@ const AboutSection = () => {
     return (
         <section id="about" className="py-16 bg-gray-100">
             <div className="max-w-5xl mx-auto px-4">
-                <h2 className="text-3xl font-bold text-blue-900 mb-14">./ About Me</h2>
+                <h2 className="text-3xl font-bold text-blue-900 mb-14">./&nbsp;  About Me</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                     <div className="order-2 text-base text-gray-700" data-aos="fade-up" data-aos-duration="3000">
                         <p className="mb-6">
@@ -29,7 +29,8 @@ const AboutSection = () => {
                             src="/images/profile.PNG"
                             alt="Profile"
                             title="Theetawat Premsawat (James)"
-                            className="my-10 rounded-full shadow-2xl w-64 h-64 object-cover hover:scale-110 transition-transform duration-300"
+                            className="my-10 rounded-full shadow-2xl w-64 h-64 object-cover hover:scale-110 transition-transform duration-300 pointer-events-none select-none draggable-false"
+                            onContextMenu={(e) => e.preventDefault()}
                         />
                     </div>
                 </div>

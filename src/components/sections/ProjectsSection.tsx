@@ -5,7 +5,7 @@ const Projects = () => {
     return (
         <section id="projects" className="py-16 bg-gray-900">
             <div className="max-w-6xl mx-auto px-4">
-                <h2 className="text-3xl font-bold text-white mb-8">./ Projects</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">./&nbsp; Projects</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projectsData.map((project) => (
                         <div key={project.id} className="bg-white p-6 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-500"
@@ -40,7 +40,8 @@ const Projects = () => {
                                     title='Live Demo'
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="ml-4 bg-white font-semibold px-4 py-2 rounded-full text-blue-900 border border-blue-900 hover:bg-blue-900 hover:text-white transition-colors duration-400"
+                                    className="ml-4 bg-white font-semibold px-4 py-2 rounded-full text-blue-900 border border-blue-900 hover:bg-blue-900 hover:text-white transition-colors duration-400 pointer-events-none select-none draggable-false"
+                                    onContextMenu={(e) => e.preventDefault()}
                                 >
                                     Live Demo
                                 </a>

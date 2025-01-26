@@ -50,9 +50,10 @@ const HeroSection: React.FC = () => {
                     <path d="M50 0H100L50 100H0L50 0Z" />
                 </svg>
                 <img
-                    className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+                    className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full pointer-events-none select-none draggable-false"
                     src="/images/developer.jpg"
-                    alt=""
+                    alt="Developer"
+                    onContextMenu={(e) => e.preventDefault()}
                 />
             </div>
             <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
@@ -91,15 +92,6 @@ const HeroSection: React.FC = () => {
                         data-aos="fade-up"
                         data-aos-duration="3000">
                         <a
-                            href="/pdf/Theetawat_Resume.pdf"
-                            title="Download Resume"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-white text-gray-800 border border-gray-100 hover:bg-gray-100  hover:border-gray-100 rounded-full shadow-md hover:shadow-lg transition-colors duration-400"
-                        >
-                            Resume
-                        </a>
-                        <a
                             href="https://www.linkedin.com/in/theetawat-premsawat/"
                             title="LinkedIn"
                             target="_blank"
@@ -107,6 +99,15 @@ const HeroSection: React.FC = () => {
                             className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-white text-gray-800 border border-gray-100 hover:bg-blue-600 hover:text-white hover:border-blue-500 rounded-full shadow-md hover:shadow-lg transition-colors duration-400"
                         >
                             LinkedIn
+                        </a>
+                        <a
+                            href="/pdf/Theetawat_Resume.pdf"
+                            title="Download Resume"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-gray-100 text-gray-800 border border-gray-100 hover:bg-white  hover:border-gray-100 rounded-full shadow-md hover:shadow-lg transition-colors duration-400"
+                        >
+                            Resume
                         </a>
                         <a
                             href="https://github.com/TheetawatCode"

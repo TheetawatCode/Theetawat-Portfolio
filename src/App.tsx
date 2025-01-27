@@ -4,13 +4,11 @@ import NavBar from "./components/layout/NavBar";
 import Footer from "./components/layout/Footer";
 
 import Home from "./pages/Home";
-import Blog from "./pages/Blog";
 import NotFoundPage from './pages/NotFoundPage';
 
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
-
 
 const App: React.FC = () => {
 
@@ -27,11 +25,10 @@ const App: React.FC = () => {
       <div>
         <Routes>
           <Route path="/" element={<Home />} /> {/* หน้าแรก */}
-          <Route path="/blog" element={<Blog />} /> 
           <Route path="*" element={<NotFoundPage />} /> {/* 404 - Page Not Found */}
         </Routes>
       </div>
-      <Footer /> 
+      <Footer />
     </Router>
   );
 };

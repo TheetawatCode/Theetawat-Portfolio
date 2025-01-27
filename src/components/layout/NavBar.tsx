@@ -65,7 +65,7 @@ const NavBar: React.FC = () => {
                 title="Download Resume"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center h-12 px-6 text-md font-medium tracking-wide bg-blue-950 text-cyan-400 border border-cyan-400 hover:bg-white hover:text-blue-950 hover:border-blue-950 rounded-lg shadow-md hover:shadow-lg transition-colors duration-500"
+                className="inline-flex items-center justify-center h-12 px-6 text-md font-medium tracking-wide bg-blue-950 text-cyan-400 border border-cyan-400 hover:bg-white hover:text-blue-950 hover:border-blue-950 rounded-lg shadow-md hover:shadow-lg transition-colors duration-1500"
               >
                 Resume
               </a>

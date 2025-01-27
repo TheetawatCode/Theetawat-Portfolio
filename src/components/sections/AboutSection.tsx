@@ -20,6 +20,18 @@ const AboutSection = () => {
                             if you have any questions or would like to work together, feel free to reach out to me at {' '}
                             <a href="mailto:KpE1t@example.com" className="text-blue-900 hover:underline">theetawat.work@gmail.com</a>
                         </p>
+                        <div className="flex items-center justify-center space-x-4 mt-8">
+                            <a
+                                href="/pdf/Theetawat_Resume.pdf"
+                                title="Download Resume"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex px-6 py-2 text-sm font-medium bg-white text-blue-900 border border-gray-100 hover:bg-blue-900 hover:border-blue-900 hover:text-white rounded-full shadow-md hover:shadow-lg transition-colors duration-500"
+                            >
+                                Resume
+                            </a>
+                        </div>
+
                     </div>
                     <div className="flex justify-center items-center order-1"
                         data-aos="flip-right"

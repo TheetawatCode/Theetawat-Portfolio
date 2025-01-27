@@ -96,11 +96,11 @@ const HeroSection: React.FC = () => {
                             title="LinkedIn"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-white text-gray-800 border border-gray-100 hover:bg-blue-600 hover:text-white hover:border-blue-500 rounded-full shadow-md hover:shadow-lg transition-colors duration-400"
+                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-white text-gray-800 border border-gray-100 hover:bg-blue-600 hover:text-white hover:border-blue-500 rounded-full shadow-md hover:shadow-lg transition-colors duration-500"
                         >
                             LinkedIn
                         </a>
-                        <a
+                        {/* <a
                             href="/pdf/Theetawat_Resume.pdf"
                             title="Download Resume"
                             target="_blank"
@@ -108,13 +108,13 @@ const HeroSection: React.FC = () => {
                             className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-gray-100 text-gray-800 border border-gray-100 hover:bg-white  hover:border-gray-100 rounded-full shadow-md hover:shadow-lg transition-colors duration-400"
                         >
                             Resume
-                        </a>
+                        </a> */}
                         <a
                             href="https://github.com/TheetawatCode"
                             title="GitHub"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-gray-950 text-white border border-gray-950 hover:bg-gray-700  hover:border-gray-700 rounded-full shadow-md hover:shadow-lg transition-colors duration-400"
+                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-gray-950 text-white border border-gray-950 hover:bg-gray-700  hover:border-gray-700 rounded-full shadow-md hover:shadow-lg transition-colors duration-500"
                         >
                             GitHub
                         </a>

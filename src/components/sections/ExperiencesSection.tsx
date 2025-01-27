@@ -11,7 +11,7 @@ const ExperiencesSection = () => {
                             data-aos="fade-up"
                             data-aos-duration="2000">
                             <h3 className="text-xl font-semibold text-blue-900">{exp.title}</h3>
-                            <p className="text-gray-600 font-medium">{exp.company} | {exp.duration}</p>
+                            <p className="text-gray-600 font-medium">{exp.company} &nbsp;|&nbsp; {exp.duration}</p>
                             {/* แสดง description เป็น Bullets */}
                             <ul className="mt-2 text-gray-700 list-disc list-inside">
                                 {exp.description.map((desc, descIndex) => (

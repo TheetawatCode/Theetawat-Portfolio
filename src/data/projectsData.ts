@@ -15,7 +15,7 @@ export const projectsData: Project[] = [
     id: 1,
     title: "Portfolio Website",
     description:
-      "A personal portfolio website built with React, TypeScript, JavaScript and TailwindCSS.",
+      "A personal portfolio website built with React, TypeScript, JavaScript and TailwindCSS v4.0",
     image:
       "/images/projects/project1.jpg",
     technologies: ["React", "TypeScript", "JavaScript", "TailwindCSS"],

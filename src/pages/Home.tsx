@@ -9,8 +9,7 @@ import EducationSection from "../components/sections/EducationSection";
 // import CertificationsSection from "../components/sections/CertificationsSection";
 // import BlogSection from "../components/sections/BlogSection";
 // import ContactSection  from "../components/sections/ContactSection";
-
-// import { TestimonialsSection } from "../components/sections/TestimonialsSection";
+// import TestimonialsSection from "../components/sections/TestimonialsSection";
 
 
 
@@ -26,7 +25,6 @@ const Home: React.FC = () => {
       {/* <CertificationsSection /> */}
       {/* <BlogSection /> */}
       {/* <ContactSection /> */}
-
       {/* <TestimonialsSection /> */}
     </div>
   );

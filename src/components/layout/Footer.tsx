@@ -13,19 +13,16 @@ const Footer = () => {
           <a href="#about"
             className="hover:text-gray-300"
             title="About"
-            target="_blank"
             rel="noopener noreferrer"
           >./&nbsp; About</a>
           <a href="#experiences"
             className="hover:text-gray-300"
             title="Experiences"
-            target="_blank"
             rel="noopener noreferrer"
           >./&nbsp; Experiences</a>
           <a href="#projects"
             className="hover:text-gray-300"
             title="Projects"
-            target="_blank"
             rel="noopener noreferrer"
           >./&nbsp; Projects</a>
         </div>

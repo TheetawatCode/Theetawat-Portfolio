@@ -19,7 +19,7 @@ const Projects = () => {
                                 onContextMenu={(e) => e.preventDefault()}
                             />
                             <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
-                            <p className="mt-2 font-semibold text-gray-600">{project.status}</p>
+                            <p className="mt-2 text-sm font-semibold text-yellow-700">{project.status}</p>
                             <p className="mt-2 text-gray-700">{project.description}</p>
                             {/* แสดง technologies เป็น Bullets */}
                             <ul className="grid grid-cols-2 mt-2 text-gray-700 list-disc list-inside">

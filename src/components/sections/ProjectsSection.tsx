@@ -4,35 +4,36 @@ import { projectsData } from '../../data/projectsData';
 const Projects = () => {
     return (
         <section id="projects" className="py-16 bg-gray-900">
-            <div className="max-w-6xl mx-auto px-4">
-                <h2 className="text-3xl font-bold text-white mb-8">./&nbsp; Projects</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="max-w-6xl px-4 mx-auto">
+                <h2 className="mb-8 text-3xl font-bold text-white">./&nbsp; Projects</h2>
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                     {projectsData.map((project) => (
-                        <div key={project.id} className="bg-white p-6 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-500"
+                        <div key={project.id} className="p-6 transition-transform duration-500 bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-xl"
                             data-aos="fade-left"
                             data-aos-duration="2000"
                         >
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-48 object-cover rounded-t-lg pointer-events-none select-none draggable-false"
+                                className="object-cover w-full h-48 rounded-t-lg pointer-events-none select-none draggable-false"
                                 onContextMenu={(e) => e.preventDefault()}
                             />
-                            <h3 className="text-xl font-bold mt-4">{project.title}</h3>
-                            <p className="text-gray-700 mt-2">{project.description}</p>
+                            <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
+                            <p className="mt-2 font-semibold text-gray-600">{project.status}</p>
+                            <p className="mt-2 text-gray-700">{project.description}</p>
                             {/* แสดง technologies เป็น Bullets */}
-                            <ul className="mt-2 grid grid-cols-2 text-gray-700 list-disc list-inside">
+                            <ul className="grid grid-cols-2 mt-2 text-gray-700 list-disc list-inside">
                                 {project.technologies.map((tech, techIndex) => (
                                     <li key={techIndex}>{tech}</li>
                                 ))}
                             </ul>
-                            <div className="mt-6 flex justify-center">
+                            <div className="flex justify-center mt-6">
                                 <a
                                     href={project.githubLink}
                                     title='GitHub'
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="font-semibold px-4 py-2 rounded-full text-white border bg-gray-950 border-gray-950 hover:bg-gray-700 hover:border-gray-700 hover:text-white transition-colors duration-400"
+                                    className="px-4 py-2 font-semibold text-white transition-colors border rounded-full bg-gray-950 border-gray-950 hover:bg-gray-700 hover:border-gray-700 hover:text-white duration-400"
                                 >
                                     GitHub
                                 </a>
@@ -41,7 +42,7 @@ const Projects = () => {
                                     title='Live Demo'
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="ml-4 bg-white font-semibold px-4 py-2 rounded-full text-blue-900 border border-blue-900 hover:bg-blue-900 hover:text-white transition-colors duration-400"
+                                    className="px-4 py-2 ml-4 font-semibold text-blue-900 transition-colors bg-white border border-blue-900 rounded-full hover:bg-blue-900 hover:text-white duration-400"
                                 >
                                     Live Demo
                                 </a>

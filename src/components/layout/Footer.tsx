@@ -1,7 +1,7 @@
 // components/Footer.tsx
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 text-white py-8">
+    <footer className="py-8 text-white bg-blue-950">
       <div className="container mx-auto text-center">
         <p>&copy; {new Date().getFullYear()}&nbsp;
           <a href="#"

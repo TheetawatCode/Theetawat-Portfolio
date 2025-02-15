@@ -5,7 +5,7 @@ const NavBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="bg-blue-950 shadow-lg">
+    <div className="shadow-lg bg-blue-950">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex justify-between">
           <a
@@ -65,7 +65,7 @@ const NavBar: React.FC = () => {
                 title="Download Resume"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center h-12 px-6 text-md font-medium tracking-wide bg-blue-950 text-cyan-400 border border-cyan-400 hover:bg-white hover:text-blue-950 hover:border-blue-950 rounded-lg shadow-md hover:shadow-lg transition-colors duration-1500"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide transition-colors border rounded-lg shadow-md text-md bg-blue-950 text-cyan-400 border-cyan-400 hover:bg-white hover:text-blue-950 hover:border-blue-950 hover:shadow-lg duration-1500"
               >
                 Resume
               </a>
@@ -75,7 +75,7 @@ const NavBar: React.FC = () => {
             <button
               aria-label="Open Menu"
               title="Open Menu"
-              className="p-2 -mr-1 transition duration-200 rounded text-white hover:bg-gray-200 hover:text-blue-950 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+              className="p-2 -mr-1 text-white transition duration-200 rounded hover:bg-gray-200 hover:text-blue-950 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
               onClick={() => setIsMenuOpen(true)}
             >
               <svg className="w-5" viewBox="0 0 24 24">
@@ -127,7 +127,7 @@ const NavBar: React.FC = () => {
                       </div>
                     </div>
                     <nav>
-                      <ul className="space-y-8 mt-10 mb-8">
+                      <ul className="mt-10 mb-8 space-y-8">
                         <li>
                           <a
                             href="#about"

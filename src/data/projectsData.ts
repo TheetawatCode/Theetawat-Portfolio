@@ -3,6 +3,7 @@
 export interface Project {
   id: number;
   title: string;
+  status?: string;
   description: string;
   image: string;
   technologies: string[];
@@ -14,13 +15,69 @@ export const projectsData: Project[] = [
   {
     id: 1,
     title: "Portfolio Website",
+    status: "Active",
     description:
       "A personal portfolio website built with React, TypeScript, JavaScript and TailwindCSS v4.0",
     image:
-      "/images/projects/project1.jpg",
+      "https://images.unsplash.com/photo-1629904853716-f0bc54eea481?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["React", "TypeScript", "JavaScript", "TailwindCSS"],
     githubLink: "https://github.com/TheetawatCode/Theetawat-Portfolio",
     liveDemo: "https://theetawat-portfolio.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Landing Page",
+    status: "In Progress",
+    description:
+      "A landing page built with Next.js, TypeScript, JavaScript and TailwindCSS v4.0",
+    image: "https://images.unsplash.com/photo-1509725100077-6109f44ea148?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
+    githubLink: "/",
+    liveDemo: "/",
+  },
+  {
+    id: 3,
+    title: "Blog",
+    status: "Coming Soon",
+    description:
+      "A personal blog website built with Next.js, TypeScript, JavaScript and TailwindCSS v4.0",
+    image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
+    githubLink: "/",
+    liveDemo: "/",
+  },
+  {
+    id: 4,
+    title: "Tour Reservation Website",
+    status: "Coming Soon",
+    description:
+      "A tour reservation website built with Next.js, TypeScript, JavaScript and TailwindCSS v4.0",
+    image: "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
+    githubLink: "/",
+    liveDemo: "/",
+  },
+  {
+    id: 5,
+    title: "E-Learning Platform",
+    status: "Coming Soon",
+    description:
+      "An e-learning platform built with Next.js, TypeScript, JavaScript and TailwindCSS v4.0",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
+    githubLink: "/",
+    liveDemo: "/",
+  },
+  {
+    id: 6,
+    title: "E-Commerce Platform",
+    status: "Coming Soon",
+    description:
+      "An e-commerce platform built with Next.js, TypeScript, JavaScript and TailwindCSS v4.0",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
+    githubLink: "/",
+    liveDemo: "/",
   },
   // {
   //   id: 2,

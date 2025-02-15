@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
                     <path d="M50 0H100L50 100H0L50 0Z" />
                 </svg>
                 <img
-                    className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full pointer-events-none select-none draggable-false"
+                    className="object-cover w-full h-56 rounded shadow-lg pointer-events-none select-none lg:rounded-none lg:shadow-none md:h-96 lg:h-full draggable-false"
                     src="/images/developer.jpg"
                     alt="Developer"
                     onContextMenu={(e) => e.preventDefault()}
@@ -58,12 +58,12 @@ const HeroSection: React.FC = () => {
             </div>
             <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
                 <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-                    <p className="mb-3 inline-block px-3 py-px text-sm font-semibold tracking-wider text-blue-400 uppercase bg-blue-50 rounded-full"
+                    <p className="inline-block px-3 py-px mb-3 text-sm font-semibold tracking-wider text-blue-400 uppercase rounded-full bg-blue-50"
                         data-aos="fade-left"
                         data-aos-duration="3000">
                         Hello, I'm
                     </p>
-                    <h2 className="mb-5 font-sans text-3xl font-semibold tracking-tight text-blue-950 uppercase xs:text-4xl sm:text-4xl sm:leading-none md:text-6xl lg:mb-6"
+                    <h2 className="mb-5 font-sans text-3xl font-semibold tracking-tight uppercase text-blue-950 xs:text-4xl sm:text-4xl sm:leading-none md:text-6xl lg:mb-6"
                         data-aos="fade-left"
                         data-aos-duration="2000"
                     >
@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
                         <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
                             Currently, I'm seeking opportunities to collaborate with innovative teams and contribute to impactful projects.
                         </p>
-                        <p className="pr-5 mb-8 text-base font-semibold text-gray-700 md:text-lg transition-colors duration-300 hover:text-gray-200">
+                        <p className="pr-5 mb-8 text-base font-semibold text-gray-700 transition-colors duration-300 md:text-lg hover:text-gray-200">
                             Let’s collaborate and create solutions that matter!
                         </p>
                     </div>
@@ -96,7 +96,7 @@ const HeroSection: React.FC = () => {
                             title="LinkedIn"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-white text-gray-800 border border-gray-100 hover:bg-blue-600 hover:text-white hover:border-blue-500 rounded-full shadow-md hover:shadow-lg transition-colors duration-500"
+                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide text-gray-800 transition-colors duration-500 bg-white border border-gray-100 rounded-full shadow-md hover:bg-blue-600 hover:text-white hover:border-blue-500 hover:shadow-lg"
                         >
                             LinkedIn
                         </a>
@@ -105,7 +105,7 @@ const HeroSection: React.FC = () => {
                             title="Download Resume"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-gray-100 text-gray-800 border border-gray-100 hover:bg-white  hover:border-gray-100 rounded-full shadow-md hover:shadow-lg transition-colors duration-400"
+                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide text-gray-800 transition-colors bg-gray-100 border border-gray-100 rounded-full shadow-md hover:bg-white hover:border-gray-100 hover:shadow-lg duration-400"
                         >
                             Resume
                         </a> */}
@@ -114,7 +114,7 @@ const HeroSection: React.FC = () => {
                             title="GitHub"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide bg-gray-950 text-white border border-gray-950 hover:bg-gray-700  hover:border-gray-700 rounded-full shadow-md hover:shadow-lg transition-colors duration-500"
+                            className="inline-flex items-center justify-center h-12 px-6 mr-6 text-lg font-medium tracking-wide text-white transition-colors duration-500 border rounded-full shadow-md bg-gray-950 border-gray-950 hover:bg-gray-700 hover:border-gray-700 hover:shadow-lg"
                         >
                             GitHub
                         </a>

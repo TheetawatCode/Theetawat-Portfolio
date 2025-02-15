@@ -29,9 +29,9 @@ export const projectsData: Project[] = [
     title: "Landing Page",
     status: "Active",
     description:
-      "A landing page built with Next.js, TypeScript, JavaScript and TailwindCSS v4.0",
+      "A landing page built with Next.js, TypeScript, JavaScript and TailwindCSS",
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
+    technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS", "Preline UI"],
     githubLink: "https://github.com/TheetawatCode/My-Project/tree/main/2-LandingPage",
     liveDemo: "https://theetawat-landing-page.vercel.app/",
   },

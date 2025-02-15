@@ -30,18 +30,19 @@ export const projectsData: Project[] = [
     status: "In Progress",
     description:
       "A landing page built with Next.js, TypeScript, JavaScript and TailwindCSS v4.0",
-    image: "https://images.unsplash.com/photo-1509725100077-6109f44ea148?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
     githubLink: "/",
     liveDemo: "/",
   },
+  // https://images.unsplash.com/photo-1509725100077-6109f44ea148?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   {
     id: 3,
     title: "Blog",
     status: "Coming Soon",
     description:
       "A personal blog website built with Next.js, TypeScript, JavaScript and TailwindCSS v4.0",
-    image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1581357825453-2ca9d6fbaa3f?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
     githubLink: "/",
     liveDemo: "/",

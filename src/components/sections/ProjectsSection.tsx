@@ -15,11 +15,11 @@ const Projects = () => {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="object-cover w-full h-48 rounded-t-lg pointer-events-none select-none draggable-false"
+                                className="object-cover w-full h-48 transition-opacity duration-500 rounded-t-lg select-none draggable-false hover:opacity-80"
                                 onContextMenu={(e) => e.preventDefault()}
                             />
                             <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
-                            <p className="mt-2 text-sm font-semibold text-yellow-700">{project.status}</p>
+                            <p className="mt-2 text-sm font-semibold text-yellow-700 transition-colors duration-500 hover:text-gray-600">{project.status}</p>
                             <p className="mt-2 text-gray-700">{project.description}</p>
                             {/* แสดง technologies เป็น Bullets */}
                             <ul className="grid grid-cols-2 mt-2 text-gray-700 list-disc list-inside">

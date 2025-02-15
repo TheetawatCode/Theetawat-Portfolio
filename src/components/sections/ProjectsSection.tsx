@@ -9,8 +9,9 @@ const Projects = () => {
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                     {projectsData.map((project) => (
                         <div key={project.id} className="p-6 transition-transform duration-500 bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-xl"
-                            data-aos="fade-left"
-                            data-aos-duration="2000"
+                            data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500"
                         >
                             <img
                                 src={project.image}

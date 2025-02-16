@@ -35,6 +35,7 @@ const AboutSection = () => {
                     </div>
                     <div className="flex items-center justify-center order-1"
                         data-aos="flip-right"
+                        data-aos-easing="linear"
                         data-aos-duration="1000"
                     >
                         <img

@@ -8,13 +8,17 @@
 }
 
 .cursor.deleting {
-    background-color: red; /* เปลี่ยนสี Cursor เมื่ออยู่ในโหมดลบ */
+    background-color: red;
+    /* เปลี่ยนสี Cursor เมื่ออยู่ในโหมดลบ */
 }
 
 @keyframes blink {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }

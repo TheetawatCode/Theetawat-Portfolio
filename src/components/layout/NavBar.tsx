@@ -51,12 +51,12 @@ const NavBar: React.FC = () => {
             </li>
             {/* <li>
               <a
-                href="#content"
-                aria-label="Content"
-                title="Content"
+                href="#contact"
+                aria-label="Contact"
+                title="Contact"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-500 hover:text-gray-400"
               >
-                ./ Content
+                ./&nbsp; Contact
               </a>
             </li> */}
             <li>

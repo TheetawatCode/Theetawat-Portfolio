@@ -77,7 +77,7 @@ const HeroSection: React.FC = () => {
                         <span className="cursor">|</span> {/* เพิ่ม Cursor */}
                     </h2>
                     <div data-aos="fade-up"
-                        data-aos-duration="3000">
+                        data-aos-duration="1500">
                         <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
                             I'm a Frontend Developer who transitioned from an administrative career to follow my passion for coding.
                         </p>
@@ -90,7 +90,7 @@ const HeroSection: React.FC = () => {
                     </div>
                     <div className="flex items-center"
                         data-aos="fade-up"
-                        data-aos-duration="3000">
+                        data-aos-duration="1500">
                         <a
                             href="https://www.linkedin.com/in/theetawat-premsawat/"
                             title="LinkedIn"

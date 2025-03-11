@@ -39,12 +39,12 @@ export const projectsData: Project[] = [
   {
     id: 3,
     title: "Tour Reservation Website",
-    status: "In Progress..",
+    status: "Active",
     description:
       "A tour reservation website built with Next.js, TypeScript, JavaScript and TailwindCSS v4.0",
     image: "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["Next.js", "TypeScript", "JavaScript", "TailwindCSS"],
-    githubLink: "/",
+    githubLink: "https://github.com/TheetawatCode/My-Project/tree/main/4-TourReservation",
     liveDemo: "https://theetawat-tour-reservation.vercel.app/",
   },
   {

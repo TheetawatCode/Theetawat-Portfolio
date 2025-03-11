@@ -8,7 +8,8 @@ const Projects = () => {
                 <h2 className="mb-8 text-3xl font-bold text-white">./&nbsp; Projects</h2>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                     {projectsData.map((project) => (
-                        <div key={project.id} className="p-6 transition-transform duration-500 bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-xl"
+                        <div key={project.id}
+                            className="p-6 transition-transform duration-500 bg-white rounded-lg shadow-md hover:scale-105 hover:shadow-xl"
                             data-aos="fade-right"
                             // data-aos-easing="linear"
                             data-aos-duration="1000"
@@ -22,6 +23,7 @@ const Projects = () => {
                             <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
                             <p className="mt-2 text-sm font-semibold text-yellow-700 transition-colors duration-500 hover:text-gray-600">{project.status}</p>
                             <p className="mt-2 text-gray-700">{project.description}</p>
+                            
                             {/* แสดง technologies เป็น Bullets */}
                             <ul className="grid grid-cols-2 mt-2 text-gray-700 list-disc list-inside">
                                 {project.technologies.map((tech, techIndex) => (

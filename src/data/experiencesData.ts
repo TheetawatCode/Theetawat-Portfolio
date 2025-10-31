@@ -10,6 +10,18 @@ export const experiences = [
             "Integrated third-party APIs to extend the functionality of web applications and enhance user engagement.",
             "Acquired proficiency in building reusable and scalable components following modern development practices.",
         ]
+    },    
+    {
+        title: "Backend Development Bootcamp Participant",
+        company: "Borntodev Academy",
+        duration: "Jun 2024 - Sep 2024",
+        description: [
+            "Completed an intensive program focused on backend fundamentals, including Node.js, Express.js, and RESTful API development.",
+            "Built and deployed scalable backend applications integrating both SQL and NoSQL databases such as MySQL and MongoDB.",
+            "Gained hands-on experience in authentication, authorization, and secure data management using JSON Web Tokens (JWT).",
+            "Developed and tested APIs to ensure functionality, performance, and reliability across multiple endpoints.",
+            "Applied best practices in backend architecture, code organization, and version control using Git and GitHub.",
+        ]
     },
     {
         title: "Freelance Frontend Developer",

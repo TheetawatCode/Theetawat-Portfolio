@@ -2,7 +2,7 @@ import { skillsData } from '../../data/skillsData'; // นำเข้า skills
 
 const SkillsSection = () => {
     // ดึงข้อมูลแต่ละประเภทจาก skillsData
-    const { frontendDev, programmingLanguages, backendDev, database, versionControl, devOps, others } = skillsData[0];
+    const { frontendDev, uiFrameworks, programmingLanguages, backendDev, database, editors, versionControl, devOps, others } = skillsData[0];
 
     return (
         <section id="skills" className="py-20 bg-gray-900">
@@ -15,6 +15,25 @@ const SkillsSection = () => {
                         <h3 className="text-xl font-semibold text-gray-100">Frontend Development :</h3>
                         <div className="flex flex-wrap gap-4">
                             {frontendDev.map((skill, index) => (
+                                <div
+                                    key={index}
+                                    className="px-4 py-2 text-sm font-medium text-blue-900 transition-colors duration-500 bg-white border border-blue-900 rounded-full hover:bg-blue-700 hover:text-white hover:shadow-lg"
+                                    data-aos="fade-right"
+                                    data-aos-duration="3000"
+                                >
+                                    {skill}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* UI Frameworks */}
+                <div className="mt-4">
+                    <div className="flex flex-col gap-4 md:flex-row md:items-center">
+                        <h3 className="text-xl font-semibold text-gray-100">UI Frameworks :</h3>
+                        <div className="flex flex-wrap gap-4">
+                            {uiFrameworks.map((skill, index) => (
                                 <div
                                     key={index}
                                     className="px-4 py-2 text-sm font-medium text-blue-900 transition-colors duration-500 bg-white border border-blue-900 rounded-full hover:bg-blue-700 hover:text-white hover:shadow-lg"
@@ -72,6 +91,25 @@ const SkillsSection = () => {
                         <h3 className="text-xl font-semibold text-gray-100">Database :</h3>
                         <div className="flex flex-wrap gap-4">
                             {database.map((skill, index) => (
+                                <div
+                                    key={index}
+                                    className="px-4 py-2 text-sm font-medium text-blue-900 transition-colors duration-500 bg-white border border-blue-900 rounded-full hover:bg-blue-700 hover:text-white hover:shadow-lg"
+                                    data-aos="fade-right"
+                                    data-aos-duration="3000"
+                                >
+                                    {skill}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Editors */}
+                <div className="mt-4">
+                    <div className="flex flex-col gap-4 md:flex-row md:items-center">
+                        <h3 className="text-xl font-semibold text-gray-100">Editors :</h3>
+                        <div className="flex flex-wrap gap-4">
+                            {editors.map((skill, index) => (
                                 <div
                                     key={index}
                                     className="px-4 py-2 text-sm font-medium text-blue-900 transition-colors duration-500 bg-white border border-blue-900 rounded-full hover:bg-blue-700 hover:text-white hover:shadow-lg"

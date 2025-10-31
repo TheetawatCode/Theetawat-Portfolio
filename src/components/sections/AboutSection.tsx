@@ -7,14 +7,14 @@ const AboutSection = () => {
                 <div className="grid grid-cols-1 gap-8 p-8 transition-shadow bg-white rounded-lg shadow-md md:grid-cols-2 hover:shadow-xl">
                     <div className="order-2 text-base text-gray-700" data-aos="fade-up" data-aos-duration="3000">
                         <p className="mb-6">
-                            As a self-taught Frontend Developer, I combine my organizational skills from an administrative background with a passion for coding to create impactful digital experiences. After completing a 4-month Frontend Bootcamp, I've been actively building projects and refining my skills in modern tools like React, Next.js, TailwindCSS, and TypeScript.
+                            As a self-taught Full-stack Developer, I combine my organizational skills from an administrative background with a passion for coding to create impactful digital experiences. After completing a 4-month Full-stack Bootcamp, I've been actively building projects and refining my skills in modern tools like React, Next.js, TailwindCSS, and TypeScript.
                         </p>
                         <p className="mb-6">
                             I'm committed to continuous growth and staying up-to-date with the latest trends in Full-stack development.
                             I'm passionate about crafting projects that enhance user experience and drive business success.
                         </p>
                         <p className="mb-6">
-                            Currently, I'm seeking a Frontend Developer role where I can apply my technical skills, contribute to Open Source projects, and collaborate with a team of passionate developers.
+                            Currently, I'm seeking a Full-stack Developer role where I can apply my technical skills, contribute to Open Source projects, and collaborate with a team of passionate developers.
                         </p>
                         <p className="mb-6">
                             if you have any questions or would like to work together, feel free to reach out to me at {' '}

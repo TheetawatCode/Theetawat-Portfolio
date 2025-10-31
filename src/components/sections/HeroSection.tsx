@@ -79,7 +79,7 @@ const HeroSection: React.FC = () => {
                     <div data-aos="fade-up"
                         data-aos-duration="1500">
                         <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-                            I'm a Frontend Developer who transitioned from an administrative career to follow my passion for coding.
+                            I'm a Full-stack Developer who transitioned from an administrative career to follow my passion for coding.
                         </p>
                         <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
                             Currently, I'm seeking opportunities to collaborate with innovative teams and contribute to impactful projects.

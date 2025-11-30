@@ -31,7 +31,7 @@ const SkillsSection = () => {
                 {/* UI Frameworks */}
                 <div className="mt-4">
                     <div className="flex flex-col gap-4 md:flex-row md:items-center">
-                        <h3 className="text-xl font-semibold text-gray-100">UI Frameworks :</h3>
+                        <h3 className="text-xl font-semibold text-gray-100">UI Frameworks & Components :</h3>
                         <div className="flex flex-wrap gap-4">
                             {uiFrameworks.map((skill, index) => (
                                 <div

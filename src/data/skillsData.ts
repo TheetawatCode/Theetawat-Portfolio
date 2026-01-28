@@ -16,10 +16,17 @@ export const skillsData: skill[] = [
     frontendDev: [
       "React",
       "Next.js",
+      "React Native (Learning)",
       "Vue.js (Learning)",
       "Nuxt.js (Learning)",
     ],
-    uiFrameworks: ["TailwindCSS", "DaisyUI", "Ant Design", "shadcn/ui", "Aceternity UI"],
+    uiFrameworks: [
+      "TailwindCSS",
+      "DaisyUI",
+      "Ant Design",
+      "shadcn/ui",
+      "Aceternity UI",
+    ],
     programmingLanguages: ["JavaScript", "TypeScript", "Golang (Learning)"],
     backendDev: ["Node.js", "Express.js"],
     database: ["MongoDB", "MySQL", "PostgreSQL (Learning)"],

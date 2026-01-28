@@ -20,7 +20,7 @@ export const skillsData: skill[] = [
       "Nuxt.js (Learning)",
     ],
     uiFrameworks: ["TailwindCSS", "DaisyUI", "Ant Design", "shadcn/ui", "Aceternity UI"],
-    programmingLanguages: ["JavaScript", "TypeScript"],
+    programmingLanguages: ["JavaScript", "TypeScript", "Golang (Learning)"],
     backendDev: ["Node.js", "Express.js"],
     database: ["MongoDB", "MySQL", "PostgreSQL (Learning)"],
     editors: ["VSCode", "Cursor"],

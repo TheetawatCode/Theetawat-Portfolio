@@ -16,7 +16,7 @@ export const skillsData: skill[] = [
     frontendDev: [
       "React",
       "Next.js",
-      "React Native (Learning)",
+      "React Native",
       "Vue.js (Learning)",
       "Nuxt.js (Learning)",
     ],
@@ -30,7 +30,7 @@ export const skillsData: skill[] = [
     programmingLanguages: ["JavaScript", "TypeScript", "Golang (Learning)"],
     backendDev: ["Node.js", "Express.js"],
     database: ["MongoDB", "MySQL", "PostgreSQL (Learning)"],
-    editors: ["VSCode", "Cursor"],
+    editors: ["VSCode", "Cursor", "Google Antigravity"],
     versionControl: ["Git", "GitHub"],
     devOps: ["Docker", "OrbStack (Learning)", "Postman"],
     others: ["Figma", "Wordpress"],

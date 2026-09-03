@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Theetawat Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio for Theetawat Premsawat, rebuilt with Next.js App Router, TypeScript, Tailwind CSS v4, and pnpm.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+pnpm install
+pnpm dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Open <http://localhost:3000>.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Content updates
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Portfolio content is centralized in `src/data/portfolio.ts`:
+
+- Add or edit projects in `projects`.
+- Add or edit skill categories in `skillGroups`.
+- Add or edit roles in `experiences`.
+- Update profile links, biography, and education in their named exports.
+
+Sections are composed in `src/app/page.tsx`. Shared design tokens and responsive styles live in `src/app/globals.css`.
+
+## Commands
+
+- `pnpm dev` — local development
+- `pnpm lint` — code-quality checks
+- `pnpm build` — production build
+- `pnpm start` — run the production server
+
+## Deployment
+
+The project is ready for Vercel. Keep the framework preset as Next.js and use pnpm for dependency installation.

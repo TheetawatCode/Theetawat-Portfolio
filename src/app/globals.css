@@ -762,8 +762,12 @@ a {
 .other-projects {
   display: grid;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
+
+.project-groups { display: grid; gap: clamp(3rem, 7vw, 5rem); margin-top: clamp(3rem, 7vw, 5rem); }
+.project-groups > .roadmap-block { margin-top: 0; }
+.project-group-title { color: #0f172a; font-size: clamp(1.45rem, 3vw, 2rem); font-weight: 650; letter-spacing: -0.035em; }
 
 .project-card {
   overflow: hidden;

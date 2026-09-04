@@ -25,9 +25,44 @@ function ProjectLinks({ githubLink, liveDemo }: { githubLink?: string; liveDemo?
   );
 }
 
+function ProjectCard({ project }: { project: (typeof projects)[number] }) {
+  return (
+    <article className="project-card" key={project.id}>
+      {project.image ? (
+        <div className="project-card-image">
+          <Image
+            src={project.image}
+            alt={`${project.title} project preview`}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition duration-500 group-hover:scale-[1.03]"
+          />
+          <span className={`status status-${project.status.toLowerCase().replaceAll(" ", "-")}`}>
+            {project.status}
+          </span>
+        </div>
+      ) : null}
+      <div className="project-card-copy">
+        {!project.image ? (
+          <span className={`status status-${project.status.toLowerCase().replaceAll(" ", "-")}`}>
+            {project.status}
+          </span>
+        ) : null}
+        <h3>{project.title}</h3>
+        <p>{project.description}</p>
+        <ul className="tech-list">
+          {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
+        </ul>
+        <ProjectLinks githubLink={project.githubLink} liveDemo={project.liveDemo} />
+      </div>
+    </article>
+  );
+}
+
 export function ProjectsSection() {
   const featuredProjects = projects.filter((project) => project.featured);
-  const otherProjects = projects.filter((project) => !project.featured && project.status !== "Coming Soon");
+  const activeProjects = projects.filter((project) => !project.featured && project.status === "Active");
+  const inProgressProjects = projects.filter((project) => project.status === "In Progress");
   const roadmapProjects = projects.filter((project) => project.status === "Coming Soon");
 
   return (
@@ -78,55 +113,33 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <div className="other-projects">
-          {otherProjects.map((project) => (
-            <article className="project-card" key={project.id}>
-              {project.image ? (
-                <div className="project-card-image">
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} project preview`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                  />
-                  <span className={`status status-${project.status.toLowerCase().replaceAll(" ", "-")}`}>
-                    {project.status}
-                  </span>
-                </div>
-              ) : null}
-              <div className="project-card-copy">
-                {!project.image ? (
-                  <span className={`status status-${project.status.toLowerCase().replaceAll(" ", "-")}`}>
-                    {project.status} 
-                  </span>
-                ) : null}
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <ul className="tech-list">
-                  {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
-                </ul>
-                <ProjectLinks githubLink={project.githubLink} liveDemo={project.liveDemo} />
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="roadmap-block">
-          <div>
-            <p className="eyebrow">Currently exploring</p>
-            <h3>Ideas in the pipeline</h3>
+        <div className="project-groups">
+          <div className="project-group">
+            <h3 className="project-group-title">Active Projects</h3>
+            <div className="other-projects">{activeProjects.map((project) => <ProjectCard key={project.id} project={project} />)}</div>
           </div>
-          <div className="roadmap-list">
-            {roadmapProjects.map((project) => (
-              <article key={project.id}>
-                <span>{String(project.id).padStart(2, "0")}</span>
-                <div>
-                  <h4>{project.title}</h4>
-                  <p>{project.description}</p>
-                </div>
-              </article>
-            ))}
+
+          <div className="project-group">
+            <h3 className="project-group-title">In Progress</h3>
+            <div className="other-projects">{inProgressProjects.map((project) => <ProjectCard key={project.id} project={project} />)}</div>
+          </div>
+
+          <div className="roadmap-block">
+            <div className="project-group-heading">
+              <p className="eyebrow">Coming soon</p>
+              <h3>Ideas in the pipeline</h3>
+            </div>
+            <div className="roadmap-list">
+              {roadmapProjects.map((project) => (
+                <article key={project.id}>
+                  <span>{String(project.id).padStart(2, "0")}</span>
+                  <div>
+                    <h4>{project.title}</h4>
+                    <p>{project.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </div>

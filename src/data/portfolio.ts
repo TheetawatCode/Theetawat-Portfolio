@@ -38,7 +38,7 @@ export const navItems: NavItem[] = [
 
 export const profile = {
   name: "Theetawat Premsawat",
-  nickname: "James",
+  nickname: "Theetawat",
   role: "Full-stack Developer",
   email: "theetawat.work@gmail.com",
   linkedin: "https://www.linkedin.com/in/theetawat-premsawat/",

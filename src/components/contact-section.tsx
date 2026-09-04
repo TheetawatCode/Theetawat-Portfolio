@@ -8,7 +8,7 @@ export function ContactSection() {
       <div className="site-shell">
         <div className="contact-card">
           <div>
-            <p className="eyebrow eyebrow-invert">06 / Contact</p>
+            <p className="eyebrow eyebrow-invert">07 / Contact</p>
             <h2>Have a project or opportunity in mind?</h2>
             <p>I&apos;m open to collaborating with teams that care about thoughtful products and meaningful outcomes.</p>
           </div>

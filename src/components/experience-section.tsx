@@ -8,7 +8,7 @@ export function ExperienceSection() {
     <section className="section-space experience-section" id="experience">
       <div className="site-shell">
         <SectionHeading
-          eyebrow="03 / Experience"
+          eyebrow="04 / Experience"
           title="Experience shaped by learning, delivery, and adaptability."
           description="From business operations to hands-on software development, each role has strengthened how I communicate, solve problems, and build."
           invert

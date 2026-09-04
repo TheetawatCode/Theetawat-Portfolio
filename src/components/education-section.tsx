@@ -8,7 +8,7 @@ export function EducationSection() {
     <section className="section-space bg-soft" id="education">
       <div className="site-shell">
         <SectionHeading
-          eyebrow="05 / Education"
+          eyebrow="06 / Education"
           title="Where analytical thinking became part of how I work."
         />
         <article className="education-card">

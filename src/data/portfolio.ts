@@ -27,9 +27,20 @@ export type Project = {
   featured?: boolean;
 };
 
+export type Certificate = {
+  id: string;
+  title: string;
+  issuer: string;
+  issued: string;
+  credentialId?: string;
+  skills?: string[];
+  credentialUrl?: string;
+};
+
 export const navItems: NavItem[] = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Certificates", href: "#certificates" },
   { label: "Experience", href: "#experience" },
   { label: "About", href: "#about" },
   { label: "Education", href: "#education" },
@@ -71,6 +82,101 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Currently Learning",
     items: ["Vue.js", "Nuxt.js", "Golang", "PostgreSQL", "OrbStack"],
+  },
+];
+
+export const certificates: Certificate[] = [
+  {
+    id: "claude-code-in-action",
+    title: "Claude Code in Action",
+    issuer: "Anthropic",
+    issued: "Jun 2026",
+    credentialId: "aqxjntwg93t2",
+    skills: ["Claude Skills"],
+  },
+  {
+    id: "claude-101",
+    title: "Claude 101",
+    issuer: "Anthropic",
+    issued: "May 2026",
+    credentialId: "j92uvpe6gqnh",
+    skills: ["Claude Skills"],
+  },
+  {
+    id: "data-analyst-manifesto",
+    title: "Data Analyst Manifesto",
+    issuer: "DataRockie | The School of Generalist",
+    issued: "Dec 2024",
+    skills: ["Data Analysis"],
+    credentialUrl: "https://badgr.com/public/assertions/VfWMraH2R0m8zR4-9tpk-w",
+  },
+  {
+    id: "ai-for-all",
+    title: "AI for All: From Basics to GenAI Practice",
+    issuer: "NVIDIA",
+    issued: "Dec 2024",
+    skills: ["Artificial Intelligence"],
+  },
+  {
+    id: "chatgpt-for-developers",
+    title: "ChatGPT for Developers",
+    issuer: "BorntoDev",
+    issued: "Sep 2024",
+    skills: ["ChatGPT"],
+  },
+  {
+    id: "command-prompt-101",
+    title: "Command Prompt 101",
+    issuer: "BorntoDev",
+    issued: "Sep 2024",
+    skills: ["Command Prompt"],
+  },
+  {
+    id: "social-listening-data-analyst",
+    title: "Social Listening - Data Analyst Edition",
+    issuer: "DataRockie | The School of Generalist",
+    issued: "Aug 2024",
+    skills: ["Social Listening", "Looker Studio"],
+  },
+  {
+    id: "borntodev-participation",
+    title: "BorntoDev Participation",
+    issuer: "BorntoDev",
+    issued: "Jun 2024",
+  },
+  {
+    id: "accelerated-intro-to-cs",
+    title: "Accelerated Intro to CS Course",
+    issuer: "CodeAI",
+    issued: "May 2024",
+  },
+  {
+    id: "r-crash-course",
+    title: "R Crash Course",
+    issuer: "DataRockie | The School of Generalist",
+    issued: "Feb 2024",
+    skills: ["R"],
+  },
+  {
+    id: "sql-crash-course",
+    title: "SQL Crash Course",
+    issuer: "DataRockie | The School of Generalist",
+    issued: "Feb 2024",
+    skills: ["SQL"],
+  },
+  {
+    id: "google-sheets-crash-course",
+    title: "Google Sheets Crash Course",
+    issuer: "DataRockie | The School of Generalist",
+    issued: "Feb 2024",
+    skills: ["Google Sheets"],
+  },
+  {
+    id: "github-for-developer",
+    title: "GitHub for Developer",
+    issuer: "BorntoDev",
+    issued: "May 2024",
+    skills: ["GitHub"],
   },
 ];
 

@@ -9,7 +9,7 @@ export function AboutSection() {
     <section className="section-space bg-soft" id="about">
       <div className="site-shell">
         <SectionHeading
-          eyebrow="04 / About"
+          eyebrow="05 / About"
           title="A thoughtful builder with a business-aware foundation."
           description="My path into development brings together technical curiosity, organization, and a practical understanding of how people and businesses work."
         />

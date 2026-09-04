@@ -98,7 +98,7 @@ export function ProjectsSection() {
               <div className="project-card-copy">
                 {!project.image ? (
                   <span className={`status status-${project.status.toLowerCase().replaceAll(" ", "-")}`}>
-                    {project.status}
+                    {project.status} 
                   </span>
                 ) : null}
                 <h3>{project.title}</h3>

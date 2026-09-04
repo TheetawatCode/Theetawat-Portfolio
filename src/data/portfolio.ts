@@ -16,7 +16,7 @@ export type Experience = {
 };
 
 export type Project = {
-  id: number;
+  id: string;
   title: string;
   status: "Active" | "In Progress" | "Coming Soon";
   description: string;
@@ -144,7 +144,7 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
-    id: 1,
+    id: "portfolio",
     title: "Portfolio Website",
     status: "Active",
     description: "A personal portfolio rebuilt with Next.js, TypeScript, Tailwind CSS v4, and pnpm.",
@@ -155,7 +155,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 2,
+    id: "landing-page",
     title: "Landing Page",
     status: "Active",
     description: "A landing page built with Next.js, TypeScript, JavaScript and Tailwind CSS.",
@@ -166,18 +166,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 3,
-    title: "Portfolio Website",
-    status: "Active",
-    description: "A personal portfolio rebuilt with Next.js, TypeScript, Tailwind CSS v4, and pnpm.",
-    image: "/images/projects/portfolio-next.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "pnpm"],
-    githubLink: "https://github.com/TheetawatCode/Theetawat-Portfolio",
-    liveDemo: "https://theetawat-portfolio.vercel.app/",
-    featured: true,
-  },
-  {
-    id: 4,
+    id: "tour-reservation",
     title: "Tour Reservation Website",
     status: "In Progress",
     description: "A tour reservation website built with Next.js, TypeScript, JavaScript and Tailwind CSS v4.0.",
@@ -187,7 +176,7 @@ export const projects: Project[] = [
     liveDemo: "https://theetawat-tour-reservation.vercel.app/",
   },
   {
-    id: 5,
+    id: "blog",
     title: "Blog",
     status: "In Progress",
     description: "A developer-focused publishing platform for articles, curated topics, reading lists, and a distraction-free reading experience.",
@@ -195,21 +184,21 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MDX"],
   },
   {
-    id: 6,
+    id: "e-learning-platform",
     title: "E-Learning Platform",
     status: "Coming Soon",
     description: "An e-learning platform built with Next.js, TypeScript, JavaScript and Tailwind CSS v4.0.",
     technologies: ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
   },
   {
-    id: 7,
+    id: "e-commerce-platform",
     title: "E-Commerce Platform",
     status: "Coming Soon",
     description: "An e-commerce platform built with Next.js, TypeScript, JavaScript and Tailwind CSS v4.0.",
     technologies: ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
   },
   {
-    id: 8,
+    id: "finance-flow",
     title: "Finance Flow",
     status: "Active",
     description: "A personal finance dashboard concept for tracking spending, balances, and monthly progress.",
@@ -217,7 +206,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Charts"],
   },
   {
-    id: 9,
+    id: "team-workspace",
     title: "Team Workspace",
     status: "Active",
     description: "A collaborative task workspace concept with clear project status and focused team workflows.",
@@ -225,7 +214,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "UI/UX"],
   },
   {
-    id: 10,
+    id: "table-notes",
     title: "Table Notes",
     status: "In Progress",
     description: "A restaurant discovery and reservation experience designed around thoughtful local recommendations.",
@@ -233,7 +222,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "API Design"],
   },
   {
-    id: 11,
+    id: "habit-loop",
     title: "Habit Loop",
     status: "In Progress",
     description: "A calm habit-tracking interface that makes daily routines and long-term consistency visible.",
@@ -241,7 +230,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Data Visualization"],
   },
   {
-    id: 12,
+    id: "event-atlas",
     title: "Event Atlas",
     status: "Coming Soon",
     description: "A community event platform concept that brings schedules, attendance, and event insights together.",
@@ -249,7 +238,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Product Strategy"],
   },
   {
-    id: 13,
+    id: "learn-lab",
     title: "Learn Lab",
     status: "Coming Soon",
     description: "A developer learning platform concept with focused lessons, progress insights, and practical pathways.",

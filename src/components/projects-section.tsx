@@ -130,9 +130,9 @@ export function ProjectsSection() {
               <h3>Ideas in the pipeline</h3>
             </div>
             <div className="roadmap-list">
-              {roadmapProjects.map((project) => (
+              {roadmapProjects.map((project, index) => (
                 <article key={project.id}>
-                  <span>{String(project.id).padStart(2, "0")}</span>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
                   <div>
                     <h4>{project.title}</h4>
                     <p>{project.description}</p>

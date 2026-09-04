@@ -209,7 +209,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Finance Flow",
     status: "Active",
     description: "A personal finance dashboard concept for tracking spending, balances, and monthly progress.",
@@ -217,7 +217,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Charts"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Team Workspace",
     status: "Active",
     description: "A collaborative task workspace concept with clear project status and focused team workflows.",
@@ -225,7 +225,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "UI/UX"],
   },
   {
-    id: 9,
+    id: 10,
     title: "Table Notes",
     status: "In Progress",
     description: "A restaurant discovery and reservation experience designed around thoughtful local recommendations.",
@@ -233,7 +233,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "API Design"],
   },
   {
-    id: 10,
+    id: 11,
     title: "Habit Loop",
     status: "In Progress",
     description: "A calm habit-tracking interface that makes daily routines and long-term consistency visible.",
@@ -241,7 +241,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Data Visualization"],
   },
   {
-    id: 11,
+    id: 12,
     title: "Event Atlas",
     status: "Coming Soon",
     description: "A community event platform concept that brings schedules, attendance, and event insights together.",
@@ -249,7 +249,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Product Strategy"],
   },
   {
-    id: 12,
+    id: 13,
     title: "Learn Lab",
     status: "Coming Soon",
     description: "A developer learning platform concept with focused lessons, progress insights, and practical pathways.",

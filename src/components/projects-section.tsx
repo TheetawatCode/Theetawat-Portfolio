@@ -4,9 +4,10 @@ import { ArrowUpRight, CodeXml } from "lucide-react";
 import { projects } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
 
-function ProjectLinks({ githubLink, liveDemo }: { githubLink?: string; liveDemo?: string }) {
+function ProjectLinks({ project }: { project: (typeof projects)[number] }) {
+  const { githubLink, liveDemo } = project;
   if (!githubLink && !liveDemo) {
-    return <span className="project-unavailable">Details coming soon</span>;
+    return null;
   }
 
   return (
@@ -23,6 +24,24 @@ function ProjectLinks({ githubLink, liveDemo }: { githubLink?: string; liveDemo?
       ) : null}
     </div>
   );
+}
+
+function ProjectProgress({ project }: { project: (typeof projects)[number] }) {
+  if (project.nextMilestone) {
+    return <p className="project-unavailable">Next: {project.nextMilestone}</p>;
+  }
+
+  if (!project.githubLink && !project.liveDemo) {
+    return <p className="project-unavailable">{project.status === "Prototype" ? "Concept exploration" : "Case study in progress"}</p>;
+  }
+
+  return null;
+}
+
+function ProjectMeta({ project }: { project: (typeof projects)[number] }) {
+  const details = [project.projectType, project.role, project.period].filter(Boolean);
+
+  return details.length ? <p className="project-meta">{details.join(" · ")}</p> : null;
 }
 
 function ProjectCard({ project }: { project: (typeof projects)[number] }) {
@@ -49,11 +68,14 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
           </span>
         ) : null}
         <h3>{project.title}</h3>
+        <ProjectMeta project={project} />
         <p>{project.description}</p>
+        {project.highlight ? <p className="project-highlight">{project.highlight}</p> : null}
         <ul className="tech-list">
           {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
         </ul>
-        <ProjectLinks githubLink={project.githubLink} liveDemo={project.liveDemo} />
+        <ProjectLinks project={project} />
+        <ProjectProgress project={project} />
       </div>
     </article>
   );
@@ -61,7 +83,8 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
 
 export function ProjectsSection() {
   const featuredProjects = projects.filter((project) => project.featured);
-  const activeProjects = projects.filter((project) => !project.featured && project.status === "Active");
+  const liveProjects = projects.filter((project) => !project.featured && project.status === "Live");
+  const prototypes = projects.filter((project) => project.status === "Prototype");
   const inProgressProjects = projects.filter((project) => project.status === "In Progress");
   const roadmapProjects = projects.filter((project) => project.status === "Coming Soon");
 
@@ -103,11 +126,14 @@ export function ProjectsSection() {
                   <span className="text-xs font-medium uppercase tracking-[.18em] text-slate-400">Featured</span>
                 </div>
                 <h3>{project.title}</h3>
+                <ProjectMeta project={project} />
                 <p>{project.description}</p>
+                {project.highlight ? <p className="project-highlight">{project.highlight}</p> : null}
                 <ul className="tech-list">
                   {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
                 </ul>
-                <ProjectLinks githubLink={project.githubLink} liveDemo={project.liveDemo} />
+                <ProjectLinks project={project} />
+                <ProjectProgress project={project} />
               </div>
             </article>
           ))}
@@ -115,13 +141,21 @@ export function ProjectsSection() {
 
         <div className="project-groups">
           <div className="project-group">
-            <h3 className="project-group-title">Active Projects</h3>
-            <div className="other-projects">{activeProjects.map((project) => <ProjectCard key={project.id} project={project} />)}</div>
+            <h3 className="project-group-title">Live Projects</h3>
+            <p className="project-group-description">Shipped work with a public codebase or live experience to explore.</p>
+            <div className="other-projects">{liveProjects.map((project) => <ProjectCard key={project.id} project={project} />)}</div>
           </div>
 
           <div className="project-group">
             <h3 className="project-group-title">In Progress</h3>
+            <p className="project-group-description">Work actively being shaped, with the next milestone shown on each card.</p>
             <div className="other-projects">{inProgressProjects.map((project) => <ProjectCard key={project.id} project={project} />)}</div>
+          </div>
+
+          <div className="project-group">
+            <h3 className="project-group-title">Concepts & Explorations</h3>
+            <p className="project-group-description">Interface and product concepts used to explore focused user experiences.</p>
+            <div className="other-projects">{prototypes.map((project) => <ProjectCard key={project.id} project={project} />)}</div>
           </div>
 
           <div className="roadmap-block">

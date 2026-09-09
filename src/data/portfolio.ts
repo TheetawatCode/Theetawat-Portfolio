@@ -18,13 +18,18 @@ export type Experience = {
 export type Project = {
   id: string;
   title: string;
-  status: "Active" | "In Progress" | "Coming Soon";
+  status: "Live" | "Prototype" | "In Progress" | "Coming Soon";
   description: string;
   image?: string;
   technologies: string[];
   githubLink?: string;
   liveDemo?: string;
   featured?: boolean;
+  projectType?: string;
+  role?: string;
+  period?: string;
+  highlight?: string;
+  nextMilestone?: string;
 };
 
 export type Certificate = {
@@ -250,26 +255,46 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    id: "serviceops-desk",
+    title: "ServiceOps Desk",
+    status: "Live",
+    description: "A role-aware service operations workspace for submitting, assigning, and closing internal support jobs with clear SLA visibility.",
+    image: "/images/projects/serviceops-desk-mockup.png",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
+    githubLink: "https://github.com/TheetawatCode/serviceops-desk",
+    liveDemo: "https://serviceops-desk.vercel.app/",
+    featured: true,
+    projectType: "Full-stack application",
+    role: "Full-stack Developer",
+    period: "2026",
+    highlight: "Role-aware workflows with end-to-end SLA tracking.",
+  },
+  {
     id: "portfolio",
     title: "Portfolio Website",
-    status: "Active",
+    status: "Live",
     description: "A personal portfolio rebuilt with Next.js, TypeScript, Tailwind CSS v4, and pnpm.",
     image: "/images/projects/portfolio-next.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "pnpm"],
     githubLink: "https://github.com/TheetawatCode/Theetawat-Portfolio",
     liveDemo: "https://theetawat-portfolio.vercel.app/",
     featured: true,
+    projectType: "Developer portfolio",
+    role: "Designer & Developer",
+    period: "2026",
+    highlight: "A content-driven portfolio designed to evolve with new work.",
   },
   {
     id: "landing-page",
     title: "Landing Page",
-    status: "Active",
+    status: "Live",
     description: "A landing page built with Next.js, TypeScript, JavaScript and Tailwind CSS.",
     image: "/images/projects/landing-page.png",
     technologies: ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Preline UI"],
     githubLink: "https://github.com/TheetawatCode/My-Project/tree/main/2-LandingPage",
     liveDemo: "https://theetawat-landing-page.vercel.app/",
-    featured: true,
+    projectType: "Frontend website",
+    role: "Frontend Developer",
   },
   {
     id: "tour-reservation",
@@ -280,6 +305,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
     githubLink: "https://github.com/TheetawatCode/My-Project/tree/main/4-TourReservation",
     liveDemo: "https://theetawat-tour-reservation.vercel.app/",
+    nextMilestone: "Refining the reservation flow and API integration.",
   },
   {
     id: "blog",
@@ -288,6 +314,7 @@ export const projects: Project[] = [
     description: "A developer-focused publishing platform for articles, curated topics, reading lists, and a distraction-free reading experience.",
     image: "/images/projects/blog-mockup.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MDX"],
+    nextMilestone: "Building the MDX publishing flow and article discovery.",
   },
   {
     id: "e-learning-platform",
@@ -306,18 +333,22 @@ export const projects: Project[] = [
   {
     id: "finance-flow",
     title: "Finance Flow",
-    status: "Active",
+    status: "Prototype",
     description: "A personal finance dashboard concept for tracking spending, balances, and monthly progress.",
     image: "/images/projects/finance-dashboard-mockup.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Charts"],
+    projectType: "Product concept",
+    highlight: "A focused exploration of financial clarity and progress tracking.",
   },
   {
     id: "team-workspace",
     title: "Team Workspace",
-    status: "Active",
+    status: "Prototype",
     description: "A collaborative task workspace concept with clear project status and focused team workflows.",
     image: "/images/projects/team-workspace-mockup.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "UI/UX"],
+    projectType: "Product concept",
+    highlight: "A focused exploration of collaborative work and team visibility.",
   },
   {
     id: "table-notes",
@@ -326,6 +357,7 @@ export const projects: Project[] = [
     description: "A restaurant discovery and reservation experience designed around thoughtful local recommendations.",
     image: "/images/projects/restaurant-booking-mockup.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "API Design"],
+    nextMilestone: "Defining the discovery and reservation workflow.",
   },
   {
     id: "habit-loop",
@@ -334,6 +366,7 @@ export const projects: Project[] = [
     description: "A calm habit-tracking interface that makes daily routines and long-term consistency visible.",
     image: "/images/projects/habit-tracker-mockup.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Data Visualization"],
+    nextMilestone: "Designing insights, streaks, and long-term progress views.",
   },
   {
     id: "event-atlas",

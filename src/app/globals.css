@@ -881,7 +881,8 @@ a {
   font-weight: 700;
 }
 
-.status-active { border-color: rgba(22, 163, 74, 0.17); background: #f0fdf4; color: #15803d; }
+.status-live { border-color: rgba(22, 163, 74, 0.17); background: #f0fdf4; color: #15803d; }
+.status-prototype { border-color: rgba(37, 99, 235, 0.14); background: #eff6ff; color: #1d4ed8; }
 .status-coming-soon { border-color: rgba(100, 116, 139, 0.17); background: #f8fafc; color: #64748b; }
 
 .project-link {
@@ -901,7 +902,7 @@ a {
 .project-link:hover { transform: translateY(-2px); border-color: #93c5fd; color: #1d4ed8; }
 .project-link-primary { border-color: #0b1f3a; background: #0b1f3a; color: #fff; }
 .project-link-primary:hover { border-color: #1d4ed8; color: #fff; }
-.project-unavailable { color: #94a3b8; font-size: 0.75rem; font-weight: 650; }
+.project-unavailable { color: #64748b; font-size: 0.75rem; font-weight: 650; line-height: 1.55; }
 .tech-list + div,
 .tech-list + .project-unavailable { margin-top: 1.5rem; }
 
@@ -914,6 +915,28 @@ a {
 .project-groups { display: grid; gap: clamp(3rem, 7vw, 5rem); margin-top: clamp(3rem, 7vw, 5rem); }
 .project-groups > .roadmap-block { margin-top: 0; }
 .project-group-title { color: #0f172a; font-size: clamp(1.45rem, 3vw, 2rem); font-weight: 650; letter-spacing: -0.035em; }
+.project-group-description { margin-top: 0.45rem; color: #64748b; font-size: 0.88rem; line-height: 1.6; }
+
+.project-meta {
+  margin-top: 0.55rem;
+  color: #2563eb;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.project-meta + p { margin-top: 0.65rem; }
+
+.project-highlight {
+  margin-top: 0.85rem !important;
+  border-left: 2px solid #93c5fd;
+  padding-left: 0.7rem;
+  color: #334155 !important;
+  font-size: 0.82rem !important;
+  font-weight: 650;
+  line-height: 1.6 !important;
+}
 
 .project-card {
   overflow: hidden;

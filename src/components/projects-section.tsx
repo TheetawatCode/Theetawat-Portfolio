@@ -83,7 +83,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
 
 export function ProjectsSection() {
   const featuredProjects = projects.filter((project) => project.featured);
-  const liveProjects = projects.filter((project) => !project.featured && project.status === "Live");
+  const liveProjects = projects.filter((project) => project.status === "Live");
   const prototypes = projects.filter((project) => project.status === "Prototype");
   const inProgressProjects = projects.filter((project) => project.status === "In Progress");
   const roadmapProjects = projects.filter((project) => project.status === "Coming Soon");
@@ -95,7 +95,7 @@ export function ProjectsSection() {
         <SectionHeading
           eyebrow="01 / Projects"
           title="Selected work, built to learn and create value."
-          description="A collection of web experiences exploring modern interfaces, scalable foundations, and practical product thinking."
+          description="Two highlighted case studies, followed by every deployed project available to explore."
         />
 
         <div className="featured-projects">
@@ -142,7 +142,7 @@ export function ProjectsSection() {
         <div className="project-groups">
           <div className="project-group">
             <h3 className="project-group-title">Live Projects</h3>
-            <p className="project-group-description">Shipped work with a public codebase or live experience to explore.</p>
+            <p className="project-group-description">Every deployed project, including the featured case studies and this portfolio.</p>
             <div className="other-projects">{liveProjects.map((project) => <ProjectCard key={project.id} project={project} />)}</div>
           </div>
 

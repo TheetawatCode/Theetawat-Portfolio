@@ -95,7 +95,7 @@ export function ProjectsSection() {
         <SectionHeading
           eyebrow="01 / Projects"
           title="Selected work, built to learn and create value."
-          description="Two highlighted case studies, followed by every deployed project available to explore."
+          description="Three highlighted case studies, followed by every deployed project available to explore."
         />
 
         <div className="featured-projects">

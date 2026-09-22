@@ -1,21 +1,26 @@
+"use client";
+
+import Link from "next/link";
+import { useRef } from "react";
 import { ArrowUpRight, FileText, Menu } from "lucide-react";
 
 import { navItems, profile } from "@/data/portfolio";
 
 export function SiteHeader() {
+  const menu = useRef<HTMLDetailsElement>(null);
   return (
     <header className="site-header">
       <div className="site-shell flex h-18 items-center justify-between">
-        <a className="brand-mark" href="#top" aria-label="Back to top">
+        <Link className="brand-mark" href="/#top" aria-label="Back to portfolio home">
           <span>TP</span>
           <span className="hidden sm:block">Theetawat Premsawat</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <a className="nav-link" href={item.href} key={item.href}>
+            <Link className="nav-link" href={`/${item.href}`} key={item.href}>
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -26,15 +31,22 @@ export function SiteHeader() {
             <ArrowUpRight size={15} aria-hidden="true" />
           </a>
 
-          <details className="mobile-menu lg:hidden">
+          <details className="mobile-menu lg:hidden" ref={menu} onKeyDown={(event) => {
+            if (event.key === "Escape" && menu.current) {
+              menu.current.open = false;
+              menu.current.querySelector("summary")?.focus();
+            }
+          }}>
             <summary aria-label="Open navigation menu">
               <Menu size={20} aria-hidden="true" />
             </summary>
-            <nav aria-label="Mobile navigation">
+            <nav aria-label="Mobile navigation" onClick={(event) => {
+              if ((event.target as HTMLElement).closest("a") && menu.current) menu.current.open = false;
+            }}>
               {navItems.map((item) => (
-                <a href={item.href} key={item.href}>
+                <Link href={`/${item.href}`} key={item.href}>
                   {item.label}
-                </a>
+                </Link>
               ))}
               <a href={profile.resume} target="_blank" rel="noreferrer">Resume</a>
             </nav>

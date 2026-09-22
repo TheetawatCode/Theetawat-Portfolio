@@ -9,6 +9,7 @@ export type SkillGroup = {
 };
 
 export type Experience = {
+  kind: "work" | "training";
   title: string;
   company: string;
   duration: string;
@@ -37,6 +38,7 @@ export type Certificate = {
   title: string;
   issuer: string;
   issued: string;
+  selected?: boolean;
   credentialId?: string;
   skills?: string[];
   credentialUrl?: string;
@@ -45,10 +47,9 @@ export type Certificate = {
 export const navItems: NavItem[] = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Certificates", href: "#certificates" },
   { label: "Experience", href: "#experience" },
+  { label: "Certificates", href: "#certificates" },
   { label: "About", href: "#about" },
-  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -61,38 +62,37 @@ export const profile = {
   github: "https://github.com/TheetawatCode",
   resume: "/pdf/Theetawat_Resume.pdf",
   introduction: [
-    "I'm a Full-stack Developer who transitioned from an administrative career to follow my passion for coding.",
-    "Currently, I'm seeking opportunities to collaborate with innovative teams and contribute to impactful projects.",
+    "I build web experiences with React, Next.js, and TypeScript — from storefronts to service operations. I'm looking for a team where I can contribute and keep growing.",
   ],
   about: [
-    "As a self-taught Full-stack Developer, I combine my organizational skills from an administrative background with a passion for coding to create impactful digital experiences. After completing a 4-month Full-stack Bootcamp, I've been actively building projects and refining my skills in modern tools like React, Next.js, TailwindCSS, and TypeScript.",
-    "I'm committed to continuous growth and staying up-to-date with the latest trends in Full-stack development. I'm passionate about crafting projects that enhance user experience and drive business success.",
-    "Currently, I'm seeking a Full-stack Developer role where I can apply my technical skills, contribute to Open Source projects, and collaborate with a team of passionate developers.",
+    "My background in economics and administrative work taught me to organize information, communicate clearly, and understand business needs. I bring that perspective to software development.",
+    "After completing a full-stack bootcamp, I continued learning through hands-on projects. I enjoy turning complex workflows into approachable interfaces and improving them through testing and feedback.",
   ],
 } as const;
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Core Development",
-    items: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Node.js", "Express.js"],
+    title: "Frontend",
+    items: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
   },
   {
-    title: "UI & Product",
-    items: ["React Native", "DaisyUI", "Ant Design", "shadcn/ui", "Aceternity UI", "Figma", "WordPress"],
+    title: "Backend & Data",
+    items: ["Node.js", "Express.js", "PostgreSQL", "Prisma", "MySQL", "MongoDB"],
   },
   {
-    title: "Data & Delivery",
-    items: ["MongoDB", "MySQL", "Git", "GitHub", "Docker", "Postman", "VSCode", "Cursor", "Google Antigravity"],
+    title: "Tools & Delivery",
+    items: ["Git", "GitHub", "Docker", "Postman", "Figma", "WordPress"],
   },
   {
     title: "Currently Learning",
-    items: ["Vue.js", "Nuxt.js", "Golang", "PostgreSQL", "OrbStack"],
+    items: ["Vue.js", "Nuxt.js", "Golang", "OrbStack"],
   },
 ];
 
 export const certificates: Certificate[] = [
   {
     id: "claude-code-in-action",
+    selected: true,
     title: "Claude Code in Action",
     issuer: "Anthropic",
     issued: "Jun 2026",
@@ -164,6 +164,7 @@ export const certificates: Certificate[] = [
   },
   {
     id: "sql-crash-course",
+    selected: true,
     title: "SQL Crash Course",
     issuer: "DataRockie | The School of Generalist",
     issued: "Feb 2024",
@@ -178,6 +179,7 @@ export const certificates: Certificate[] = [
   },
   {
     id: "github-for-developer",
+    selected: true,
     title: "GitHub for Developer",
     issuer: "BorntoDev",
     issued: "May 2024",
@@ -188,6 +190,7 @@ export const certificates: Certificate[] = [
 export const experiences: Experience[] = [
   {
     title: "Frontend Development Bootcamp Participant",
+    kind: "training",
     company: "Borntodev Academy",
     duration: "Jun 2024 – Sep 2024",
     description: [
@@ -199,6 +202,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Backend Development Bootcamp Participant",
+    kind: "training",
     company: "Borntodev Academy",
     duration: "Jun 2024 – Sep 2024",
     description: [
@@ -211,6 +215,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Freelance Frontend Developer",
+    kind: "work",
     company: "Self-Employed",
     duration: "Dec 2022 – Apr 2024",
     description: [
@@ -222,6 +227,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Administrative Assistant",
+    kind: "work",
     company: "Malaysia Hair Import Export Co Ltd.",
     duration: "Nov 2019 – Jun 2020",
     description: [
@@ -238,6 +244,7 @@ export const experiences: Experience[] = [
   },
   {
     title: "Marketing Internship",
+    kind: "work",
     company: "Advanced Info Services Plc. (AIS)",
     duration: "Jun 2018 – Jul 2018",
     description: [
@@ -258,7 +265,7 @@ export const projects: Project[] = [
     id: "saan-market",
     title: "Saan Market",
     status: "Live",
-    description: "A polished commerce experience for discovering contemporary Thai home goods through editorial browsing, search, a persistent cart, and a simulated checkout.",
+    description: "A Thai home-goods storefront with editorial browsing, product search, a persistent cart, and simulated checkout.",
     image: "/images/projects/saan-market-mockup.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand"],
     githubLink: "https://github.com/TheetawatCode/saan-market",
@@ -288,7 +295,7 @@ export const projects: Project[] = [
     id: "boreal-route",
     title: "Boreal Route",
     status: "Live",
-    description: "An editorial northern-lights expedition platform that pairs route discovery with weather-aware readiness, a simulated booking flow, and read-only operations coordination.",
+    description: "A northern-lights expedition demo with route discovery, weather-aware readiness, and simulated booking.",
     image: "/images/projects/boreal-route-mockup.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vitest"],
     githubLink: "https://github.com/TheetawatCode/boreal-route",
@@ -349,14 +356,14 @@ export const projects: Project[] = [
     id: "e-learning-platform",
     title: "E-Learning Platform",
     status: "Coming Soon",
-    description: "An e-learning platform built with Next.js, TypeScript, JavaScript and Tailwind CSS v4.0.",
+    description: "A planned e-learning experience for discovering courses and following a structured learning path.",
     technologies: ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
   },
   {
     id: "e-commerce-platform",
     title: "E-Commerce Platform",
     status: "Coming Soon",
-    description: "An e-commerce platform built with Next.js, TypeScript, JavaScript and Tailwind CSS v4.0.",
+    description: "A planned commerce project exploring product browsing, cart interactions, and checkout.",
     technologies: ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
   },
   {

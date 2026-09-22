@@ -1193,6 +1193,59 @@ a {
   .profile-caption { align-items: flex-start; flex-direction: column; gap: 0.15rem; }
 }
 
+/* Curated homepage and expandable project collection. */
+.section-action { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 2rem; }
+.section-action p { max-width: 34rem; color: #526174; line-height: 1.7; }
+.project-badges { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.project-featured-label { font-size: 0.68rem; color: #64748b; letter-spacing: 0.12em; text-transform: uppercase; }
+.project-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.project-link { min-height: 44px; }
+.project-copy > .project-role, .project-card-copy > .project-role { color: #2563eb; font-size: 0.8rem; margin-top: 0.35rem; }
+.project-card h2 { margin-top: 0.8rem; color: #0f172a; font-size: 1.35rem; font-weight: 650; letter-spacing: -0.04em; }
+.project-card-image { min-height: 0; aspect-ratio: 16 / 10; background: #edf2f8; }
+.project-visual::after, .project-card-image::after { display: none; }
+.content-disclosure { margin-top: 2rem; border-top: 1px solid var(--hairline); padding-top: 1rem; }
+.content-disclosure > summary { cursor: pointer; padding: 1rem 0; font-weight: 650; color: #0b1f3a; }
+.content-disclosure > summary span { font-size: 0.8rem; font-weight: 400; color: #526174; margin-left: 0.6rem; }
+.content-disclosure[open] > summary { margin-bottom: 1rem; }
+.certificate-card { min-height: 0; }
+.education-summary { margin-top: 3rem; scroll-margin-top: 6rem; }
+.education-summary > h3 { margin-bottom: 1rem; }
+.education-summary h4 { font-size: 1.15rem; font-weight: 650; }
+.experience-kind { font-size: 0.72rem; color: #93c5fd; margin-top: 1rem; }
+.catalog-back { display: inline-flex; align-items: center; min-height: 44px; color: #1d4ed8; font-weight: 600; }
+.catalog-heading { max-width: 48rem; margin: 2rem 0; }
+.catalog-heading h1 { font-size: clamp(2.3rem, 5vw, 4rem); line-height: 1.08; letter-spacing: -0.045em; font-weight: 650; margin: 0.8rem 0 1rem; }
+.catalog-heading > p:last-child { color: #526174; line-height: 1.75; }
+.project-filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-block: 2rem 1rem; }
+.project-filters button { display: inline-flex; gap: 0.5rem; align-items: center; border: 1px solid var(--hairline); border-radius: 999px; padding: 0.65rem 1rem; min-height: 44px; cursor: pointer; color: #334155; background: white; }
+.project-filters button[aria-pressed="true"] { background: #0b1f3a; color: white; border-color: #0b1f3a; }
+.project-filters button span { font-size: 0.75rem; opacity: 0.8; }
+.catalog-count, .catalog-empty { color: #526174; font-size: 0.9rem; margin-block: 1rem; }
+.catalog-page .project-card { height: 100%; }
+.roadmap-list h3 { font-size: 0.95rem; font-weight: 700; }
+.roadmap-disclosure { margin-top: 3rem; }
+[data-project-result]:focus-visible, button:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid #2563eb; outline-offset: 4px; }
+@media (max-width: 899px) {
+  .project-visual { min-height: 0; aspect-ratio: 16 / 10; }
+  .project-copy { padding: 1.25rem; }
+  .project-copy h3 { margin-top: 0.7rem; font-size: 1.65rem; }
+}
+@media (max-width: 639px) {
+  .section-space { padding-block: 3.5rem; }
+  .section-heading { margin-bottom: 2rem; }
+  .hero-layout { min-height: auto; padding-block: 3.5rem; gap: 2rem; }
+  .hero-section h1 { font-size: clamp(2.6rem, 10vw, 3.4rem); line-height: 1.06; }
+  .hero-console { display: none; }
+  .hero-layout .mt-8 { margin-top: 1.25rem; font-size: 1rem; line-height: 1.75; }
+  .hero-layout .mt-10 { margin-top: 1.5rem; }
+  .project-copy > p { line-height: 1.6; }
+  .section-action { align-items: flex-start; flex-direction: column; }
+  .profile-frame { min-height: 0; max-height: 300px; }
+  .about-card { gap: 1.5rem; }
+  .education-thesis { font-size: 0.85rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }

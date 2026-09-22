@@ -1,21 +1,16 @@
 import { BookOpen, GraduationCap } from "lucide-react";
 
 import { education } from "@/data/portfolio";
-import { SectionHeading } from "./section-heading";
 
 export function EducationSection() {
   return (
-    <section className="section-space bg-soft" id="education">
-      <div className="site-shell">
-        <SectionHeading
-          eyebrow="06 / Education"
-          title="Where analytical thinking became part of how I work."
-        />
+    <div className="education-summary" id="education">
+        <h3 className="eyebrow">Education</h3>
         <article className="education-card">
           <div className="education-icon"><GraduationCap size={26} aria-hidden="true" /></div>
           <div>
             <p className="eyebrow">{education.duration}</p>
-            <h3>{education.title}</h3>
+            <h4>{education.title}</h4>
             <p className="mt-2 text-slate-600">{education.major}</p>
             <div className="education-thesis">
               <BookOpen size={18} aria-hidden="true" />
@@ -23,7 +18,6 @@ export function EducationSection() {
             </div>
           </div>
         </article>
-      </div>
-    </section>
+    </div>
   );
 }

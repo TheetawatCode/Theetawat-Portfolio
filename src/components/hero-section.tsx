@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="hero-orb hero-orb-one" aria-hidden="true" />
       <div className="hero-orb hero-orb-two" aria-hidden="true" />
 
-      <div className="site-shell relative grid min-h-[calc(100svh-4.5rem)] items-center gap-14 py-20 lg:grid-cols-[1.08fr_.92fr] lg:py-24">
+      <div className="site-shell hero-layout relative grid min-h-[calc(100svh-4.5rem)] items-center gap-14 py-20 lg:grid-cols-[1.08fr_.92fr] lg:py-24">
         <div className="max-w-3xl">
           <div className="availability-pill">
             <span aria-hidden="true" />
@@ -17,7 +17,7 @@ export function HeroSection() {
           </div>
           <p className="hero-kicker">Hello, I&apos;m {profile.nickname}.</p>
           <h1>
-            I build digital products that <span>perform, adapt, and scale.</span>
+            Full-stack Developer.<br /><span>Thoughtful web experiences.</span>
           </h1>
           <div className="mt-8 max-w-2xl space-y-3 text-lg leading-8 text-slate-600">
             {profile.introduction.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}

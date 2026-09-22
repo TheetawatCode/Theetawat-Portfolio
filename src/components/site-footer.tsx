@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowUp, CodeXml, ContactRound, Mail } from "lucide-react";
 
 import { navItems, profile } from "@/data/portfolio";
@@ -9,7 +10,7 @@ export function SiteFooter() {
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} {profile.name}</p>
           <nav aria-label="Footer navigation">
-            {navItems.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}
+            {navItems.map((item) => <Link href={`/${item.href}`} key={item.href}>{item.label}</Link>)}
           </nav>
           <div className="flex items-center gap-2">
             <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><CodeXml size={17} /></a>

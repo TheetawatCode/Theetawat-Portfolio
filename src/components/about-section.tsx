@@ -3,15 +3,15 @@ import { ArrowUpRight, Download } from "lucide-react";
 
 import { profile } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
+import { EducationSection } from "./education-section";
 
 export function AboutSection() {
   return (
     <section className="section-space bg-soft" id="about">
       <div className="site-shell">
         <SectionHeading
-          eyebrow="05 / About"
+          eyebrow="05 / About & Education"
           title="A thoughtful builder with a business-aware foundation."
-          description="My path into development brings together technical curiosity, organization, and a practical understanding of how people and businesses work."
         />
 
         <div className="about-card">
@@ -23,7 +23,6 @@ export function AboutSection() {
               height={720}
               sizes="(max-width: 768px) 80vw, 360px"
               className="h-full w-full object-cover"
-              priority
             />
             <div className="profile-caption">
               <span>{profile.name}</span>
@@ -51,6 +50,7 @@ export function AboutSection() {
             </div>
           </div>
         </div>
+        <EducationSection />
       </div>
     </section>
   );

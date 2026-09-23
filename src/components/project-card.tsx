@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, CodeXml } from "lucide-react";
 import type { Project } from "@/data/portfolio";
 
@@ -14,8 +15,9 @@ export function ProjectCard({ project, featured = false }: { project: Project; f
       {project.role && <p className="project-role">{project.role}</p>}
       <p>{project.description}</p>
       <ul className="tech-list" aria-label="Technologies">{(featured ? project.technologies.slice(0, 4) : project.technologies).map(t => <li key={t}>{t}</li>)}</ul>
-      {(project.liveDemo || project.githubLink) && <div className="project-actions">
-        {project.liveDemo && <a className="project-link project-link-primary" href={project.liveDemo} target="_blank" rel="noreferrer" aria-label={`Open ${project.title} live site`}>Live site <ArrowUpRight size={16} aria-hidden="true" /></a>}
+      {(project.caseStudy || project.liveDemo || project.githubLink) && <div className="project-actions">
+        {project.caseStudy && <Link className="project-link project-link-primary" href={project.caseStudy}>View case study <ArrowUpRight size={16} aria-hidden="true" /></Link>}
+        {project.liveDemo && <a className="project-link" href={project.liveDemo} target="_blank" rel="noreferrer" aria-label={`Open ${project.title} live site`}>Live site <ArrowUpRight size={16} aria-hidden="true" /></a>}
         {project.githubLink && <a className="project-link" href={project.githubLink} target="_blank" rel="noreferrer" aria-label={`View ${project.title} source code`}><CodeXml size={16} aria-hidden="true" /> Code</a>}
       </div>}
       {!featured && project.nextMilestone && <p className="project-unavailable">Next: {project.nextMilestone}</p>}

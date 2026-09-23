@@ -25,6 +25,7 @@ export type Project = {
   technologies: string[];
   githubLink?: string;
   liveDemo?: string;
+  caseStudy?: string;
   featured?: boolean;
   projectType?: string;
   role?: string;
@@ -272,6 +273,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
     githubLink: "https://github.com/TheetawatCode/serviceops-desk",
     liveDemo: "https://serviceops-desk.vercel.app/",
+    caseStudy: "/projects/serviceops-desk",
     featured: true,
     projectType: "Full-stack application",
     role: "Full-stack Developer",

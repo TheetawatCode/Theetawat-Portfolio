@@ -62,7 +62,7 @@ export const profile = {
   github: "https://github.com/TheetawatCode",
   resume: "/pdf/Theetawat_Resume.pdf",
   introduction: [
-    "I build web experiences with React, Next.js, and TypeScript — from storefronts to service operations. I'm looking for a team where I can contribute and keep growing.",
+    "I build responsive web applications with React, Next.js, and TypeScript. My background in economics and administrative work helps me understand business needs and design approachable interfaces. I'm looking for a team where I can contribute and keep growing.",
   ],
   about: [
     "My background in economics and administrative work taught me to organize information, communicate clearly, and understand business needs. I bring that perspective to software development.",
@@ -264,21 +264,6 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
-    id: "saan-market",
-    title: "Saan Market",
-    status: "Live",
-    description: "A Thai home-goods storefront with editorial browsing, product search, a persistent cart, and simulated checkout.",
-    image: "/images/projects/saan-market-mockup.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand"],
-    githubLink: "https://github.com/TheetawatCode/saan-market",
-    liveDemo: "https://saan-market.vercel.app/",
-    featured: true,
-    projectType: "E-commerce storefront",
-    role: "Frontend Developer",
-    period: "2026",
-    highlight: "Editorial product discovery with accessible interactions and a persistent client-side cart.",
-  },
-  {
     id: "serviceops-desk",
     title: "ServiceOps Desk",
     status: "Live",
@@ -292,6 +277,21 @@ export const projects: Project[] = [
     role: "Full-stack Developer",
     period: "2026",
     highlight: "Role-aware workflows with end-to-end SLA tracking.",
+  },
+  {
+    id: "saan-market",
+    title: "Saan Market",
+    status: "Live",
+    description: "A Thai home-goods storefront with editorial browsing, product search, a persistent cart, and simulated checkout.",
+    image: "/images/projects/saan-market-mockup.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand"],
+    githubLink: "https://github.com/TheetawatCode/saan-market",
+    liveDemo: "https://saan-market.vercel.app/",
+    featured: true,
+    projectType: "E-commerce storefront",
+    role: "Frontend Developer",
+    period: "2026",
+    highlight: "Editorial product discovery with accessible interactions and a persistent client-side cart.",
   },
   {
     id: "boreal-route",

@@ -498,6 +498,37 @@ a {
   font-weight: 600;
 }
 
+.learning-skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem 1rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: 1.1rem;
+}
+
+.learning-skills > span {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.learning-skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.learning-skills li {
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  border-radius: 999px;
+  background: #f8fbff;
+  padding: 0.36rem 0.62rem;
+  color: #475569;
+  font-size: 0.74rem;
+}
+
 .certificates-section {
   position: relative;
   overflow: hidden;
@@ -1234,6 +1265,8 @@ a {
 @media (max-width: 639px) {
   .section-space { padding-block: 3.5rem; }
   .section-heading { margin-bottom: 2rem; }
+  .skill-card { min-height: 0; }
+  .skill-card ul { margin-top: 1rem; }
   .hero-layout { min-height: auto; padding-block: 3.5rem; gap: 2rem; }
   .hero-section h1 { font-size: clamp(2.6rem, 10vw, 3.4rem); line-height: 1.06; }
   .hero-console { display: none; }

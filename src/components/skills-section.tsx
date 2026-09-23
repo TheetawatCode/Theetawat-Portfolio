@@ -1,9 +1,9 @@
 import { Braces, Database, Layers3, Orbit } from "lucide-react";
 
-import { skillGroups } from "@/data/portfolio";
+import { currentlyLearningSkills, skillGroups } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
 
-const icons = [Braces, Layers3, Database, Orbit];
+const icons = [Braces, Database, Orbit, Layers3];
 
 export function SkillsSection() {
   return (
@@ -11,8 +11,8 @@ export function SkillsSection() {
       <div className="site-shell">
         <SectionHeading
           eyebrow="02 / Skills"
-          title="Tools I use to turn ideas into reliable products."
-          description="A growing toolkit across frontend, backend, databases, product design, and modern development workflows."
+          title="Skills for building and shipping full-stack products."
+          description="Technologies and tools shaped by my projects, training, and professional work."
         />
 
         <div className="skills-grid">
@@ -30,6 +30,10 @@ export function SkillsSection() {
               </article>
             );
           })}
+        </div>
+        <div className="learning-skills" aria-label="Currently learning">
+          <span>Currently learning</span>
+          <ul>{currentlyLearningSkills.map((skill) => <li key={skill}>{skill}</li>)}</ul>
         </div>
       </div>
     </section>

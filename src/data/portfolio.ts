@@ -72,22 +72,24 @@ export const profile = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
+    title: "Frontend Development",
+    items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML & CSS", "Tailwind CSS", "Zustand"],
   },
   {
-    title: "Backend & Data",
-    items: ["Node.js", "Express.js", "PostgreSQL", "Prisma", "MySQL", "MongoDB"],
+    title: "Backend & Databases",
+    items: ["Node.js", "Express.js", "REST APIs", "SQL", "PostgreSQL", "Prisma", "MySQL", "MongoDB"],
+  },
+  {
+    title: "Testing & Quality",
+    items: ["Vitest", "Playwright", "Postman"],
   },
   {
     title: "Tools & Delivery",
-    items: ["Git", "GitHub", "Docker", "Postman", "Figma", "WordPress"],
-  },
-  {
-    title: "Currently Learning",
-    items: ["Vue.js", "Nuxt.js", "Golang", "OrbStack"],
+    items: ["Git", "GitHub", "Vercel", "Docker", "Figma", "WordPress"],
   },
 ];
+
+export const currentlyLearningSkills = ["Vue.js", "Nuxt.js", "Go"];
 
 export const certificates: Certificate[] = [
   {

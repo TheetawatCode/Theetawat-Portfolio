@@ -90,7 +90,7 @@ export const skillGroups: SkillGroup[] = [
   },
 ];
 
-export const currentlyLearningSkills = ["React Native (Expo)", "AI Agents & Multi-Agent Systems", "AWS Cloud Fundamentals", "Vue.js", "Nuxt.js"];
+export const currentlyLearningSkills = ["React Native (Expo)", "AI Agents & Multi-Agent Systems", "AWS Cloud Fundamentals", "Web Application Security"];
 
 export const certificates: Certificate[] = [
   {

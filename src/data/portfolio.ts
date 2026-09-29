@@ -95,6 +95,17 @@ export const currentlyLearningSkills = ["React Native (Expo)", "AI Agents & Mult
 
 export const certificates: Certificate[] = [
   {
+    id: "openai-codex-pathway",
+    selected: true,
+    title: "Build with AI - Codex Pathway Completion",
+    issuer: "OpenAI Academy",
+    issued: "Sep 29, 2026",
+    expires: "Mar 29, 2027",
+    credentialId: "195502732",
+    skills: ["OpenAI Codex"],
+    credentialUrl: "https://oaiacademy.credential.net/61f016fd-c487-4629-a39f-a5e99a9857d6",
+  },
+  {
     id: "claude-code-in-action",
     selected: true,
     title: "Claude Code in Action",
@@ -173,17 +184,6 @@ export const certificates: Certificate[] = [
     issuer: "DataRockie | The School of Generalist",
     issued: "Feb 2024",
     skills: ["SQL"],
-  },
-  {
-    id: "openai-codex-pathway",
-    selected: true,
-    title: "Build with AI - Codex Pathway Completion",
-    issuer: "OpenAI Academy",
-    issued: "Sep 29, 2026",
-    expires: "Mar 29, 2027",
-    credentialId: "195502732",
-    skills: ["OpenAI Codex"],
-    credentialUrl: "https://oaiacademy.credential.net/61f016fd-c487-4629-a39f-a5e99a9857d6",
   },
   {
     id: "google-sheets-crash-course",

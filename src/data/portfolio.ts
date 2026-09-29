@@ -41,6 +41,7 @@ export type Certificate = {
   issued: string;
   selected?: boolean;
   credentialId?: string;
+  expires?: string;
   skills?: string[];
   credentialUrl?: string;
 };
@@ -174,6 +175,17 @@ export const certificates: Certificate[] = [
     skills: ["SQL"],
   },
   {
+    id: "openai-codex-pathway",
+    selected: true,
+    title: "Build with AI - Codex Pathway Completion",
+    issuer: "OpenAI Academy",
+    issued: "Sep 29, 2026",
+    expires: "Mar 29, 2027",
+    credentialId: "195502732",
+    skills: ["OpenAI Codex"],
+    credentialUrl: "https://oaiacademy.credential.net/61f016fd-c487-4629-a39f-a5e99a9857d6",
+  },
+  {
     id: "google-sheets-crash-course",
     title: "Google Sheets Crash Course",
     issuer: "DataRockie | The School of Generalist",
@@ -182,7 +194,6 @@ export const certificates: Certificate[] = [
   },
   {
     id: "github-for-developer",
-    selected: true,
     title: "GitHub for Developer",
     issuer: "BorntoDev",
     issued: "May 2024",

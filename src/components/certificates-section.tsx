@@ -13,6 +13,7 @@ function CertificateCard({ certificate }: { certificate: Certificate }) {
               <h3>{certificate.title}</h3>
               <div className="certificate-meta">
                 <span><CalendarDays size={15} aria-hidden="true" /> Issued {certificate.issued}</span>
+                {certificate.expires ? <span><CalendarDays size={15} aria-hidden="true" /> Expires {certificate.expires}</span> : null}
                 {certificate.credentialId ? <span className="credential-id">ID {certificate.credentialId}</span> : null}
               </div>
               {certificate.skills?.length ? (

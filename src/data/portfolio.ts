@@ -113,7 +113,7 @@ export const certificates: Certificate[] = [
     issued: "Oct 4, 2026",
     expires: "Apr 4, 2027",
     credentialId: "196204879",
-    skills: ["Applied AI", "AI Agents & Workflows"],
+    skills: ["Applied AI", "OpenAI Codex", "Agent-assisted Workflows"],
     credentialUrl: "https://oaiacademy.credential.net/b3f799ef-b9dd-4de0-8ec6-d2ff2a9c8394",
   },
   {

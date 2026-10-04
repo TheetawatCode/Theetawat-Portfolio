@@ -14,18 +14,22 @@ function CertificateCard({ certificate }: { certificate: Certificate }) {
               <div className="certificate-meta">
                 <span><CalendarDays size={15} aria-hidden="true" /> Issued {certificate.issued}</span>
                 {certificate.expires ? <span><CalendarDays size={15} aria-hidden="true" /> Expires {certificate.expires}</span> : null}
-                {certificate.credentialId ? <span className="credential-id">ID {certificate.credentialId}</span> : null}
+              </div>
+              <div className="certificate-identity" aria-hidden={!certificate.credentialId || undefined}>
+                {certificate.credentialId ? <span className="credential-id">Credential ID {certificate.credentialId}</span> : null}
               </div>
               {certificate.skills?.length ? (
                 <ul className="certificate-skills" aria-label="Skills">
                   {certificate.skills.map((skill) => <li key={skill}>{skill}</li>)}
                 </ul>
               ) : <span className="certificate-foundation">Learning foundation</span>}
+              <div className="certificate-footer">
               {certificate.credentialUrl ? (
                 <a className="certificate-verify-link" href={certificate.credentialUrl} target="_blank" rel="noreferrer">
                   Verify credential <ExternalLink size={14} aria-hidden="true" />
                 </a>
               ) : null}
+              </div>
             </article>
   );
 }

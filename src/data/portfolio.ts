@@ -106,6 +106,17 @@ export const certificates: Certificate[] = [
     credentialUrl: "https://oaiacademy.credential.net/61f016fd-c487-4629-a39f-a5e99a9857d6",
   },
   {
+    id: "openai-apply-ai-at-work-pathway",
+    selected: true,
+    title: "Apply AI at Work Pathway Completion",
+    issuer: "OpenAI Academy",
+    issued: "Oct 4, 2026",
+    expires: "Apr 4, 2027",
+    credentialId: "196204879",
+    skills: ["Applied AI", "AI Agents & Workflows"],
+    credentialUrl: "https://oaiacademy.credential.net/b3f799ef-b9dd-4de0-8ec6-d2ff2a9c8394",
+  },
+  {
     id: "claude-code-in-action",
     selected: true,
     title: "Claude Code in Action",
@@ -179,7 +190,6 @@ export const certificates: Certificate[] = [
   },
   {
     id: "sql-crash-course",
-    selected: true,
     title: "SQL Crash Course",
     issuer: "DataRockie | The School of Generalist",
     issued: "Feb 2024",

@@ -53,7 +53,7 @@ export function CertificatesSection() {
           </a>
         </div>
 
-        <div className="certificates-grid">
+        <div className="certificates-grid certificates-grid-selected">
           {selected.map((certificate) => (
             <CertificateCard certificate={certificate} key={certificate.id} />
           ))}

@@ -686,8 +686,9 @@ a {
 
 @supports (grid-template-rows: subgrid) {
   @media (min-width: 640px) {
-    .certificate-card { grid-row: span 6; grid-template-rows: subgrid; }
-    .certificate-footer:empty, .certificate-identity:empty { display: block; }
+    .certificates-grid-selected > .certificate-card { grid-row: span 6; grid-template-rows: subgrid; }
+    .certificates-grid-selected .certificate-footer:empty,
+    .certificates-grid-selected .certificate-identity:empty { display: block; }
   }
 }
 

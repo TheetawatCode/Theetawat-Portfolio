@@ -1,4 +1,4 @@
-import { BriefcaseBusiness } from "lucide-react";
+import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 
 import { experiences } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
@@ -14,8 +14,10 @@ export function ExperienceSection() {
           invert
         />
 
-        <div className="timeline">
-          {[...experiences.filter(item => item.kind === "work"), ...experiences.filter(item => item.kind === "training")].map((experience, index) => (
+        <div role="group" aria-labelledby="work-experience-heading">
+          <h3 className="experience-group-heading" id="work-experience-heading">Work Experience</h3>
+          <div className="timeline">
+          {experiences.filter(item => item.kind === "work").map((experience, index) => (
             <article className="timeline-item" key={`${experience.company}-${experience.title}`}>
               <div className="timeline-marker" aria-hidden="true">
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -25,8 +27,7 @@ export function ExperienceSection() {
                   <span><BriefcaseBusiness size={16} aria-hidden="true" /> {experience.company}</span>
                   <time>{experience.duration}</time>
                 </div>
-                <p className="experience-kind">{experience.kind === "training" ? "Technical training" : "Professional experience"}</p>
-                <h3>{experience.title}</h3>
+                <h4>{experience.title}</h4>
                 <ul>
                   {experience.description.slice(0, 2).map((item) => <li key={item}>{item}</li>)}
                 </ul>
@@ -41,6 +42,35 @@ export function ExperienceSection() {
               </div>
             </article>
           ))}
+          </div>
+        </div>
+
+        <div className="technical-training" role="group" aria-labelledby="technical-training-heading">
+          <h3 className="experience-group-heading" id="technical-training-heading">Technical Training</h3>
+          <p className="training-intro">Hands-on bootcamp training in frontend and backend development.</p>
+          <div className="training-grid">
+            {experiences.filter(item => item.kind === "training").map((experience) => (
+              <article className="timeline-card training-card" key={`${experience.company}-${experience.title}`}>
+                <div className="timeline-meta">
+                  <span><GraduationCap size={16} aria-hidden="true" /> {experience.company}</span>
+                  <time>{experience.duration}</time>
+                </div>
+                <p className="training-badge">Bootcamp</p>
+                <h4>{experience.title}</h4>
+                <ul>
+                  {experience.description.slice(0, 2).map((item) => <li key={item}>{item}</li>)}
+                </ul>
+                {experience.description.length > 2 ? (
+                  <details className="experience-details">
+                    <summary>View {experience.description.length - 2} more details</summary>
+                    <ul>
+                      {experience.description.slice(2).map((item) => <li key={item}>{item}</li>)}
+                    </ul>
+                  </details>
+                ) : null}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

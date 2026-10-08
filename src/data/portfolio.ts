@@ -95,17 +95,6 @@ export const currentlyLearningSkills = ["React Native (Expo)", "AI Agents & Mult
 
 export const certificates: Certificate[] = [
   {
-    id: "openai-codex-pathway",
-    selected: true,
-    title: "Build with AI - Codex Pathway Completion",
-    issuer: "OpenAI Academy",
-    issued: "Sep 29, 2026",
-    expires: "Mar 29, 2027",
-    credentialId: "195502732",
-    skills: ["OpenAI Codex"],
-    credentialUrl: "https://oaiacademy.credential.net/61f016fd-c487-4629-a39f-a5e99a9857d6",
-  },
-  {
     id: "openai-apply-ai-at-work-pathway",
     selected: true,
     title: "Apply AI at Work Pathway Completion",
@@ -115,6 +104,17 @@ export const certificates: Certificate[] = [
     credentialId: "196204879",
     skills: ["Applied AI", "OpenAI Codex", "Agent-assisted Workflows"],
     credentialUrl: "https://oaiacademy.credential.net/b3f799ef-b9dd-4de0-8ec6-d2ff2a9c8394",
+  },
+  {
+    id: "openai-codex-pathway",
+    selected: true,
+    title: "Build with AI - Codex Pathway Completion",
+    issuer: "OpenAI Academy",
+    issued: "Sep 29, 2026",
+    expires: "Mar 29, 2027",
+    credentialId: "195502732",
+    skills: ["OpenAI Codex"],
+    credentialUrl: "https://oaiacademy.credential.net/61f016fd-c487-4629-a39f-a5e99a9857d6",
   },
   {
     id: "claude-code-in-action",

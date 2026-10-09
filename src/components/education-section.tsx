@@ -8,13 +8,20 @@ export function EducationSection() {
         <h3 className="eyebrow">Education</h3>
         <article className="education-card">
           <div className="education-icon"><GraduationCap size={26} aria-hidden="true" /></div>
-          <div>
-            <p className="eyebrow">{education.duration}</p>
-            <h4>{education.title}</h4>
-            <p className="mt-2 text-slate-600">{education.major}</p>
+          <div className="education-content">
+            <h4>{education.degree}</h4>
+            <p className="education-university">{education.university}</p>
+            <p className="education-duration">{education.duration}</p>
+            <dl className="education-fields">
+              <div><dt>Major</dt><dd>{education.major}</dd></div>
+              <div><dt>Minor</dt><dd>{education.minor}</dd></div>
+            </dl>
             <div className="education-thesis">
               <BookOpen size={18} aria-hidden="true" />
-              <p>{education.description}</p>
+              <div>
+                <h5>Undergraduate Thesis</h5>
+                <p>{education.thesis}</p>
+              </div>
             </div>
           </div>
         </article>

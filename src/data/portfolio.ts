@@ -145,13 +145,6 @@ export const certificates: Certificate[] = [
     credentialUrl: "https://badges.parchment.com/public/assertions/VfWMraH2R0m8zR4-9tpk-w",
   },
   {
-    id: "ai-for-all",
-    title: "AI for All: From Basics to GenAI Practice",
-    issuer: "NVIDIA",
-    issued: "Dec 2024",
-    skills: ["Artificial Intelligence"],
-  },
-  {
     id: "accelerated-intro-to-cs",
     title: "Accelerated Intro to CS Course",
     issuer: "CodeAI",

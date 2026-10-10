@@ -140,8 +140,9 @@ export const certificates: Certificate[] = [
     title: "Data Analyst Manifesto",
     issuer: "DataRockie | The School of Generalist",
     issued: "Dec 2024",
+    credentialId: "VfWMraH2R0m8zR4-9tpk-w",
     skills: ["Data Analysis"],
-    credentialUrl: "https://badgr.com/public/assertions/VfWMraH2R0m8zR4-9tpk-w",
+    credentialUrl: "https://badges.parchment.com/public/assertions/VfWMraH2R0m8zR4-9tpk-w",
   },
   {
     id: "ai-for-all",

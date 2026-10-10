@@ -151,44 +151,10 @@ export const certificates: Certificate[] = [
     skills: ["Artificial Intelligence"],
   },
   {
-    id: "chatgpt-for-developers",
-    title: "ChatGPT for Developers",
-    issuer: "BorntoDev",
-    issued: "Sep 2024",
-    skills: ["ChatGPT"],
-  },
-  {
-    id: "command-prompt-101",
-    title: "Command Prompt 101",
-    issuer: "BorntoDev",
-    issued: "Sep 2024",
-    skills: ["Command Prompt"],
-  },
-  {
-    id: "social-listening-data-analyst",
-    title: "Social Listening - Data Analyst Edition",
-    issuer: "DataRockie | The School of Generalist",
-    issued: "Aug 2024",
-    skills: ["Social Listening", "Looker Studio"],
-  },
-  {
-    id: "borntodev-participation",
-    title: "BorntoDev Participation",
-    issuer: "BorntoDev",
-    issued: "Jun 2024",
-  },
-  {
     id: "accelerated-intro-to-cs",
     title: "Accelerated Intro to CS Course",
     issuer: "CodeAI",
     issued: "May 2024",
-  },
-  {
-    id: "r-crash-course",
-    title: "R Crash Course",
-    issuer: "DataRockie | The School of Generalist",
-    issued: "Feb 2024",
-    skills: ["R"],
   },
   {
     id: "sql-crash-course",
@@ -196,13 +162,6 @@ export const certificates: Certificate[] = [
     issuer: "DataRockie | The School of Generalist",
     issued: "Feb 2024",
     skills: ["SQL"],
-  },
-  {
-    id: "google-sheets-crash-course",
-    title: "Google Sheets Crash Course",
-    issuer: "DataRockie | The School of Generalist",
-    issued: "Feb 2024",
-    skills: ["Google Sheets"],
   },
   {
     id: "github-for-developer",

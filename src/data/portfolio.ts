@@ -127,6 +127,15 @@ export const certificates: Certificate[] = [
     credentialUrl: "https://verify.skilljar.com/c/aqxjntwg93t2",
   },
   {
+    id: "claude-code-101",
+    title: "Claude Academy: Claude Code 101",
+    issuer: "Anthropic",
+    issued: "Oct 12, 2026",
+    credentialId: "6945ac558eb7b16371a70f41fa7d88fa",
+    skills: ["Claude Code"],
+    credentialUrl: "https://academy.claude.com/verify/6945ac558eb7b16371a70f41fa7d88fa",
+  },
+  {
     id: "claude-101",
     title: "Claude Academy: Claude 101",
     issuer: "Anthropic",

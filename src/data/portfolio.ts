@@ -87,7 +87,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Tools & Delivery",
-    items: ["Git", "GitHub", "Vercel", "Docker", "Figma", "WordPress"],
+    items: ["Git", "GitHub", "Vercel", "Docker", "Figma", "OpenAI Codex"],
   },
 ];
 

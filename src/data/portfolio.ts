@@ -119,12 +119,12 @@ export const certificates: Certificate[] = [
   {
     id: "claude-code-in-action",
     selected: true,
-    title: "Claude Code in Action",
+    title: "Claude Academy: Claude Code in Action",
     issuer: "Anthropic",
-    issued: "Jun 2026",
-    credentialId: "aqxjntwg93t2",
-    skills: ["Claude Skills"],
-    credentialUrl: "https://verify.skilljar.com/c/aqxjntwg93t2",
+    issued: "Oct 20, 2026",
+    credentialId: "f06ce88664bf328ece69cff900720bcd",
+    skills: ["Claude Code"],
+    credentialUrl: "https://academy.claude.com/verify/f06ce88664bf328ece69cff900720bcd",
   },
   {
     id: "claude-code-101",

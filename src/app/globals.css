@@ -442,7 +442,7 @@ a {
 }
 
 .skill-card {
-  min-height: 13rem;
+  min-height: 11rem;
   border: 1px solid var(--hairline);
   border-radius: 1.25rem;
   background: linear-gradient(145deg, #fff, #f9fbff);

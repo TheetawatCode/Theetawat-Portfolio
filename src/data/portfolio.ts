@@ -75,7 +75,7 @@ export const profile = {
 export const skillGroups: SkillGroup[] = [
   {
     title: "Frontend Development",
-    items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML & CSS", "Tailwind CSS", "Zustand"],
+    items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML & CSS", "Tailwind CSS", "Responsive Design", "Zustand"],
   },
   {
     title: "Backend & Databases",
@@ -87,7 +87,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Tools & Delivery",
-    items: ["Git", "GitHub", "Vercel", "Docker", "Figma", "OpenAI Codex"],
+    items: ["Git", "GitHub", "Vercel", "Docker", "Figma", "OpenAI Codex", "Claude Code"],
   },
 ];
 

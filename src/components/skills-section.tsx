@@ -11,7 +11,7 @@ export function SkillsSection() {
       <div className="site-shell">
         <SectionHeading
           eyebrow="02 / Skills"
-          title="Skills for building and shipping full-stack products."
+          title="Skills for building thoughtful web applications."
           description="Technologies and tools shaped by my projects, training, and professional work."
         />
 

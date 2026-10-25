@@ -11,18 +11,20 @@ function CertificateCard({ certificate }: { certificate: Certificate }) {
                 <span className="certificate-issuer">{certificate.issuer}</span>
               </div>
               <h3>{certificate.title}</h3>
-              <div className="certificate-meta">
-                <span><CalendarDays size={15} aria-hidden="true" /> Issued {certificate.issued}</span>
-                {certificate.expires ? <span><CalendarDays size={15} aria-hidden="true" /> Expires {certificate.expires}</span> : null}
+              <div className="certificate-details">
+                <div className="certificate-meta">
+                  <span><CalendarDays size={15} aria-hidden="true" /> Issued {certificate.issued}</span>
+                  {certificate.expires ? <span><CalendarDays size={15} aria-hidden="true" /> Expires {certificate.expires}</span> : null}
+                </div>
+                <div className="certificate-identity" aria-hidden={!certificate.credentialId || undefined}>
+                  {certificate.credentialId ? <span className="credential-id">Credential ID {certificate.credentialId}</span> : null}
+                </div>
+                {certificate.skills?.length ? (
+                  <ul className="certificate-skills" aria-label="Skills">
+                    {certificate.skills.map((skill) => <li key={skill}>{skill}</li>)}
+                  </ul>
+                ) : <span className="certificate-foundation">Learning foundation</span>}
               </div>
-              <div className="certificate-identity" aria-hidden={!certificate.credentialId || undefined}>
-                {certificate.credentialId ? <span className="credential-id">Credential ID {certificate.credentialId}</span> : null}
-              </div>
-              {certificate.skills?.length ? (
-                <ul className="certificate-skills" aria-label="Skills">
-                  {certificate.skills.map((skill) => <li key={skill}>{skill}</li>)}
-                </ul>
-              ) : <span className="certificate-foundation">Learning foundation</span>}
               <div className="certificate-footer">
               {certificate.credentialUrl ? (
                 <a className="certificate-verify-link" href={certificate.credentialUrl} target="_blank" rel="noreferrer">

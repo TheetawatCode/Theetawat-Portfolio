@@ -119,8 +119,8 @@ export const certificates: Certificate[] = [
   {
     id: "claude-code-in-action",
     selected: true,
-    title: "Claude Academy: Claude Code in Action",
-    issuer: "Anthropic",
+    title: "Claude Code in Action",
+    issuer: "Claude Academy",
     issued: "Oct 20, 2026",
     credentialId: "f06ce88664bf328ece69cff900720bcd",
     skills: ["Claude Code"],
@@ -128,8 +128,8 @@ export const certificates: Certificate[] = [
   },
   {
     id: "claude-building-with-api",
-    title: "Claude Academy: Building with the Claude API",
-    issuer: "Anthropic",
+    title: "Building with the Claude API",
+    issuer: "Claude Academy",
     issued: "Oct 25, 2026",
     credentialId: "9ad828beae4c7166449d995da77a75bf",
     skills: ["Claude API"],
@@ -137,8 +137,8 @@ export const certificates: Certificate[] = [
   },
   {
     id: "claude-code-101",
-    title: "Claude Academy: Claude Code 101",
-    issuer: "Anthropic",
+    title: "Claude Code 101",
+    issuer: "Claude Academy",
     issued: "Oct 12, 2026",
     credentialId: "6945ac558eb7b16371a70f41fa7d88fa",
     skills: ["Claude Code"],
@@ -146,8 +146,8 @@ export const certificates: Certificate[] = [
   },
   {
     id: "claude-101",
-    title: "Claude Academy: Claude 101",
-    issuer: "Anthropic",
+    title: "Claude 101",
+    issuer: "Claude Academy",
     issued: "Oct 9, 2026",
     credentialId: "a437de728f6d9961253ef018c869be52",
     skills: ["Claude Skills"],

@@ -27,7 +27,7 @@ export function HeroSection() {
             <a className="button button-primary" href="#projects">
               View projects <ArrowDown size={17} aria-hidden="true" />
             </a>
-            <a className="button" href={`mailto:${profile.email}`}>
+            <a className="button" href="https://linktr.ee/theetawat.work" target="_blank" rel="noreferrer">
               Let&apos;s work together <ArrowUpRight size={17} aria-hidden="true" />
             </a>
           </div>

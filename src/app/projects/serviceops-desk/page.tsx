@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import styles from "./case-study.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, CodeXml } from "lucide-react";
@@ -20,7 +21,7 @@ const decisions = [
 ];
 
 export default function ServiceOpsCaseStudyPage() {
-  return <><SiteHeader /><main id="top" className="case-study-page">
+  return <><SiteHeader /><main id="top" className={`case-study-page ${styles.page}`}>
     <div className="site-shell case-study-shell">
       <Link href="/#projects" className="catalog-back">← Back to selected projects</Link>
       <div className="case-study-intro">

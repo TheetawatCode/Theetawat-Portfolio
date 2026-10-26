@@ -1,0 +1,63 @@
+/* Route-scoped styles: excluded from the initial homepage stylesheet. */
+
+
+.page :global(.other-projects) {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.page :global(.roadmap-list) {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.page :global(.roadmap-list article) {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.8rem;
+  border: 1px solid var(--hairline);
+  border-radius: 1rem;
+  background: #f8fafc;
+  padding: 1rem;
+}
+
+.page :global(.roadmap-list article > span) {
+  color: #2563eb;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.page :global(.roadmap-list h4) {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.page :global(.roadmap-list p) {
+  margin-top: 0.3rem;
+  color: #64748b;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .page :global(.other-projects) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .page :global(.other-projects) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.page :global(.catalog-back) { display: inline-flex; align-items: center; min-height: 44px; color: #1d4ed8; font-weight: 600; }
+.page :global(.catalog-heading) { max-width: 48rem; margin: 2rem 0; }
+.page :global(.catalog-heading h1) { font-size: clamp(2.3rem, 5vw, 4rem); line-height: 1.08; letter-spacing: -0.045em; font-weight: 650; margin: 0.8rem 0 1rem; }
+.page :global(.catalog-heading > p:last-child) { color: #526174; line-height: 1.75; }
+.page :global(.project-filters) { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-block: 2rem 1rem; }
+.page :global(.project-filters button) { display: inline-flex; gap: 0.5rem; align-items: center; border: 1px solid var(--hairline); border-radius: 999px; padding: 0.65rem 1rem; min-height: 44px; cursor: pointer; color: #334155; background: white; }
+.page :global(.project-filters button[aria-pressed="true"]) { background: #0b1f3a; color: white; border-color: #0b1f3a; }
+.page :global(.project-filters button span) { font-size: 0.75rem; opacity: 0.8; }
+.page :global(.catalog-count),
+.page :global(.catalog-empty) { color: #526174; font-size: 0.9rem; margin-block: 1rem; }
+.page :global(.project-card) { height: 100%; }
+.page :global(.roadmap-list h3) { font-size: 0.95rem; font-weight: 700; }
+.page :global(.roadmap-disclosure) { margin-top: 3rem; }

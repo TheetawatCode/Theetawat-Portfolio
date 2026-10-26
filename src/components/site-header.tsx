@@ -1,19 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ArrowUpRight, FileText, Menu } from "lucide-react";
 
 import { navItems, profile } from "@/data/portfolio";
 
 export function SiteHeader() {
   const menu = useRef<HTMLDetailsElement>(null);
+  const header = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const update = () => header.current?.toggleAttribute("data-scrolled", window.scrollY > 24);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
   return (
-    <header className="site-header">
+    <header className="site-header" ref={header}>
       <div className="site-shell flex h-18 items-center justify-between">
-        <Link className="brand-mark" href="/#top" aria-label="Back to portfolio home">
+        <Link className="brand-mark" href="/#top">
           <span>TP</span>
           <span className="hidden sm:block">Theetawat Premsawat</span>
+          <span className="sr-only"> — portfolio home</span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">

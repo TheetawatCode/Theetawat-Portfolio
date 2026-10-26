@@ -1,3 +1,4 @@
+import { MotionEnhancements } from "@/components/motion-enhancements";
 import { AboutSection } from "@/components/about-section";
 import { CertificatesSection } from "@/components/certificates-section";
 import { ExperienceSection } from "@/components/experience-section";
@@ -22,6 +23,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <SiteFooter />
+      <MotionEnhancements />
     </>
   );
 }

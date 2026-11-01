@@ -127,6 +127,15 @@ export const certificates: Certificate[] = [
     credentialUrl: "https://academy.claude.com/verify/f06ce88664bf328ece69cff900720bcd",
   },
   {
+    id: "claude-ai-fluency-small-businesses",
+    title: "AI Fluency for small businesses",
+    issuer: "Claude Academy",
+    issued: "Nov 2, 2026",
+    credentialId: "9a58a939fd838d359d8134ef3476f138",
+    skills: ["AI Fluency"],
+    credentialUrl: "https://academy.claude.com/verify/9a58a939fd838d359d8134ef3476f138",
+  },
+  {
     id: "claude-ai-fluency-foundations",
     title: "AI Fluency: Framework and foundations",
     issuer: "Claude Academy",
@@ -143,6 +152,15 @@ export const certificates: Certificate[] = [
     credentialId: "9ad828beae4c7166449d995da77a75bf",
     skills: ["Claude API"],
     credentialUrl: "https://academy.claude.com/verify/9ad828beae4c7166449d995da77a75bf",
+  },
+  {
+    id: "claude-introduction-to-claude-cowork",
+    title: "Introduction to Claude Cowork",
+    issuer: "Claude Academy",
+    issued: "Oct 15, 2026",
+    credentialId: "429770a0092f5aaa2af600bdd5b1a572",
+    skills: ["Claude Cowork"],
+    credentialUrl: "https://academy.claude.com/verify/429770a0092f5aaa2af600bdd5b1a572",
   },
   {
     id: "claude-code-101",

@@ -127,6 +127,15 @@ export const certificates: Certificate[] = [
     credentialUrl: "https://academy.claude.com/verify/f06ce88664bf328ece69cff900720bcd",
   },
   {
+    id: "claude-ai-fluency-creative-work",
+    title: "AI Fluency for creative work",
+    issuer: "Claude Academy",
+    issued: "Nov 3, 2026",
+    credentialId: "3375ecabf00288b847b1ec937322f292",
+    skills: ["AI Fluency"],
+    credentialUrl: "https://academy.claude.com/verify/3375ecabf00288b847b1ec937322f292",
+  },
+  {
     id: "claude-ai-fluency-small-businesses",
     title: "AI Fluency for small businesses",
     issuer: "Claude Academy",

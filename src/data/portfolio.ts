@@ -127,6 +127,15 @@ export const certificates: Certificate[] = [
     credentialUrl: "https://academy.claude.com/verify/f06ce88664bf328ece69cff900720bcd",
   },
   {
+    id: "claude-human-agent-teams",
+    title: "Building effective human-agent teams (beta)",
+    issuer: "Claude Academy",
+    issued: "Nov 5, 2026",
+    credentialId: "c9b8490b716d4b117ee0aee53be2a3b1",
+    skills: ["Human-Agent Collaboration"],
+    credentialUrl: "https://academy.claude.com/verify/c9b8490b716d4b117ee0aee53be2a3b1",
+  },
+  {
     id: "claude-ai-fluency-creative-work",
     title: "AI Fluency for creative work",
     issuer: "Claude Academy",

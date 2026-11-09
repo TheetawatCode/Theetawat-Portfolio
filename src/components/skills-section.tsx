@@ -1,9 +1,9 @@
-import { Braces, Database, Layers3, Orbit } from "lucide-react";
+import { Braces, Database, Layers3, Orbit, ShieldCheck } from "lucide-react";
 
 import { currentlyLearningSkills, skillGroups } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
 
-const icons = [Braces, Database, Orbit, Layers3];
+const icons = [Braces, Database, Orbit, Layers3, ShieldCheck];
 
 export function SkillsSection() {
   return (
@@ -11,7 +11,7 @@ export function SkillsSection() {
       <div className="site-shell">
         <SectionHeading
           eyebrow="02 / Skills"
-          title="Skills for building thoughtful web applications."
+          title="Skills for building secure, reliable web applications."
           description="Technologies and tools shaped by my projects, training, and professional work."
         />
 

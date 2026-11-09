@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "Projects | Theetawat Premsawat", des
 export default function ProjectsPage() {
   return <><SiteHeader /><main id="top" className={`section-space catalog-page ${styles.page}`}><div className="site-shell">
     <Link href="/#projects" className="catalog-back">← Back to portfolio</Link>
-    <div className="catalog-heading"><p className="eyebrow">Project collection</p><h1>Work, experiments, and what comes next.</h1><p>Explore by status. Live projects have a public experience to try; explorations showcase ideas and interface concepts.</p></div>
+    <div className="catalog-heading"><p className="eyebrow">Project collection</p><h1>Shipped work and ongoing builds.</h1><p>Explore by status. Live projects have a public experience to try; explorations showcase ideas and interface concepts.</p></div>
     <ProjectCatalog projects={projects} />
   </div></main><SiteFooter /></>;
 }

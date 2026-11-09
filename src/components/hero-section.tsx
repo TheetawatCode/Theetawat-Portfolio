@@ -17,7 +17,7 @@ export function HeroSection() {
           </div>
           <p className="hero-kicker">Hello, I&apos;m {profile.nickname}.</p>
           <h1>
-            Full-stack Developer.<br /><span>Thoughtful web experiences.</span>
+            Full-stack Developer.<br /><span>Secure, <span className="whitespace-nowrap">well-tested</span> web apps.</span>
           </h1>
           <div className="mt-8 max-w-2xl space-y-3 text-lg leading-8 text-slate-600">
             {profile.introduction.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -59,7 +59,7 @@ export function HeroSection() {
             <p><i>02</i>&nbsp;&nbsp;name: <span className="text-cyan-300">&quot;{profile.name}&quot;</span>,</p>
             <p><i>03</i>&nbsp;&nbsp;role: <span className="text-cyan-300">&quot;{profile.role}&quot;</span>,</p>
             <p><i>04</i>&nbsp;&nbsp;focus: [</p>
-            <p><i>05</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Thoughtful web experiences&quot;</span>,</p>
+            <p><i>05</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Secure, well-tested web apps&quot;</span>,</p>
             <p><i>06</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Maintainable applications&quot;</span>,</p>
             <p><i>07</i>&nbsp;&nbsp;],</p>
             <p><i>08</i>&nbsp;&nbsp;learning: <span className="text-cyan-300">&quot;Web application security&quot;</span>,</p>

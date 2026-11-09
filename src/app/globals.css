@@ -441,6 +441,8 @@ a {
   gap: 1rem;
 }
 
+.skills-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+
 .skill-card {
   min-height: 11rem;
   border: 1px solid var(--hairline);

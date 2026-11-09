@@ -19,7 +19,7 @@ export type Experience = {
 export type Project = {
   id: string;
   title: string;
-  status: "Live" | "Prototype" | "In Progress" | "Coming Soon";
+  status: "Live" | "Prototype" | "In Progress";
   description: string;
   image?: string;
   technologies: string[];
@@ -64,12 +64,12 @@ export const profile = {
   github: "https://github.com/TheetawatCode",
   resume: "/pdf/Theetawat_Resume.pdf",
   introduction: [
-    "I build responsive web applications with React, Next.js, and TypeScript, with attention to usability, maintainability, and security. I’m currently strengthening my knowledge of web application security and looking for a team where I can contribute and grow.",
+    "I build full-stack web applications with Next.js, TypeScript, Node.js, and PostgreSQL — from the interface to the API and the database. I treat security as part of the build: permissions checked on the server, validated input, and tested access rules. I’m looking for a team where I can ship reliable features and keep growing in application security.",
   ],
   about: [
     "My background in economics and administrative work taught me to organize information, communicate clearly, and understand business needs. I bring that perspective to software development.",
     "After completing a full-stack bootcamp, I continued learning through hands-on projects. I enjoy turning complex workflows into approachable interfaces and improving them through testing and feedback.",
-    "I’m also developing my understanding of web application security, including how applications handle user access and protect data.",
+    "Security is where I’m going deeper. In ServiceOps Desk, permissions are enforced on the server, not just hidden in the UI. On this site, I set up security headers, CI checks, and automated dependency updates. I’m now studying authentication, access control, and data protection in web applications.",
   ],
 } as const;
 
@@ -89,6 +89,10 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Tools & Delivery",
     items: ["Git", "GitHub", "Vercel", "Docker", "Figma", "OpenAI Codex", "Claude Code"],
+  },
+  {
+    title: "Security Practices",
+    items: ["Server-side authorization", "Input validation", "Security headers & CSP", "Dependency monitoring"],
   },
 ];
 
@@ -318,7 +322,7 @@ export const projects: Project[] = [
     projectType: "Full-stack application",
     role: "Full-stack Developer",
     period: "2026",
-    highlight: "Role-aware workflows with end-to-end SLA tracking.",
+    highlight: "Role-based access enforced on the server, with tested state transitions and SLA tracking.",
   },
   {
     id: "saan-market",
@@ -388,29 +392,6 @@ export const projects: Project[] = [
     nextMilestone: "Refining the reservation flow and API integration.",
   },
   {
-    id: "blog",
-    title: "Blog",
-    status: "In Progress",
-    description: "A developer-focused publishing platform for articles, curated topics, reading lists, and a distraction-free reading experience.",
-    image: "/images/projects/blog-mockup.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MDX"],
-    nextMilestone: "Building the MDX publishing flow and article discovery.",
-  },
-  {
-    id: "e-learning-platform",
-    title: "E-Learning Platform",
-    status: "Coming Soon",
-    description: "A planned e-learning experience for discovering courses and following a structured learning path.",
-    technologies: ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
-  },
-  {
-    id: "e-commerce-platform",
-    title: "E-Commerce Platform",
-    status: "Coming Soon",
-    description: "A planned commerce project exploring product browsing, cart interactions, and checkout.",
-    technologies: ["Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
-  },
-  {
     id: "finance-flow",
     title: "Finance Flow",
     status: "Prototype",
@@ -429,40 +410,6 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "UI/UX"],
     projectType: "Product concept",
     highlight: "A focused exploration of collaborative work and team visibility.",
-  },
-  {
-    id: "table-notes",
-    title: "Table Notes",
-    status: "In Progress",
-    description: "A restaurant discovery and reservation experience designed around thoughtful local recommendations.",
-    image: "/images/projects/restaurant-booking-mockup.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "API Design"],
-    nextMilestone: "Defining the discovery and reservation workflow.",
-  },
-  {
-    id: "habit-loop",
-    title: "Habit Loop",
-    status: "In Progress",
-    description: "A calm habit-tracking interface that makes daily routines and long-term consistency visible.",
-    image: "/images/projects/habit-tracker-mockup.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Data Visualization"],
-    nextMilestone: "Designing insights, streaks, and long-term progress views.",
-  },
-  {
-    id: "event-atlas",
-    title: "Event Atlas",
-    status: "Coming Soon",
-    description: "A community event platform concept that brings schedules, attendance, and event insights together.",
-    image: "/images/projects/event-platform-mockup.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Product Strategy"],
-  },
-  {
-    id: "learn-lab",
-    title: "Learn Lab",
-    status: "Coming Soon",
-    description: "A developer learning platform concept with focused lessons, progress insights, and practical pathways.",
-    image: "/images/projects/learning-platform-mockup.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Learning UX"],
   },
 ];
 

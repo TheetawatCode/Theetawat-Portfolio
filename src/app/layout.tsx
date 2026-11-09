@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const title = "Theetawat Premsawat | Full-stack Developer";
-const description = "Portfolio of Theetawat Premsawat, a Full-stack Developer building responsive and scalable digital products.";
+const description = "Portfolio of Theetawat Premsawat, a Full-stack Developer building secure, well-tested web applications with Next.js, TypeScript, and PostgreSQL.";
 
 export const metadata: Metadata = {
   title,

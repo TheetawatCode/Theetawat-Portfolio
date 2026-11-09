@@ -1,0 +1,29 @@
+version: 2
+
+# Monthly grouped version updates; security updates are enabled in repository settings and arrive immediately.
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    # Skip versions published in the last week to avoid freshly compromised releases.
+    cooldown:
+      default-days: 7
+    # Major upgrades (Next.js, Tailwind, React) are done by hand after a visual check.
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    groups:
+      npm-dependencies:
+        patterns: ["*"]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 7
+    groups:
+      github-actions:
+        patterns: ["*"]

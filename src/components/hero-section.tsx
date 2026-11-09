@@ -59,10 +59,10 @@ export function HeroSection() {
             <p><i>02</i>&nbsp;&nbsp;name: <span className="text-cyan-300">&quot;{profile.name}&quot;</span>,</p>
             <p><i>03</i>&nbsp;&nbsp;role: <span className="text-cyan-300">&quot;{profile.role}&quot;</span>,</p>
             <p><i>04</i>&nbsp;&nbsp;focus: [</p>
-            <p><i>05</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Web experiences&quot;</span>,</p>
-            <p><i>06</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Scalable systems&quot;</span>,</p>
+            <p><i>05</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Thoughtful web experiences&quot;</span>,</p>
+            <p><i>06</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Maintainable applications&quot;</span>,</p>
             <p><i>07</i>&nbsp;&nbsp;],</p>
-            <p><i>08</i>&nbsp;&nbsp;learning: <span className="text-cyan-300">true</span>,</p>
+            <p><i>08</i>&nbsp;&nbsp;learning: <span className="text-cyan-300">&quot;Web application security&quot;</span>,</p>
             <p><i>09</i>&#125;;</p>
           </div>
           <div className="console-status">

@@ -64,11 +64,12 @@ export const profile = {
   github: "https://github.com/TheetawatCode",
   resume: "/pdf/Theetawat_Resume.pdf",
   introduction: [
-    "I build responsive web applications with React, Next.js, and TypeScript. My background in economics and administrative work helps me understand business needs and design approachable interfaces. I'm looking for a team where I can contribute and keep growing.",
+    "I build responsive web applications with React, Next.js, and TypeScript, with attention to usability, maintainability, and security. I’m currently strengthening my knowledge of web application security and looking for a team where I can contribute and grow.",
   ],
   about: [
     "My background in economics and administrative work taught me to organize information, communicate clearly, and understand business needs. I bring that perspective to software development.",
     "After completing a full-stack bootcamp, I continued learning through hands-on projects. I enjoy turning complex workflows into approachable interfaces and improving them through testing and feedback.",
+    "I’m also developing my understanding of web application security, including how applications handle user access and protect data.",
   ],
 } as const;
 

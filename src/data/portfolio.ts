@@ -417,7 +417,8 @@ export const education = {
   degree: "Bachelor of Economics",
   university: "Chiang Mai University (CMU)",
   major: "Economics",
-  minor: "Business Administration (Financial Management)",
+  minor: "Financial Management",
+  minorDiscipline: "Business Administration",
   duration: "Aug 2015 – May 2019",
   thesis: "Risk and Return Analysis and Price Estimation of Energy Sector Stocks Using the Capital Asset Pricing Model (CAPM)",
 } as const;

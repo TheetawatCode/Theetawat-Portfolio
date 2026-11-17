@@ -13,8 +13,8 @@ export function EducationSection() {
             <p className="education-university">{education.university}</p>
             <p className="education-duration">{education.duration}</p>
             <dl className="education-fields">
-              <div><dt>Major</dt><dd>{education.major}</dd></div>
-              <div><dt>Minor</dt><dd>{education.minor}</dd></div>
+              <div><dt>Major</dt><dd><strong className="font-semibold">{education.major}</strong></dd></div>
+              <div><dt>Minor</dt><dd><strong className="font-semibold">{education.minor}</strong> <span className="text-sm font-normal italic text-slate-500">({education.minorDiscipline})</span></dd></div>
             </dl>
             <div className="education-thesis">
               <BookOpen size={18} aria-hidden="true" />

@@ -1,41 +1,53 @@
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 
-import { experiences } from "@/data/portfolio";
+import { experiences, type Experience } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
 
+// Short entries show in full; longer ones keep two points visible and fold the rest.
+function visibleCount(experience: Experience) {
+  return experience.description.length <= 3 ? experience.description.length : 2;
+}
+
 export function ExperienceSection() {
+  const timeline = experiences.filter(item => item.kind !== "earlier");
+  const earlier = experiences.filter(item => item.kind === "earlier");
+
   return (
     <section className="section-space experience-section" id="experience">
       <div className="site-shell">
         <SectionHeading
           eyebrow="03 / Experience"
           title="Experience in delivery and development."
-          description="From business operations to hands-on software development, each role has strengthened how I communicate, solve problems, and build."
+          description="From economics and business operations to hands-on software development, each role has strengthened how I communicate, solve problems, and build."
           invert
         />
 
         <div role="group" aria-labelledby="work-experience-heading">
-          <h3 className="experience-group-heading" id="work-experience-heading">Work Experience</h3>
-          <div className="timeline">
-          {experiences.filter(item => item.kind === "work").map((experience, index) => (
+          <h3 className="experience-group-heading" id="work-experience-heading">Development Experience</h3>
+          <div className="timeline" data-timeline>
+          {timeline.map((experience, index) => (
             <article className="timeline-item" key={`${experience.company}-${experience.title}`}>
               <div className="timeline-marker" aria-hidden="true">
                 <span>{String(index + 1).padStart(2, "0")}</span>
               </div>
               <div className="timeline-card">
                 <div className="timeline-meta">
-                  <span><BriefcaseBusiness size={16} aria-hidden="true" /> {experience.company}</span>
+                  <span>
+                    {experience.kind === "training"
+                      ? <GraduationCap size={16} aria-hidden="true" />
+                      : <BriefcaseBusiness size={16} aria-hidden="true" />} {experience.company}
+                  </span>
                   <time>{experience.duration}</time>
                 </div>
                 <h4>{experience.title}</h4>
                 <ul>
-                  {experience.description.slice(0, 2).map((item) => <li key={item}>{item}</li>)}
+                  {experience.description.slice(0, visibleCount(experience)).map((item) => <li key={item}>{item}</li>)}
                 </ul>
-                {experience.description.length > 2 ? (
+                {experience.description.length > visibleCount(experience) ? (
                   <details className="experience-details">
                     <summary>View {experience.description.length - 2} more details</summary>
                     <ul>
-                      {experience.description.slice(2).map((item) => <li key={item}>{item}</li>)}
+                      {experience.description.slice(visibleCount(experience)).map((item) => <li key={item}>{item}</li>)}
                     </ul>
                   </details>
                 ) : null}
@@ -45,33 +57,33 @@ export function ExperienceSection() {
           </div>
         </div>
 
-        <div className="technical-training" role="group" aria-labelledby="technical-training-heading">
-          <h3 className="experience-group-heading" id="technical-training-heading">Technical Training</h3>
-          <p className="training-intro">Hands-on bootcamp training in frontend and backend development.</p>
-          <div className="training-grid">
-            {experiences.filter(item => item.kind === "training").map((experience) => (
-              <article className="timeline-card training-card" key={`${experience.company}-${experience.title}`}>
-                <div className="timeline-meta">
-                  <span><GraduationCap size={16} aria-hidden="true" /> {experience.company}</span>
-                  <time>{experience.duration}</time>
-                </div>
-                <p className="training-badge">Bootcamp</p>
-                <h4>{experience.title}</h4>
-                <ul>
-                  {experience.description.slice(0, 2).map((item) => <li key={item}>{item}</li>)}
-                </ul>
-                {experience.description.length > 2 ? (
-                  <details className="experience-details">
-                    <summary>View {experience.description.length - 2} more details</summary>
-                    <ul>
-                      {experience.description.slice(2).map((item) => <li key={item}>{item}</li>)}
-                    </ul>
-                  </details>
-                ) : null}
-              </article>
-            ))}
+        {earlier.length > 0 ? (
+          <div className="earlier-experience" role="group" aria-labelledby="earlier-experience-heading">
+            <h3 className="experience-group-heading" id="earlier-experience-heading">Earlier experience</h3>
+            <ul className="earlier-list">
+              {earlier.map((experience) => (
+                <li key={`${experience.company}-${experience.title}`}>
+                  <div className="earlier-head">
+                    <strong>{experience.title}</strong>
+                    <time>{experience.duration}</time>
+                  </div>
+                  <p className="earlier-company">{experience.company}</p>
+                  <ul className="earlier-points">
+                    {experience.description.slice(0, 3).map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                  {experience.description.length > 3 ? (
+                    <details className="experience-details">
+                      <summary>View {experience.description.length - 3} more details</summary>
+                      <ul className="earlier-points">
+                        {experience.description.slice(3).map((item) => <li key={item}>{item}</li>)}
+                      </ul>
+                    </details>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ) : null}
       </div>
     </section>
   );

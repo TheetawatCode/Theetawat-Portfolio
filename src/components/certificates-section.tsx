@@ -3,6 +3,11 @@ import { Award, CalendarDays, ExternalLink } from "lucide-react";
 import { certificates, profile, type Certificate } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
 
+// The verify link carries the full ID; the card only needs a recognisable short form.
+function shortId(id: string) {
+  return id.length > 12 ? `${id.slice(0, 4)}…${id.slice(-4)}` : id;
+}
+
 function CertificateCard({ certificate }: { certificate: Certificate }) {
   return (
             <article className="certificate-card" key={certificate.id}>
@@ -17,7 +22,7 @@ function CertificateCard({ certificate }: { certificate: Certificate }) {
                   {certificate.expires ? <span><CalendarDays size={15} aria-hidden="true" /> Expires {certificate.expires}</span> : null}
                 </div>
                 <div className="certificate-identity" aria-hidden={!certificate.credentialId || undefined}>
-                  {certificate.credentialId ? <span className="credential-id">Credential ID {certificate.credentialId}</span> : null}
+                  {certificate.credentialId ? <span className="credential-id" title={`Credential ID ${certificate.credentialId}`}>Credential ID {shortId(certificate.credentialId)}</span> : null}
                 </div>
                 {certificate.skills?.length ? (
                   <ul className="certificate-skills" aria-label="Skills">
@@ -45,7 +50,7 @@ export function CertificatesSection() {
         <SectionHeading
           eyebrow="04 / Certificates"
           title="Selected learning credentials."
-          description="Focused learning in development, data, and AI-assisted workflows."
+          description="Focused learning in development and AI-assisted workflows."
         />
 
         <div className="certificates-toolbar">

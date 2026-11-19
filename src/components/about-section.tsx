@@ -11,7 +11,7 @@ export function AboutSection() {
       <div className="site-shell">
         <SectionHeading
           eyebrow="05 / About & Education"
-          title="A business-aware full-stack builder with a security mindset."
+          title="From economics and finance to full-stack development."
         />
 
         <div className="about-card">

@@ -9,7 +9,8 @@ export type SkillGroup = {
 };
 
 export type Experience = {
-  kind: "work" | "training";
+  /** "work" and "training" render as timeline cards; "earlier" renders as a compact list. */
+  kind: "work" | "training" | "earlier";
   title: string;
   company: string;
   duration: string;
@@ -28,6 +29,10 @@ export type Project = {
   caseStudy?: string;
   featured?: boolean;
   projectType?: string;
+  /** Short project-type label shown on cards, e.g. "Frontend showcase". Falls back to projectType. */
+  typeLabel?: string;
+  /** One line of concrete engineering evidence (security, testing, or architecture). */
+  proof?: string;
   role?: string;
   period?: string;
   highlight?: string;
@@ -64,12 +69,12 @@ export const profile = {
   github: "https://github.com/TheetawatCode",
   resume: "/pdf/Theetawat_Resume.pdf",
   introduction: [
-    "I build full-stack web applications with Next.js, TypeScript, Node.js, and PostgreSQL — from the interface to the API and the database. I treat security as part of the build: permissions checked on the server, validated input, and tested access rules. I’m looking for a team where I can ship reliable features and keep growing in application security.",
+    "I build full-stack web applications with Next.js, TypeScript, Node.js, and PostgreSQL — from the interface to the API and the database. With a background in economics and finance, I analyze before I build: requirements, data, and risk. I’m looking for a team where I can ship reliable, well-tested features and keep learning.",
   ],
   about: [
-    "My background in economics and administrative work taught me to organize information, communicate clearly, and understand business needs. I bring that perspective to software development.",
-    "After completing a full-stack bootcamp, I continued learning through hands-on projects. I enjoy turning complex workflows into approachable interfaces and improving them through testing and feedback.",
-    "Security is where I’m going deeper. In ServiceOps Desk, permissions are enforced on the server, not just hidden in the UI. On this site, I set up security headers, CI checks, and automated dependency updates. I’m now studying authentication, access control, and data protection in web applications.",
+    "I studied economics with a focus on finance at Chiang Mai University. My thesis used the Capital Asset Pricing Model to analyze the risk and return of energy-sector stocks, which taught me to work carefully with data and question assumptions.",
+    "Administrative work taught me to organize information and communicate clearly. After a full-stack bootcamp, I kept building through hands-on projects, with the same habits: understand the business need first, plan the structure, test before shipping, and keep money and data calculations exact.",
+    "Next, I’m learning web application security, including authentication, access control, and data protection, and applying it step by step in my projects.",
   ],
 } as const;
 
@@ -90,10 +95,6 @@ export const skillGroups: SkillGroup[] = [
     title: "Tools & Delivery",
     items: ["Git", "GitHub", "Vercel", "Docker", "Figma", "OpenAI Codex", "Claude Code"],
   },
-  {
-    title: "Security Practices",
-    items: ["Server-side authorization", "Input validation", "Security headers & CSP", "Dependency monitoring"],
-  },
 ];
 
 export const currentlyLearningSkills = ["React Native (Expo)", "AI Agents & Multi-Agent Systems", "AWS Cloud Fundamentals", "Web Application Security"];
@@ -101,7 +102,6 @@ export const currentlyLearningSkills = ["React Native (Expo)", "AI Agents & Mult
 export const certificates: Certificate[] = [
   {
     id: "openai-apply-ai-at-work-pathway",
-    selected: true,
     title: "Apply AI at Work Pathway Completion",
     issuer: "OpenAI Academy",
     issued: "Oct 4, 2026",
@@ -169,6 +169,7 @@ export const certificates: Certificate[] = [
   },
   {
     id: "claude-building-with-api",
+    selected: true,
     title: "Building with the Claude API",
     issuer: "Claude Academy",
     issued: "Oct 25, 2026",
@@ -236,28 +237,25 @@ export const certificates: Certificate[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "Frontend Development Bootcamp Participant",
-    kind: "training",
-    company: "Borntodev Academy",
-    duration: "Jun 2024 – Sep 2024",
+    title: "Independent Full-stack Projects",
+    kind: "work",
+    company: "Self-directed",
+    duration: "Sep 2024 – Present",
     description: [
-      "Designed and developed a fully responsive web application as a Capstone Project, implementing best practices in UI/UX and leveraging tools like Tailwind CSS and React.",
-      "Gained hands-on experience in debugging, performance optimization, and version control using Git, simulating real-world development workflows.",
-      "Integrated third-party APIs to extend the functionality of web applications and enhance user engagement.",
-      "Acquired proficiency in building reusable and scalable components following modern development practices.",
+      "Built ServiceOps Desk, a role-aware service operations workspace with server-enforced role-based access, tested state transitions and SLA tracking, using Next.js, TypeScript, PostgreSQL and Prisma.",
+      "Built Saan Market, a Thai home-goods storefront with product search, a validated persistent cart and simulated checkout, covered by 30+ Vitest tests in CI.",
+      "Built Boreal Route, a northern-lights travel demo with weather-aware discovery and capacity-safe booking, covered by 25+ Vitest tests in CI.",
     ],
   },
   {
-    title: "Backend Development Bootcamp Participant",
+    title: "Full-stack Bootcamp (Frontend + Backend)",
     kind: "training",
     company: "Borntodev Academy",
     duration: "Jun 2024 – Sep 2024",
     description: [
-      "Completed an intensive program focused on backend fundamentals, including Node.js, Express.js, and RESTful API development.",
-      "Built and deployed scalable backend applications integrating both SQL and NoSQL databases such as MySQL and MongoDB.",
-      "Gained hands-on experience in authentication, authorization, and secure data management using JSON Web Tokens (JWT).",
-      "Developed and tested APIs to ensure functionality, performance, and reliability across multiple endpoints.",
-      "Applied best practices in backend architecture, code organization, and version control using Git and GitHub.",
+      "Frontend: designed and developed a fully responsive web application as a Capstone Project with React and Tailwind CSS, integrating third-party APIs and building reusable, scalable components.",
+      "Backend: built and deployed Node.js and Express.js REST APIs with MySQL and MongoDB, secured with authentication and authorization using JSON Web Tokens (JWT).",
+      "Practiced debugging, performance optimization, API testing and Git/GitHub version control across both tracks.",
     ],
   },
   {
@@ -266,7 +264,7 @@ export const experiences: Experience[] = [
     company: "Self-Employed",
     duration: "Dec 2022 – Apr 2024",
     description: [
-      "Designed and developed a landing page using WordPress for a Thai restaurant client in New Jersey, USA.",
+      "Designed and developed a landing page for a Thai restaurant client in New Jersey, USA.",
       "Collaborated with the client to understand business needs and deliver solutions that align with their goals.",
       "Conducted website maintenance and updates to ensure ongoing functionality and security.",
       "Optimized website performance and user experience through responsive design and SEO best practices.",
@@ -274,32 +272,27 @@ export const experiences: Experience[] = [
   },
   {
     title: "Administrative Assistant",
-    kind: "work",
+    kind: "earlier",
     company: "Malaysia Hair Import Export Co Ltd.",
     duration: "Nov 2019 – Jun 2020",
     description: [
-      "Supported daily operations across multiple departments to ensure smooth business functions.",
-      "Managed and organized company documents, ensuring accurate filing and retrieval processes.",
-      "Managed a diverse range of administrative tasks, including correspondence, data entry, and inventory control.",
-      "Provided exceptional customer service, resolving inquiries promptly and professionally.",
-      "Collaborated closely with colleagues across departments to ensure smooth operations and achieve company objectives.",
-      "Facilitated effective communication and information sharing within the team.",
-      "Contributed to a positive and supportive work environment through teamwork and collaboration.",
+      "Supported daily operations across multiple departments, handling correspondence, data entry, document filing and inventory control.",
+      "Provided customer service, resolving inquiries promptly and professionally.",
+      "Coordinated with colleagues across departments to keep information flowing and operations running smoothly.",
       "Proficient in using various computer software and applications for administrative tasks.",
       "Adapted quickly to new technologies and processes.",
+      "Contributed to a positive and supportive work environment through teamwork and collaboration.",
     ],
   },
   {
     title: "Marketing Internship",
-    kind: "work",
+    kind: "earlier",
     company: "Advanced Info Services Plc. (AIS)",
     duration: "Jun 2018 – Jul 2018",
     description: [
-      "Collaborated with the marketing team to develop and execute innovative marketing campaigns.",
-      "Conducted in-depth analysis of competitive strategies and customer behavior to inform marketing initiatives.",
-      "Led a team of 10 trainees from various universities to enhance the AIS Project, emphasizing collaboration and teamwork for successful outcomes.",
-      "Developed a new application prototype for demonstration purposes, showcasing innovative solutions to meet project objectives.",
-      "Prepared detailed reports and presentations to communicate project progress and outcomes to senior management.",
+      "Led a team of 10 trainees from various universities to enhance the AIS Project.",
+      "Developed an application prototype for demonstration and presented project progress and outcomes to senior management.",
+      "Worked with the marketing team on campaigns, analyzing competitive strategies and customer behavior to inform marketing initiatives.",
       "Demonstrated strong communication and interpersonal skills in a fast-paced corporate environment.",
       "Proficient in using various computer software and applications for marketing tasks.",
       "Contributed to a positive and supportive work environment through teamwork and collaboration.",
@@ -320,6 +313,8 @@ export const projects: Project[] = [
     caseStudy: "/projects/serviceops-desk",
     featured: true,
     projectType: "Full-stack application",
+    typeLabel: "Full-stack app",
+    proof: "Role permissions and state transitions validated on the server; Vitest and Playwright cover the core job flow.",
     role: "Full-stack Developer",
     period: "2026",
     highlight: "Role-based access enforced on the server, with tested state transitions and SLA tracking.",
@@ -335,6 +330,8 @@ export const projects: Project[] = [
     liveDemo: "https://saan-market.vercel.app/",
     featured: true,
     projectType: "E-commerce storefront",
+    typeLabel: "Frontend showcase · simulated checkout",
+    proof: "Prices are stored as integer satang to avoid rounding errors; persisted cart data is validated on load; 30+ Vitest tests run in CI.",
     role: "Frontend Developer",
     period: "2026",
     highlight: "Editorial product discovery with accessible interactions and a persistent client-side cart.",
@@ -350,6 +347,8 @@ export const projects: Project[] = [
     liveDemo: "https://boreal-route.vercel.app/",
     featured: true,
     projectType: "Travel experience platform",
+    typeLabel: "Frontend showcase · simulated booking",
+    proof: "Capacity-safe booking simulation with weather-aware readiness; 25+ Vitest tests cover booking and operations flows in CI.",
     role: "Frontend Developer",
     period: "2026",
     highlight: "Weather-aware discovery, capacity-safe booking simulation, and departure readiness coordination.",

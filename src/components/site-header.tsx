@@ -21,6 +21,7 @@ export function SiteHeader() {
       <div className="site-shell flex h-18 items-center justify-between">
         <Link className="brand-mark" href="/#top">
           <span>TP</span>
+          <span className="hidden min-[360px]:block sm:hidden">Theetawat</span>
           <span className="hidden sm:block">Theetawat Premsawat</span>
           <span className="sr-only"> — portfolio home</span>
         </Link>

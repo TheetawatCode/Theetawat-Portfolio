@@ -4,16 +4,17 @@ import { ArrowUpRight, CodeXml } from "lucide-react";
 import type { Project } from "@/data/portfolio";
 
 export function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
+  const typeLabel = project.typeLabel ?? project.projectType;
   const Heading = featured ? "h3" : "h2";
   return <article className={featured ? "featured-project" : "project-card"}>
     {project.image && <div className={featured ? "project-visual" : "project-card-image"}>
       <Image src={project.image} alt={`${project.title} project preview`} fill sizes={featured ? "(max-width: 899px) 100vw, 50vw" : "(max-width: 767px) 100vw, 50vw"} className="object-contain" />
     </div>}
     <div className={featured ? "project-copy" : "project-card-copy"}>
-      <div className="project-badges"><span className={`status status-${project.status.toLowerCase().replaceAll(" ", "-")}`}>{project.status === "Prototype" ? "Exploration" : project.status}</span>{project.featured && <span className="project-featured-label">Selected work</span>}</div>
+      <div className="project-badges">{/* Featured work is all live, so the badge only adds noise there. */}{!featured && <span className={`status status-${project.status.toLowerCase().replaceAll(" ", "-")}`}>{project.status === "Prototype" ? "Exploration" : project.status}</span>}{typeLabel && <span className="project-type">{typeLabel}</span>}</div>
       <Heading>{project.title}</Heading>
-      {project.role && <p className="project-role">{project.role}</p>}
       <p>{project.description}</p>
+      {project.proof && <p className="project-proof"><span>Evidence</span> {project.proof}</p>}
       <ul className="tech-list" aria-label="Technologies">{(featured ? project.technologies.slice(0, 4) : project.technologies).map(t => <li key={t}>{t}</li>)}</ul>
       {(project.caseStudy || project.liveDemo || project.githubLink) && <div className="project-actions">
         {project.caseStudy && <Link className="project-link project-link-primary" href={project.caseStudy}>View case study <ArrowUpRight size={16} aria-hidden="true" /></Link>}

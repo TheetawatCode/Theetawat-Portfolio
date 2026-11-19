@@ -17,7 +17,7 @@ export function HeroSection() {
           </div>
           <p className="hero-kicker">Hello, I&apos;m {profile.nickname}.</p>
           <h1>
-            Full-stack Developer.<br /><span>Secure, <span className="whitespace-nowrap">well-tested</span> web apps.</span>
+            Full-stack Developer.<br /><span>Analytical by training, systematic by habit.</span>
           </h1>
           <div className="mt-8 max-w-2xl space-y-3 text-lg leading-8 text-slate-600">
             {profile.introduction.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -58,12 +58,13 @@ export function HeroSection() {
             <p><i>01</i><span className="text-blue-300">const</span> developer = &#123;</p>
             <p><i>02</i>&nbsp;&nbsp;name: <span className="text-cyan-300">&quot;{profile.name}&quot;</span>,</p>
             <p><i>03</i>&nbsp;&nbsp;role: <span className="text-cyan-300">&quot;{profile.role}&quot;</span>,</p>
-            <p><i>04</i>&nbsp;&nbsp;focus: [</p>
-            <p><i>05</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Secure, well-tested web apps&quot;</span>,</p>
-            <p><i>06</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Maintainable applications&quot;</span>,</p>
-            <p><i>07</i>&nbsp;&nbsp;],</p>
-            <p><i>08</i>&nbsp;&nbsp;learning: <span className="text-cyan-300">&quot;Web application security&quot;</span>,</p>
-            <p><i>09</i>&#125;;</p>
+            <p><i>04</i>&nbsp;&nbsp;background: <span className="text-cyan-300">&quot;Economics &amp; Finance&quot;</span>,</p>
+            <p><i>05</i>&nbsp;&nbsp;focus: [</p>
+            <p><i>06</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Reliable, well-tested web apps&quot;</span>,</p>
+            <p><i>07</i>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-cyan-300">&quot;Maintainable applications&quot;</span>,</p>
+            <p><i>08</i>&nbsp;&nbsp;],</p>
+            <p><i>09</i>&nbsp;&nbsp;learning: <span className="text-cyan-300">&quot;Web application security&quot;</span>,</p>
+            <p><i>10</i>&#125;;</p>
           </div>
           <div className="console-status">
             <span><b>main</b> — ready to collaborate</span>

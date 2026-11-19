@@ -10,6 +10,7 @@ export function MotionEnhancements() {
     const animations = new Set<Animation>();
     const observed = new Set<HTMLElement>();
     let observer: IntersectionObserver | undefined;
+    const railCleanup: Array<() => void> = [];
 
     function animate(element: HTMLElement, delay = 0, hero = false) {
       element.removeAttribute("data-motion-pending");
@@ -35,6 +36,8 @@ export function MotionEnhancements() {
 
     function stopMotion() {
       observer?.disconnect();
+      railCleanup.forEach(fn => fn());
+      document.querySelectorAll<HTMLElement>("[data-rail]").forEach(rail => { rail.dataset.rail = "drawn"; });
       observed.forEach(element => element.removeAttribute("data-motion-pending"));
       animations.forEach(animation => animation.cancel());
       animations.clear();
@@ -70,6 +73,22 @@ export function MotionEnhancements() {
           observer?.unobserve(element);
         });
       }, { threshold: 0.04, rootMargin: "0px 0px 24px 0px" });
+
+      // Timeline rail: starts collapsed only when JS can draw it; CSS ignores this under reduced motion.
+      const rails = document.querySelectorAll<HTMLElement>("[data-timeline]");
+      const railObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          (entry.target as HTMLElement).dataset.rail = "drawn";
+          railObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.08 });
+      rails.forEach(rail => {
+        if (rail.getBoundingClientRect().top < 0) return;
+        rail.dataset.rail = "pending";
+        railObserver.observe(rail);
+        railCleanup.push(() => railObserver.disconnect());
+      });
 
       document.querySelectorAll<HTMLElement>(
         ".section-heading, .featured-project, .skill-card, .learning-skills, .timeline-item, .training-card, .certificates-toolbar, .certificates-grid-selected > .certificate-card, .about-card, .contact-card, .section-action",

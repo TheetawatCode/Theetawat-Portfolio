@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight, Download } from "lucide-react";
 
 import { profile } from "@/data/portfolio";
+import { LinkedinIcon } from "./brand-icons";
 import { SectionHeading } from "./section-heading";
 import { EducationSection } from "./education-section";
 
@@ -42,10 +43,10 @@ export function AboutSection() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a className="button button-primary" href={profile.resume} target="_blank" rel="noreferrer">
-                <Download size={17} aria-hidden="true" /> Download resume
+                <Download size={17} aria-hidden="true" /> Download resume <span className="file-tag">PDF</span>
               </a>
               <a className="button" href={profile.linkedin} target="_blank" rel="noreferrer">
-                LinkedIn <ArrowUpRight size={17} aria-hidden="true" />
+                <LinkedinIcon size={16} /> LinkedIn <ArrowUpRight size={17} aria-hidden="true" />
               </a>
             </div>
           </div>

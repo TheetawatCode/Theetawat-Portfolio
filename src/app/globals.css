@@ -111,6 +111,31 @@ a {
   color: #0f172a;
 }
 
+.nav-link[aria-current="location"],
+.mobile-menu nav a[aria-current="location"] {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* Hidden until keyboard focus reaches it. */
+.skip-link {
+  position: absolute;
+  z-index: 60;
+  top: 5rem;
+  left: 0.75rem;
+  transform: translateY(-500%);
+  border-radius: 0.65rem;
+  background: #0f172a;
+  padding: 0.6rem 0.9rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.skip-link:focus-visible { transform: none; }
+
+main:focus { outline: none; }
+
 .button {
   display: inline-flex;
   min-height: 2.875rem;
@@ -280,6 +305,32 @@ a {
   letter-spacing: -0.068em;
   line-height: 0.94;
 }
+
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin-top: 1.4rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.hero-proof li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* A dot per item, not a separator, so wrapped lines never start with a stray "·". */
+.hero-proof li::before {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 999px;
+  background: #93c5fd;
+  content: "";
+}
+
+.hero-proof strong { color: #0f172a; font-weight: 700; }
 
 .hero-section h1 span {
   color: #2563eb;
@@ -498,6 +549,31 @@ a {
   color: #475569;
   font-size: 0.76rem;
   font-weight: 600;
+}
+
+.skill-card li.skill-core {
+  border-color: rgba(37, 99, 235, 0.32);
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.skills-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.skills-legend span {
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1.5px solid #2563eb;
+  border-radius: 999px;
+  background: #dbeafe;
 }
 
 .learning-skills {
@@ -823,6 +899,16 @@ a {
   background: #60a5fa;
   content: "";
 }
+
+.experience-project-link {
+  color: #7dd3fc;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(125, 211, 252, 0.4);
+  text-underline-offset: 3px;
+}
+
+.experience-project-link:hover { text-decoration-color: currentColor; }
 
 .experience-details {
   margin-top: 1rem;
@@ -1161,13 +1247,36 @@ a {
   gap: 0.55rem;
 }
 
-.contact-actions > p {
+.copy-email {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: 0.75rem;
+  border-radius: 0.5rem;
   color: #e2e8f0;
   font-size: 0.95rem;
   font-weight: 550;
-  overflow-wrap: anywhere;
+  text-align: left;
+  cursor: pointer;
+  transition: color 180ms ease;
 }
+.copy-email > span:first-child { overflow-wrap: anywhere; }
+.copy-email svg { flex: none; color: #7dd3fc; }
+.copy-email:hover { color: #fff; }
+.copy-email-status { color: #7dd3fc; font-size: 0.78rem; font-weight: 650; }
+
+/* Signals a file download before the click. */
+.file-tag {
+  border: 1px solid currentColor;
+  border-radius: 0.35rem;
+  padding: 0.05rem 0.3rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+@media (max-width: 639px) { .site-header .file-tag { display: none; } }
 
 .contact-facts {
   display: flex;
@@ -1237,6 +1346,15 @@ a {
 }
 
 .footer-bottom nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+.footer-colophon {
+  margin-top: 1.25rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.14);
+  padding-top: 1rem;
+  color: #94a3b8;
+  font-size: 0.72rem;
+}
+.footer-colophon a { color: #cbd5e1; text-decoration: underline; text-underline-offset: 2px; }
+.footer-colophon a:hover { color: #7dd3fc; }
 .footer-bottom a { color: #cbd5e1; transition: color 180ms ease; }
 .footer-bottom a:hover { color: #7dd3fc; }
 .footer-bottom > div a { display: grid; width: 2.25rem; height: 2.25rem; place-items: center; border: 1px solid rgba(148, 163, 184, 0.2); border-radius: 999px; }

@@ -1,6 +1,8 @@
-import { ArrowUpRight, ContactRound, FileText, Mail } from "lucide-react";
+import { ArrowUpRight, FileText, Mail } from "lucide-react";
 
 import { profile } from "@/data/portfolio";
+import { LinkedinIcon } from "./brand-icons";
+import { CopyEmailButton } from "./copy-email-button";
 
 export function ContactSection() {
   return (
@@ -21,13 +23,13 @@ export function ContactSection() {
               <span><Mail size={18} aria-hidden="true" /> Email me</span>
               <ArrowUpRight size={20} aria-hidden="true" />
             </a>
-            <p>{profile.email}</p>
+            <CopyEmailButton email={profile.email} />
             <div className="contact-links">
               <a href={profile.linkedin} target="_blank" rel="noreferrer">
-                <ContactRound size={16} aria-hidden="true" /> LinkedIn
+                <LinkedinIcon size={15} /> LinkedIn
               </a>
               <a href={profile.resume} target="_blank" rel="noreferrer">
-                <FileText size={16} aria-hidden="true" /> Resume
+                <FileText size={16} aria-hidden="true" /> Resume <span className="file-tag">PDF</span>
               </a>
             </div>
           </div>

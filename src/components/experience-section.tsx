@@ -1,11 +1,24 @@
+import Link from "next/link";
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 
-import { experiences, type Experience } from "@/data/portfolio";
+import { experiences, projects, type Experience } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
 
 // Short entries show in full; longer ones keep two points visible and fold the rest.
 function visibleCount(experience: Experience) {
   return experience.description.length <= 3 ? experience.description.length : 2;
+}
+
+// Project names in timeline bullets link to their case studies, connecting the history to the evidence.
+const caseStudies = projects.filter((project) => project.caseStudy);
+const caseStudyPattern = new RegExp(`(${caseStudies.map((project) => project.title).join("|")})`);
+
+function withCaseStudyLinks(text: string) {
+  if (!caseStudies.length) return text;
+  return text.split(caseStudyPattern).map((part, index) => {
+    const project = caseStudies.find((item) => item.title === part);
+    return project ? <Link className="experience-project-link" href={project.caseStudy!} key={index}>{part}</Link> : part;
+  });
 }
 
 export function ExperienceSection() {
@@ -41,13 +54,13 @@ export function ExperienceSection() {
                 </div>
                 <h4>{experience.title}</h4>
                 <ul>
-                  {experience.description.slice(0, visibleCount(experience)).map((item) => <li key={item}>{item}</li>)}
+                  {experience.description.slice(0, visibleCount(experience)).map((item) => <li key={item}>{withCaseStudyLinks(item)}</li>)}
                 </ul>
                 {experience.description.length > visibleCount(experience) ? (
                   <details className="experience-details">
                     <summary>View {experience.description.length - 2} more details</summary>
                     <ul>
-                      {experience.description.slice(visibleCount(experience)).map((item) => <li key={item}>{item}</li>)}
+                      {experience.description.slice(visibleCount(experience)).map((item) => <li key={item}>{withCaseStudyLinks(item)}</li>)}
                     </ul>
                   </details>
                 ) : null}

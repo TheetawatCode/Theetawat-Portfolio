@@ -15,6 +15,7 @@ export function SkillsSection() {
           description="Technologies and tools shaped by my projects, training, and professional work."
         />
 
+        <p className="skills-legend"><span aria-hidden="true" /> Core stack</p>
         <div className="skills-grid">
           {skillGroups.map((group, index) => {
             const Icon = icons[index];
@@ -25,7 +26,7 @@ export function SkillsSection() {
                   <h3>{group.title}</h3>
                 </div>
                 <ul>
-                  {group.items.map((skill) => <li key={skill}>{skill}</li>)}
+                  {[...(group.core ?? []), ...group.items.filter((skill) => !group.core?.includes(skill))].map((skill) => <li className={group.core?.includes(skill) ? "skill-core" : undefined} key={skill}>{skill}</li>)}
                 </ul>
               </article>
             );

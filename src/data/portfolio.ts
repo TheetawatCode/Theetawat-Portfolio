@@ -6,6 +6,8 @@ export type NavItem = {
 export type SkillGroup = {
   title: string;
   items: string[];
+  /** Everyday tools in this group, shown with stronger emphasis. */
+  core?: string[];
 };
 
 export type Experience = {
@@ -82,18 +84,22 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Frontend Development",
     items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML & CSS", "Tailwind CSS", "Responsive Design", "Zustand"],
+    core: ["React", "Next.js", "TypeScript"],
   },
   {
     title: "Backend & Databases",
     items: ["Node.js", "Express.js", "REST APIs", "SQL", "PostgreSQL", "Prisma", "MySQL", "MongoDB"],
+    core: ["Node.js", "PostgreSQL", "Prisma"],
   },
   {
     title: "Testing & Quality",
-    items: ["Vitest", "Playwright", "Postman"],
+    items: ["Vitest", "Playwright", "Postman", "GitHub Actions (CI)", "ESLint"],
+    core: ["Vitest", "Playwright"],
   },
   {
     title: "Tools & Delivery",
     items: ["Git", "GitHub", "Vercel", "Docker", "Figma", "OpenAI Codex", "Claude Code"],
+    core: ["Git", "GitHub", "Vercel"],
   },
 ];
 
@@ -328,6 +334,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand"],
     githubLink: "https://github.com/TheetawatCode/saan-market",
     liveDemo: "https://saan-market.vercel.app/",
+    caseStudy: "/projects/saan-market",
     featured: true,
     projectType: "E-commerce storefront",
     typeLabel: "Frontend showcase · simulated checkout",

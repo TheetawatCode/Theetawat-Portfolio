@@ -1,6 +1,7 @@
-import { ArrowDown, ArrowUpRight, CodeXml, ContactRound, Mail } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
 
 import { profile } from "@/data/portfolio";
+import { GithubIcon, LinkedinIcon } from "./brand-icons";
 
 export function HeroSection() {
   return (
@@ -27,18 +28,25 @@ export function HeroSection() {
             <a className="button button-primary" href="#projects">
               View projects <ArrowDown size={17} aria-hidden="true" />
             </a>
-            <a className="button" href="https://linktr.ee/theetawat.work" target="_blank" rel="noreferrer">
-              Let&apos;s connect <ArrowUpRight size={17} aria-hidden="true" />
+            <a className="button" href="#contact">
+              Let&apos;s connect <Mail size={17} aria-hidden="true" />
             </a>
           </div>
+
+          {/* Counts from the three featured repos (Nov 2026); update when projects change. */}
+          <ul className="hero-proof" aria-label="Project evidence">
+            <li><strong>3</strong> live projects</li>
+            <li><strong>90+</strong> automated tests</li>
+            <li><strong>CI</strong>-checked</li>
+          </ul>
 
           <div className="mt-10 flex items-center gap-2 text-sm text-slate-500">
             <span className="mr-2 hidden sm:inline">Find me on</span>
             <a className="social-link" href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-              <CodeXml size={18} aria-hidden="true" />
+              <GithubIcon size={18} />
             </a>
             <a className="social-link" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <ContactRound size={18} aria-hidden="true" />
+              <LinkedinIcon size={18} />
             </a>
             <a className="social-link" href={`mailto:${profile.email}`} aria-label="Email">
               <Mail size={18} aria-hidden="true" />

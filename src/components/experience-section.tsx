@@ -21,8 +21,36 @@ function withCaseStudyLinks(text: string) {
   });
 }
 
+function ExperienceDetails({ experience }: { experience: Experience }) {
+  return (
+    <>
+      <ul>
+        {experience.description.slice(0, visibleCount(experience)).map((item) => <li key={item}>{withCaseStudyLinks(item)}</li>)}
+      </ul>
+      {experience.description.length > visibleCount(experience) ? (
+        <details className="experience-details">
+          <summary>View {experience.description.length - 2} more details</summary>
+          <ul>
+            {experience.description.slice(visibleCount(experience)).map((item) => <li key={item}>{withCaseStudyLinks(item)}</li>)}
+          </ul>
+        </details>
+      ) : null}
+    </>
+  );
+}
+
+// Consecutive training entries from the same provider share one timeline step as parallel tracks.
+function groupTimeline(items: Experience[]) {
+  return items.reduce<Experience[][]>((groups, item) => {
+    const last = groups.at(-1);
+    if (item.kind === "training" && last?.[0].kind === "training" && last[0].company === item.company) last.push(item);
+    else groups.push([item]);
+    return groups;
+  }, []);
+}
+
 export function ExperienceSection() {
-  const timeline = experiences.filter(item => item.kind !== "earlier");
+  const timeline = groupTimeline(experiences.filter(item => item.kind !== "earlier"));
   const earlier = experiences.filter(item => item.kind === "earlier");
 
   return (
@@ -38,35 +66,44 @@ export function ExperienceSection() {
         <div role="group" aria-labelledby="work-experience-heading">
           <h3 className="experience-group-heading" id="work-experience-heading">Development Experience</h3>
           <div className="timeline" data-timeline>
-          {timeline.map((experience, index) => (
-            <article className="timeline-item" key={`${experience.company}-${experience.title}`}>
-              <div className="timeline-marker" aria-hidden="true">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-              </div>
-              <div className="timeline-card">
-                <div className="timeline-meta">
-                  <span>
-                    {experience.kind === "training"
-                      ? <GraduationCap size={16} aria-hidden="true" />
-                      : <BriefcaseBusiness size={16} aria-hidden="true" />} {experience.company}
-                  </span>
-                  <time>{experience.duration}</time>
+          {timeline.map((group, index) => {
+            const [experience] = group;
+            return (
+              <article className="timeline-item" key={`${experience.company}-${experience.title}`}>
+                <div className="timeline-marker" aria-hidden="true">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
                 </div>
-                <h4>{experience.title}</h4>
-                <ul>
-                  {experience.description.slice(0, visibleCount(experience)).map((item) => <li key={item}>{withCaseStudyLinks(item)}</li>)}
-                </ul>
-                {experience.description.length > visibleCount(experience) ? (
-                  <details className="experience-details">
-                    <summary>View {experience.description.length - 2} more details</summary>
-                    <ul>
-                      {experience.description.slice(visibleCount(experience)).map((item) => <li key={item}>{withCaseStudyLinks(item)}</li>)}
-                    </ul>
-                  </details>
-                ) : null}
-              </div>
-            </article>
-          ))}
+                <div className="timeline-card">
+                  <div className="timeline-meta">
+                    <span>
+                      {experience.kind === "training"
+                        ? <GraduationCap size={16} aria-hidden="true" />
+                        : <BriefcaseBusiness size={16} aria-hidden="true" />} {experience.company}
+                    </span>
+                    <time>{experience.duration}</time>
+                  </div>
+                  {group.length > 1 ? (
+                    <>
+                      <h4>Full-stack Bootcamp</h4>
+                      <div className="training-tracks">
+                        {group.map((track) => (
+                          <section className="training-track" key={track.title}>
+                            <h5>{track.title}</h5>
+                            <ExperienceDetails experience={track} />
+                          </section>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <h4>{experience.title}</h4>
+                      <ExperienceDetails experience={experience} />
+                    </>
+                  )}
+                </div>
+              </article>
+            );
+          })}
           </div>
         </div>
 

@@ -10,6 +10,8 @@ export function SiteHeader() {
   const menu = useRef<HTMLDetailsElement>(null);
   const header = useRef<HTMLElement>(null);
   const [active, setActive] = useState<string>();
+  const nav = useRef<HTMLElement>(null);
+  const indicator = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const update = () => header.current?.toggleAttribute("data-scrolled", window.scrollY > 24);
@@ -32,9 +34,27 @@ export function SiteHeader() {
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, []);
+  // Slide one highlight between nav items instead of repainting each item's background.
+  useEffect(() => {
+    const place = () => {
+      const link = nav.current?.querySelector<HTMLElement>('[aria-current="location"]');
+      const marker = indicator.current;
+      if (!marker) return;
+      marker.toggleAttribute("data-visible", Boolean(link));
+      if (link) {
+        marker.style.width = `${link.offsetWidth}px`;
+        marker.style.height = `${link.offsetHeight}px`;
+        marker.style.transform = `translate(${link.offsetLeft}px, ${link.offsetTop}px)`;
+      }
+    };
+    place();
+    window.addEventListener("resize", place);
+    return () => window.removeEventListener("resize", place);
+  }, [active]);
+
   return (
     <header className="site-header" ref={header}>
-      <a className="skip-link" href="#main" onClick={(event) => {
+      <a className="skip-link" href="#top" onClick={(event) => {
         const main = document.querySelector("main");
         if (!main) return;
         event.preventDefault();
@@ -49,7 +69,8 @@ export function SiteHeader() {
           <span className="sr-only"> — portfolio home</span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
+        <nav className="primary-nav hidden items-center gap-1 lg:flex" aria-label="Primary navigation" ref={nav}>
+          <span className="nav-indicator" ref={indicator} aria-hidden="true" />
           {navItems.map((item) => (
             <Link className="nav-link" href={`/${item.href}`} key={item.href} aria-current={active === item.href ? "location" : undefined}>
               {item.label}

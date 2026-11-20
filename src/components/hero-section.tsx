@@ -35,8 +35,8 @@ export function HeroSection() {
 
           {/* Counts from the three featured repos (Nov 2026); update when projects change. */}
           <ul className="hero-proof" aria-label="Project evidence">
-            <li><strong>3</strong> live projects</li>
-            <li><strong>90+</strong> automated tests</li>
+            <li><strong data-count="3">3</strong> live projects</li>
+            <li><strong data-count="90" data-suffix="+">90+</strong> automated tests</li>
             <li><strong>CI</strong>-checked</li>
           </ul>
 

@@ -111,10 +111,32 @@ a {
   color: #0f172a;
 }
 
-.nav-link[aria-current="location"],
+.primary-nav { position: relative; }
+
+.nav-link { position: relative; z-index: 1; }
+
+.nav-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.65rem;
+  background: #eff6ff;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), width 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease;
+}
+
+.nav-indicator[data-visible] { opacity: 1; }
+
+.nav-link[aria-current="location"] { color: #1d4ed8; }
+
 .mobile-menu nav a[aria-current="location"] {
   background: #eff6ff;
   color: #1d4ed8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-indicator { transition: none; }
 }
 
 /* Hidden until keyboard focus reaches it. */
@@ -244,6 +266,8 @@ main:focus { outline: none; }
 
 .hero-orb {
   position: absolute;
+  translate: var(--orb-x, 0) var(--orb-y, 0);
+  transition: translate 900ms cubic-bezier(0.22, 1, 0.36, 1);
   z-index: -2;
   border-radius: 999px;
   filter: blur(14px);
@@ -318,7 +342,7 @@ main:focus { outline: none; }
 .hero-proof li {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  white-space: pre;
 }
 
 /* A dot per item, not a separator, so wrapped lines never start with a stray "·". */
@@ -326,11 +350,12 @@ main:focus { outline: none; }
   width: 0.3rem;
   height: 0.3rem;
   border-radius: 999px;
+  margin-right: 0.45rem;
   background: #93c5fd;
   content: "";
 }
 
-.hero-proof strong { color: #0f172a; font-weight: 700; }
+.hero-proof strong { color: #0f172a; font-variant-numeric: tabular-nums; font-weight: 700; }
 
 .hero-section h1 span {
   color: #2563eb;
@@ -361,7 +386,8 @@ main:focus { outline: none; }
   background: linear-gradient(145deg, rgba(11, 31, 58, 0.97), rgba(15, 23, 42, 0.94));
   color: #e2e8f0;
   box-shadow: 0 38px 90px rgba(11, 31, 58, 0.25), inset 0 1px rgba(255, 255, 255, 0.08);
-  transform: perspective(1100px) rotateY(-3deg) rotateX(1deg);
+  transform: perspective(1100px) rotateY(calc(-3deg + var(--tilt-y, 0deg))) rotateX(calc(1deg + var(--tilt-x, 0deg)));
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .console-topbar,
@@ -462,15 +488,67 @@ main:focus { outline: none; }
   position: relative;
   overflow: hidden;
   min-height: 420px;
-  border-radius: 1.35rem;
-  background: #dbeafe;
+  border-radius: 1.6rem;
+  /* Frosted glass mat around the photo. */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(219, 234, 254, 0.55));
+  padding: 0.6rem;
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 34px 70px rgba(15, 23, 42, 0.2),
+    0 12px 28px rgba(37, 99, 235, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 650ms ease;
+}
+
+.profile-frame img { border-radius: 1.1rem; }
+
+/* Glass edge: a gradient hairline drawn with a mask so it reads like light on a glass rim. */
+.profile-frame::before {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.12) 40%, rgba(147, 197, 253, 0.6));
+  content: "";
+  pointer-events: none;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Sheen that follows the cursor; rests near the top-left as a soft glass gloss. */
+.profile-frame::after {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background:
+    radial-gradient(420px circle at var(--gx, 22%) var(--gy, 8%), rgba(255, 255, 255, 0.3), transparent 45%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.14), transparent 38%);
+  content: "";
+  opacity: 0.7;
+  pointer-events: none;
+  transition: opacity 400ms ease;
+}
+
+.profile-caption { z-index: 4; }
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .profile-frame:hover {
+    box-shadow:
+      0 44px 90px rgba(15, 23, 42, 0.24),
+      0 16px 36px rgba(37, 99, 235, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .profile-frame:hover::after { opacity: 1; }
 }
 
 .profile-caption {
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  left: 1rem;
+  right: 1.4rem;
+  bottom: 1.4rem;
+  left: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -835,6 +913,12 @@ main:focus { outline: none; }
 }
 
 /* Fill layer: fully visible by default so the timeline reads without JS. */
+/* The current step carries a steady halo instead of a "Current" label. */
+.timeline-item:first-child .timeline-marker span {
+  border-color: rgba(125, 211, 252, 0.85);
+  box-shadow: 0 0 0 6px #08182d, 0 0 0 7px rgba(125, 211, 252, 0.3), 0 0 24px 6px rgba(56, 189, 248, 0.35);
+}
+
 .timeline-marker span::before {
   position: absolute;
   inset: 0;
@@ -898,6 +982,53 @@ main:focus { outline: none; }
   border-radius: 999px;
   background: #60a5fa;
   content: "";
+}
+
+.training-tracks {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+@media (min-width: 900px) {
+  .training-tracks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.training-track {
+  min-width: 0;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 1.1rem 1.2rem;
+}
+
+.training-track h5 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.training-track ul { margin-top: 0.8rem; }
+
+/* Tracks have different lengths; keep both "View details" rows on one baseline. */
+.training-track { display: flex; flex-direction: column; }
+.training-track > .experience-details { margin-top: auto; }
+.training-track > ul { margin-bottom: 1rem; }
+
+/* Stacked on small screens: drop the inner frame so text keeps a readable line length. */
+@media (max-width: 899px) {
+  .training-tracks { gap: 1.25rem; }
+  .training-track {
+    border: 0;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+  }
+  .training-track + .training-track {
+    border-top: 1px solid rgba(148, 163, 184, 0.14);
+    padding-top: 1.25rem;
+  }
 }
 
 .experience-project-link {
@@ -1149,8 +1280,9 @@ main:focus { outline: none; }
   display: flex;
   gap: 0.75rem;
   margin-top: 1.5rem;
-  border-top: 1px solid var(--hairline);
-  padding-top: 1.3rem;
+  border-radius: 1rem;
+  background: #f8fafc;
+  padding: 1.1rem 1.25rem;
   color: #526174;
   font-size: 0.88rem;
   line-height: 1.65;
@@ -1197,6 +1329,8 @@ main:focus { outline: none; }
   border-radius: 999px;
   background: radial-gradient(circle, rgba(37, 99, 235, 0.5), transparent 65%);
   content: "";
+  translate: var(--cx, 0) var(--cy, 0);
+  transition: translate 1100ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .contact-card h2 {
@@ -1233,12 +1367,13 @@ main:focus { outline: none; }
   font-size: 0.88rem;
   font-weight: 700;
   backdrop-filter: blur(14px);
-  transition: background 180ms ease, transform 180ms ease;
+  transition: background 180ms ease, transform 180ms ease, box-shadow 220ms ease;
 }
 
 .contact-actions > a:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.45), 0 0 22px rgba(56, 189, 248, 0.22);
 }
 
 .contact-actions > a span {
@@ -1534,6 +1669,55 @@ a:focus-visible { outline: 3px solid #2563eb; outline-offset: 4px; }
       opacity: 1;
     }
   }
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .skill-card,
+  .featured-project,
+  .project-card,
+  .certificate-card,
+  .education-card,
+  .timeline-card,
+  .earlier-list > li { position: relative; }
+
+  .timeline-card::after,
+  .earlier-list > li::after {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(320px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(125, 211, 252, 0.1), transparent 65%);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 260ms ease;
+  }
+
+  .timeline-card:hover::after,
+  .earlier-list > li:hover::after { opacity: 1; }
+
+  /* Soft light that follows the cursor; position comes from MotionEnhancements. */
+  .skill-card::after,
+  .featured-project::after,
+  .project-card::after,
+  .certificate-card::after,
+  .education-card::after {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(320px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(59, 130, 246, 0.09), transparent 65%);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 260ms ease;
+  }
+
+  .skill-card:hover::after,
+  .featured-project:hover::after,
+  .project-card:hover::after,
+  .certificate-card:hover::after,
+  .education-card:hover::after { opacity: 1; }
 }
 
 @media (hover: hover) and (pointer: fine) {

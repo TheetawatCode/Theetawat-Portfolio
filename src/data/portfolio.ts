@@ -298,7 +298,7 @@ export const experiences: Experience[] = [
       "Run day-to-day operations of a laundromat serving roughly 20–30 customers on weekdays and about double on weekends and public holidays.",
       "Maintain daily income and expense records, prepare monthly expense reports, and handle staff payroll.",
       "Advise the owner on pricing and promotions, using customer behavior in each area to time offers by day and hour.",
-      "Control costs for detergent, electricity, and water; order from suppliers, manage stock levels, and supervise staff.",
+      "Control costs for consumables, electricity, and water; order from suppliers, manage stock levels, and supervise staff.",
       "Report in English to an international owner with broad decision-making authority, and support 3 additional locations owned by other operators.",
       "Coach staff on service quality, which increased sales, reduced complaints, and drew frequent customer compliments.",
     ],

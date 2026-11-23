@@ -1068,6 +1068,21 @@ main:focus { outline: none; }
   text-transform: uppercase;
 }
 
+.operations-experience {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+}
+.operations-experience .experience-group-heading { margin-bottom: 0.5rem; }
+.operations-intro {
+  max-width: 44rem;
+  margin-bottom: 1.1rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.operations-card { border-left: 3px solid rgba(96, 165, 250, 0.7); }
+
 .earlier-experience {
   margin-top: clamp(2rem, 4vw, 3rem);
   border-top: 1px solid rgba(148, 163, 184, 0.2);

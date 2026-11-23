@@ -11,8 +11,8 @@ export type SkillGroup = {
 };
 
 export type Experience = {
-  /** "work" and "training" render as timeline cards; "earlier" renders as a compact list. */
-  kind: "work" | "training" | "earlier";
+  /** "work" and "training" render as timeline cards; "operations" renders as a featured current-role card; "earlier" renders as a compact list. */
+  kind: "work" | "training" | "operations" | "earlier";
   title: string;
   company: string;
   duration: string;
@@ -287,6 +287,20 @@ export const experiences: Experience[] = [
       "Collaborated with the client to understand business needs and deliver solutions that align with their goals.",
       "Conducted website maintenance and updates to ensure ongoing functionality and security.",
       "Optimized website performance and user experience through responsive design and SEO best practices.",
+    ],
+  },
+  {
+    title: "Operations Manager",
+    kind: "operations",
+    company: "Laundromat business",
+    duration: "Jan 2022 – Present",
+    description: [
+      "Run day-to-day operations of a laundromat serving roughly 20–30 customers on weekdays and about double on weekends and public holidays.",
+      "Maintain daily income and expense records, prepare monthly expense reports, and handle staff payroll.",
+      "Advise the owner on pricing and promotions, using customer behavior in each area to time offers by day and hour.",
+      "Control costs for detergent, electricity, and water; order from suppliers, manage stock levels, and supervise staff.",
+      "Report in English to an international owner with broad decision-making authority, and support 3 additional locations owned by other operators.",
+      "Coach staff on service quality, which increased sales, reduced complaints, and drew frequent customer compliments.",
     ],
   },
   {

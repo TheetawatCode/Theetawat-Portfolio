@@ -4,9 +4,10 @@ import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 import { experiences, projects, type Experience } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
 
-// Short entries show in full; longer ones keep two points visible and fold the rest.
+// Short entries show in full; longer ones keep two points visible (three for the operations card) and fold the rest.
 function visibleCount(experience: Experience) {
-  return experience.description.length <= 3 ? experience.description.length : 2;
+  if (experience.description.length <= 3) return experience.description.length;
+  return experience.kind === "operations" ? 3 : 2;
 }
 
 // Project names in timeline bullets link to their case studies, connecting the history to the evidence.
@@ -29,7 +30,7 @@ function ExperienceDetails({ experience }: { experience: Experience }) {
       </ul>
       {experience.description.length > visibleCount(experience) ? (
         <details className="experience-details">
-          <summary>View {experience.description.length - 2} more details</summary>
+          <summary>View {experience.description.length - visibleCount(experience)} more details</summary>
           <ul>
             {experience.description.slice(visibleCount(experience)).map((item) => <li key={item}>{withCaseStudyLinks(item)}</li>)}
           </ul>
@@ -50,7 +51,8 @@ function groupTimeline(items: Experience[]) {
 }
 
 export function ExperienceSection() {
-  const timeline = groupTimeline(experiences.filter(item => item.kind !== "earlier"));
+  const timeline = groupTimeline(experiences.filter(item => item.kind === "work" || item.kind === "training"));
+  const operations = experiences.filter(item => item.kind === "operations");
   const earlier = experiences.filter(item => item.kind === "earlier");
 
   return (
@@ -58,7 +60,7 @@ export function ExperienceSection() {
       <div className="site-shell">
         <SectionHeading
           eyebrow="03 / Experience"
-          title="Experience in delivery and development."
+          title="Experience across development and operations."
           description="From economics and business operations to hands-on software development, each role has strengthened how I communicate, solve problems, and build."
           invert
         />
@@ -106,6 +108,23 @@ export function ExperienceSection() {
           })}
           </div>
         </div>
+
+        {operations.length > 0 ? (
+          <div className="operations-experience" role="group" aria-labelledby="operations-experience-heading">
+            <h3 className="experience-group-heading" id="operations-experience-heading">Business operations</h3>
+            <p className="operations-intro">An ongoing role I hold alongside my development work, built on budgeting, cost control, and customer insight.</p>
+            {operations.map((experience) => (
+              <article className="timeline-card operations-card" key={`${experience.company}-${experience.title}`}>
+                <div className="timeline-meta">
+                  <span><BriefcaseBusiness size={16} aria-hidden="true" /> {experience.company}</span>
+                  <time>{experience.duration}</time>
+                </div>
+                <h4>{experience.title}</h4>
+                <ExperienceDetails experience={experience} />
+              </article>
+            ))}
+          </div>
+        ) : null}
 
         {earlier.length > 0 ? (
           <div className="earlier-experience" role="group" aria-labelledby="earlier-experience-heading">

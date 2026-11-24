@@ -296,11 +296,11 @@ export const experiences: Experience[] = [
     duration: "Jan 2022 – Present",
     description: [
       "Run day-to-day operations of a laundromat serving roughly 20–30 customers on weekdays and about double on weekends and public holidays.",
+      "Control costs for consumables, electricity, and water; order from suppliers, manage stock levels, and supervise staff.",
       "Maintain daily income and expense records, prepare monthly expense reports, and handle staff payroll.",
       "Advise the owner on pricing and promotions, using customer behavior in each area to time offers by day and hour.",
-      "Control costs for consumables, electricity, and water; order from suppliers, manage stock levels, and supervise staff.",
-      "Report in English to an international owner with broad decision-making authority, and support 3 additional locations owned by other operators.",
       "Coached staff on service quality and used customer feedback to improve day-to-day service.",
+      "Report in English to an international owner with broad decision-making authority, and support 3 additional locations owned by other operators.",
     ],
   },
   {

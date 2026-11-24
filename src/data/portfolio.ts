@@ -300,7 +300,7 @@ export const experiences: Experience[] = [
       "Advise the owner on pricing and promotions, using customer behavior in each area to time offers by day and hour.",
       "Control costs for consumables, electricity, and water; order from suppliers, manage stock levels, and supervise staff.",
       "Report in English to an international owner with broad decision-making authority, and support 3 additional locations owned by other operators.",
-      "Coach staff on service quality, which increased sales, reduced complaints, and drew frequent customer compliments.",
+      "Coached staff on service quality and used customer feedback to improve day-to-day service.",
     ],
   },
   {

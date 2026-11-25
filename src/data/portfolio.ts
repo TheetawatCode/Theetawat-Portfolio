@@ -292,14 +292,14 @@ export const experiences: Experience[] = [
   {
     title: "Operations Manager",
     kind: "operations",
-    company: "Laundromat business",
+    company: "Local Service Business",
     duration: "Jan 2022 – Present",
     description: [
-      "Run day-to-day operations of a laundromat serving roughly 20–30 customers on weekdays and about double on weekends and public holidays.",
-      "Control costs for consumables, electricity, and water; order from suppliers, manage stock levels, and supervise staff.",
+      "Run day-to-day operations of a customer-facing service business serving roughly 20\u2060–\u206030 customers on weekdays and about double on weekends and public holidays.",
+      "Control consumables and utility costs; order from suppliers, manage stock levels, and supervise staff.",
       "Maintain daily income and expense records, prepare monthly expense reports, and handle staff payroll.",
       "Advise the owner on pricing and promotions, using customer behavior in each area to time offers by day and hour.",
-      "Coached staff on service quality and used customer feedback to improve day-to-day service.",
+      "Coach staff on service quality and use customer feedback to improve day-to-day service.",
       "Report in English to an international owner with broad decision-making authority, and support 3 additional locations owned by other operators.",
     ],
   },

@@ -86,7 +86,7 @@ export function ExperienceSection() {
                   </div>
                   {group.length > 1 ? (
                     <>
-                      <h4>Full-stack Bootcamp</h4>
+                      <h4>Full-Stack Developer Bootcamp</h4>
                       <div className="training-tracks">
                         {group.map((track) => (
                           <section className="training-track" key={track.title}>

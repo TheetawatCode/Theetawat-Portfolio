@@ -243,7 +243,7 @@ export const certificates: Certificate[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "Independent Full-stack Projects",
+    title: "Independent Full-Stack Projects",
     kind: "work",
     company: "Self-directed",
     duration: "Sep 2024 – Present",

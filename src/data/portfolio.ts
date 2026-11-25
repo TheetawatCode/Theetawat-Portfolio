@@ -315,7 +315,6 @@ export const experiences: Experience[] = [
       "Managed and organized company documents, ensuring accurate filing and retrieval processes.",
       "Collaborated closely with colleagues across departments to ensure smooth operations and achieve company objectives.",
       "Facilitated effective communication and information sharing within the team.",
-      "Contributed to a positive and supportive work environment through teamwork and collaboration.",
       "Proficient in using various computer software and applications for administrative tasks.",
       "Adapted quickly to new technologies and processes.",
     ],

@@ -311,7 +311,7 @@ export const experiences: Experience[] = [
     description: [
       "Supported daily operations across multiple departments to ensure smooth business functions.",
       "Managed a diverse range of administrative tasks, including correspondence, data entry, and inventory control.",
-      "Provided exceptional customer service, resolving inquiries promptly and professionally.",
+      "Provided customer service, resolving inquiries promptly and professionally.",
       "Managed and organized company documents, ensuring accurate filing and retrieval processes.",
       "Collaborated closely with colleagues across departments to ensure smooth operations and achieve company objectives.",
       "Facilitated effective communication and information sharing within the team.",
@@ -326,9 +326,9 @@ export const experiences: Experience[] = [
     duration: "Jun 2018 – Jul 2018",
     description: [
       "Led a team of 10 trainees from various universities to enhance the AIS Project, emphasizing collaboration and teamwork for successful outcomes.",
-      "Developed a new application prototype for demonstration purposes, showcasing innovative solutions to meet project objectives.",
+      "Developed a new application prototype for demonstration purposes, showcasing solutions to meet project objectives.",
       "Prepared detailed reports and presentations to communicate project progress and outcomes to senior management.",
-      "Collaborated with the marketing team to develop and execute innovative marketing campaigns.",
+      "Collaborated with the marketing team to develop and execute marketing campaigns.",
       "Conducted in-depth analysis of competitive strategies and customer behavior to inform marketing initiatives.",
       "Demonstrated strong communication and interpersonal skills in a fast-paced corporate environment.",
       "Proficient in using various computer software and applications for marketing tasks.",

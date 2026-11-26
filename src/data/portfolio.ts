@@ -335,6 +335,7 @@ export const experiences: Experience[] = [
       "Interned in the Marketing department: worked on site at AIS events and coordinated with the marketing team and other departments to carry out marketing plans.",
       "Collaborated with the marketing team to develop and run marketing campaigns.",
       "Analyzed competitor strategies and customer behavior to inform marketing initiatives.",
+      "Achievement: Team won first place in the Growing with AIS (GA18) program, as decided by the judging committee; as the winning project, it was intended for AIS to build on in future development.",
     ],
   },
 ];

@@ -22,6 +22,12 @@ function withCaseStudyLinks(text: string) {
   });
 }
 
+// A leading "Achievement:" label renders bold so the outcome stands out among the folded details.
+function withAchievementLabel(text: string) {
+  const label = "Achievement:";
+  return text.startsWith(label) ? <><strong>{label}</strong>{text.slice(label.length)}</> : text;
+}
+
 function ExperienceDetails({ experience }: { experience: Experience }) {
   return (
     <>
@@ -144,7 +150,7 @@ export function ExperienceSection() {
                     <details className="experience-details">
                       <summary>View {experience.description.length - 3} more details</summary>
                       <ul className="earlier-points">
-                        {experience.description.slice(3).map((item) => <li key={item}>{item}</li>)}
+                        {experience.description.slice(3).map((item) => <li key={item}>{withAchievementLabel(item)}</li>)}
                       </ul>
                     </details>
                   ) : null}

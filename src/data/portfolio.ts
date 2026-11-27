@@ -283,10 +283,12 @@ export const experiences: Experience[] = [
     company: "Self-Employed",
     duration: "Dec 2022 – Apr 2024",
     description: [
-      "Designed and developed a landing page for a Thai restaurant client in New Jersey, USA.",
-      "Collaborated with the client to understand business needs and deliver solutions that align with their goals.",
-      "Conducted website maintenance and updates to ensure ongoing functionality and security.",
-      "Optimized website performance and user experience through responsive design and SEO best practices.",
+      "Designed and built a landing page for a Thai restaurant client in New Jersey, USA (HTML, CSS, JavaScript), with menu and prices, photo gallery, opening hours, map and contact details.",
+      "Built a responsive layout for mobile, tablet and desktop, and set up page titles, meta tags and sitemap for SEO.",
+      "Worked directly with the client and handled the project end to end, from requirements and build to hosting, domain and ongoing maintenance.",
+      "Arranged the hosting plan and domain registration for the client's site, and had HTTPS (SSL) enabled through the hosting provider.",
+      "Updated menu items, prices and opening hours for the client when they changed.",
+      "Updated libraries and packages with known vulnerabilities to keep the site secure.",
     ],
   },
   {

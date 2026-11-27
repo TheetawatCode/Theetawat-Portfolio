@@ -4,10 +4,10 @@ import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 import { experiences, projects, type Experience } from "@/data/portfolio";
 import { SectionHeading } from "./section-heading";
 
-// Short entries show in full; longer ones keep two points visible (three for the operations card) and fold the rest.
+// Short entries show in full; longer ones keep three points visible (two for the parallel bootcamp tracks) and fold the rest.
 function visibleCount(experience: Experience) {
   if (experience.description.length <= 3) return experience.description.length;
-  return experience.kind === "operations" ? 3 : 2;
+  return experience.kind === "training" ? 2 : 3;
 }
 
 // Project names in timeline bullets link to their case studies, connecting the history to the evidence.
